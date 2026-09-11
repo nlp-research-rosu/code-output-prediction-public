@@ -1,0 +1,1 @@
+{"d": 5, "diff": 0, "digits": [9, 9, 9, 9, 9, 9, 9, 9, 9], "i": 1, "k": 19, "new_diff": -1, "new_total": 5, "result": 5, "state": 2, "total": 0}

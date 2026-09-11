@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.buffer.readline
+sys.setrecursionlimit(10 ** 7)
+
+def dfs(v):
+    visited[v] = True
+    for next_node in graph[v]:
+        if not visited[next_node]:
+            visited[next_node] = True
+            dfs(next_node)
+    ans.append(v + 1)
+N = int(input())
+cp = [list(map(int, input().split())) for _ in range(N)]
+graph = [[] for _ in range(N)]
+for i in range(N):
+    for j in range(1, len(cp[i])):
+        graph[i].append(cp[i][j] - 1)
+visited = [False] * N
+ans = []
+dfs(0)
+print(*ans[:-1])

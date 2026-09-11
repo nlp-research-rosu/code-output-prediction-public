@@ -1,0 +1,1 @@
+{"a.size()":8,"ans":3,"b.size()":8,"g[a.front()][b.front()]":0,"g[a.back()][b.back()]":0}

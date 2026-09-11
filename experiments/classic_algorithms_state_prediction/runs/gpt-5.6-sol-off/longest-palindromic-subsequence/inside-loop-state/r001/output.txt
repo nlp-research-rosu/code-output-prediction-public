@@ -1,0 +1,1 @@
+The program prints a JSON snapshot of the 54×54 dp table when processing dp[6][41].

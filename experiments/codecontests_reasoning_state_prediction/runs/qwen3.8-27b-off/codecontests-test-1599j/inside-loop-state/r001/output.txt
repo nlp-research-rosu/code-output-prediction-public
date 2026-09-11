@@ -1,0 +1,1 @@
+{"i":0,"mask.size()":1,"mask[0].size()":1,"mask[0][0].first":0,"mask[0][0].second":0,"tmp":12}

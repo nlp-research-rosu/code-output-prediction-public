@@ -1,0 +1,1 @@
+{"best":[2252,250],"cost":13,"distance":2252,"neighbor":249,"node":250,"parent":249,"stack":[]}

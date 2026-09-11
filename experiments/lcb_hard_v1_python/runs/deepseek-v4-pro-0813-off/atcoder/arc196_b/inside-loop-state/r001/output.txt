@@ -1,0 +1,1 @@
+{"components": 0, "d": 0, "len(stack)": 1, "start": 0, "sum(visited)": 1, "u": 0, "v": 2, "value[u]": 0, "value[v]": 0}

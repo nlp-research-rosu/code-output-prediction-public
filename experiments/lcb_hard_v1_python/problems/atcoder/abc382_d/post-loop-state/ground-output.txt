@@ -1,0 +1,1 @@
+{"M":40,"N":3,"current":[6,18],"index":2,"len(result)":902,"max_val":40,"min_val":28,"val":40}

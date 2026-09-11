@@ -1,0 +1,1 @@
+{"T":"abcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcdeabcde","bags":[["a"],["b"],["c"],["d"],["e"],["a"],["b"],["c"],["d"],["e"]],"i":8,"j":118,"len_s":1,"s":"c"}

@@ -1,0 +1,1 @@
+{"character": "0", "index": 1, "moves": 2, "prefix_ones": [0, 1], "source_size": 794}

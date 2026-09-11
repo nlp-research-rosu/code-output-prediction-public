@@ -1,0 +1,1 @@
+{"dp": 16, "last": 496, "left": 0, "len(stk)": 1, "nums[right]": 6, "prefix": 502, "right": 501, "stk[-5:]": [[502, 502, 16]]}

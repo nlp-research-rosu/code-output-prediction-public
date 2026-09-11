@@ -1,0 +1,109 @@
+{
+  "analysis_sources": [
+    {
+      "available_series_count": 49,
+      "excluded_series_count": 0,
+      "include_groups": [],
+      "include_scopes": [],
+      "name": "default",
+      "points_file": "experiments/classic_algorithms_state_prediction/reports/prediction-factor-analysis/data/analysis/raw-points.csv",
+      "points_sha256": "a679459ff9b72ae1b62bf8fc17a9780aa238f76ef0a3886e43f8eb81cc8ca874",
+      "selected_series_count": 49,
+      "series_results_file": "experiments/classic_algorithms_state_prediction/reports/prediction-factor-analysis/data/analysis/series-results.csv",
+      "series_results_sha256": "f65994ceb34a353a05600a7e6efd11a81511afbb24a2346898d567e4104df9fb"
+    }
+  ],
+  "chart_count": 7,
+  "chart_counts_by_scope": {
+    "dynamic": 3,
+    "static": 4
+  },
+  "chart_data_file": "chart-data.csv",
+  "chart_data_row_count": 168,
+  "chart_data_sha256": "1a5b914497ffc4754c9937f1d078835c4451c927ebc786cef38ea19a6228e7a5",
+  "config_file": "experiments/classic_algorithms_state_prediction/reports/prediction-factor-analysis/chart-config.json",
+  "config_sha256": "6de1c1fc9643fe7dad662a3e4c777cf16bf84bef83d71f227aed542dc709a8bb",
+  "generator_sha256": "644fa84fd055af4800b942396393ac9490c70a9a33192f0f9f6030c35c5c0603",
+  "logistic_chart_data_file": "logistic-chart-data.csv",
+  "logistic_chart_data_row_count": 28,
+  "logistic_chart_data_sha256": "1f6bd37d03cdc7a5a3b1d398746379cf0bfef04e6d22a7812020c9e2d1e27680",
+  "logistic_regression_sources": [
+    {
+      "curve_point_count": 1680,
+      "curves_file": "data/analysis/logistic-regression-curves.csv",
+      "curves_sha256": "b2d1d0b86ec9378d0e15fcb12c613e1ccaa6d569c738f6f098be51675cab6e7b",
+      "name": "cumulative-state-load",
+      "point_count": 840,
+      "points_file": "data/analysis/logistic-regression-points.csv",
+      "points_sha256": "d26493e6f69c0c157ec55a9bfabbb04856c1e76ac057bb1f921e16472afc7477",
+      "result_count": 7,
+      "results_file": "data/analysis/logistic-regression-results.csv",
+      "results_sha256": "45d01c049e5241364ddca8ae99b16d50eb0a6bdf66fd052170af6ddb483c4588"
+    }
+  ],
+  "numpy_version": "2.1.3",
+  "output_sha256": {
+    "chart-data.csv": "1a5b914497ffc4754c9937f1d078835c4451c927ebc786cef38ea19a6228e7a5",
+    "charts.md": "89ae4074ce7df52207df947e0a08a27ecc30be5e7e52a83a0d2e70757e197d13",
+    "charts/dynamic/all-arms/omega-hat-nativetrace.pdf": "a5fb16ec9202e6e81c8924c1dfcc70f968816fcf8bb226c391942974645f7b2a",
+    "charts/dynamic/all-arms/omega-hat-nativetrace.png": "53a05d15d2b4a6be6f84a51641ce8d04f4a96b7c73afa509e5a434fb38964c99",
+    "charts/dynamic/all-arms/omega-hat-stateload.pdf": "58014ba13feca6857800ff71d4b602b46fc9b91ced8a93a0dd947f11a51e2aa9",
+    "charts/dynamic/all-arms/omega-hat-stateload.png": "e1eb5d7b3cf4f178b6b48dc2144bf81d27504bb8e09da3e0f7f187b7b2959633",
+    "charts/dynamic/all-arms/omega-hat-statesize.pdf": "fb52e3af4f52d92387af87ff17e3b39b1ef4fe762ee1e852fbf158981cc60885",
+    "charts/dynamic/all-arms/omega-hat-statesize.png": "365e33221722607cae0a69e221fa51152c7de00c32714a05bdee01565185b7a2",
+    "charts/static/inside-loop-state/omega-cc.pdf": "ac4b13158f9b502d94aca62295020f3479265b9a80b23cab91fd9a5692e5f811",
+    "charts/static/inside-loop-state/omega-cc.png": "2300fe18f422a7aea4ee0e1fb203b151a93a95f5f1168f05db50bc0ad3aaea65",
+    "charts/static/long-trace-final/omega-cc.pdf": "41ba5b771aea5c842f29cc099349169936fb70749a2a19c391942a33e491462c",
+    "charts/static/long-trace-final/omega-cc.png": "f8d0c13389a583216a6024e863f16d68ef342ca515d9de5468b34e7258a9b007",
+    "charts/static/post-loop-state/omega-cc.pdf": "c3b421b0e78c7e288ead3b4ed3bbe865274a88e678dfa63b6577043d5bbd4da5",
+    "charts/static/post-loop-state/omega-cc.png": "d4f83043aed24559ca591e5e6181e0217e3477ae0c0bb0a87eef2c80912c77a4",
+    "charts/static/short-trace-final/omega-cc.pdf": "16d72d11df1f85b29f7513f34748a37954f3e787651a3b8c4f9683f9e593e090",
+    "charts/static/short-trace-final/omega-cc.png": "c4ab0140dd420621ea8120060189867b2c91b60642bd33999a28cc4d07582510",
+    "logistic-chart-data.csv": "1f6bd37d03cdc7a5a3b1d398746379cf0bfef04e6d22a7812020c9e2d1e27680"
+  },
+  "point_count": 3360,
+  "python_version": "3.12.11",
+  "schema": "generate-analysis-charts-v4",
+  "series_count": 49,
+  "style": {
+    "binned_accuracy": {
+      "capsize": 3,
+      "color": "#f05a28",
+      "elinewidth": 1.4,
+      "label": "binned accuracy + Wilson 95% CI",
+      "marker": "square",
+      "markersize": 6,
+      "matplotlib_marker": "s"
+    },
+    "logistic_fit": {
+      "band_alpha": 0.16,
+      "color": "#2478d4",
+      "label": "logistic fit + 95% confidence band",
+      "linewidth": 2
+    },
+    "overall_accuracy": {
+      "color": "#81817c",
+      "dash_pattern": [
+        3,
+        3
+      ],
+      "label": "overall accuracy",
+      "linewidth": 1.4
+    },
+    "prediction_outcome": {
+      "alpha": 0.45,
+      "color": "#8b8b86",
+      "label": "prediction outcome",
+      "marker": "circle",
+      "matplotlib_marker": "o",
+      "size": 18
+    },
+    "schema": "prediction-factor-chart-style-v1",
+    "statistics_annotation": {
+      "color": "#555550",
+      "fontsize": 7.5,
+      "lines": 2,
+      "placement": "panel-header"
+    }
+  }
+}

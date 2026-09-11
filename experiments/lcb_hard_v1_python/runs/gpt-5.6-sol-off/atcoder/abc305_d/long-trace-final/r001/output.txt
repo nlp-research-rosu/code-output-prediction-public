@@ -1,0 +1,1 @@
+The program produces no output because it raises an IndexError while attempting to parse 1002 queries from insufficient input data.

@@ -1,0 +1,8 @@
+{
+  "benchmark": "codecontests_reasoning_state_prediction",
+  "source_format": "codecontests-profiles-json",
+  "sources": [
+    "profiles.json"
+  ],
+  "static_adapter": "cpp-preprocessed-control-flow-v1"
+}

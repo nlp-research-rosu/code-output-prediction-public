@@ -1,0 +1,228 @@
+{
+  "arm_labels": {
+    "inside-loop-state": "inside-loop-state",
+    "long-trace-final": "long-trace-final",
+    "post-loop-state": "post-loop-state",
+    "short-trace-final": "short-trace-final"
+  },
+  "arms": [
+    "short-trace-final",
+    "long-trace-final",
+    "inside-loop-state",
+    "post-loop-state"
+  ],
+  "cases": 30,
+  "dynamic_arms": [
+    "short-trace-final",
+    "long-trace-final",
+    "inside-loop-state",
+    "post-loop-state"
+  ],
+  "dynamic_metrics": [
+    "Omega_hat_NativeTrace",
+    "Omega_hat_StateSize",
+    "Omega_hat_StateLoad"
+  ],
+  "dynamic_pooling": {
+    "arm_group": "all-arms",
+    "arms": [
+      "short-trace-final",
+      "long-trace-final",
+      "inside-loop-state",
+      "post-loop-state"
+    ]
+  },
+  "eligible_predictions": 840,
+  "excluded_by_model_arm_status": {},
+  "excluded_predictions": 0,
+  "included_by_model_arm": {
+    "deepseek-v4-pro-0813-high::inside-loop-state": 30,
+    "deepseek-v4-pro-0813-high::long-trace-final": 30,
+    "deepseek-v4-pro-0813-high::post-loop-state": 30,
+    "deepseek-v4-pro-0813-high::short-trace-final": 30,
+    "deepseek-v4-pro-0813-off::inside-loop-state": 30,
+    "deepseek-v4-pro-0813-off::long-trace-final": 30,
+    "deepseek-v4-pro-0813-off::post-loop-state": 30,
+    "deepseek-v4-pro-0813-off::short-trace-final": 30,
+    "glm-5.3-high::inside-loop-state": 30,
+    "glm-5.3-high::long-trace-final": 30,
+    "glm-5.3-high::post-loop-state": 30,
+    "glm-5.3-high::short-trace-final": 30,
+    "gpt-5.6-sol-high::inside-loop-state": 30,
+    "gpt-5.6-sol-high::long-trace-final": 30,
+    "gpt-5.6-sol-high::post-loop-state": 30,
+    "gpt-5.6-sol-high::short-trace-final": 30,
+    "gpt-5.6-sol-off::inside-loop-state": 30,
+    "gpt-5.6-sol-off::long-trace-final": 30,
+    "gpt-5.6-sol-off::post-loop-state": 30,
+    "gpt-5.6-sol-off::short-trace-final": 30,
+    "qwen3.8-27b-high::inside-loop-state": 30,
+    "qwen3.8-27b-high::long-trace-final": 30,
+    "qwen3.8-27b-high::post-loop-state": 30,
+    "qwen3.8-27b-high::short-trace-final": 30,
+    "qwen3.8-27b-off::inside-loop-state": 30,
+    "qwen3.8-27b-off::long-trace-final": 30,
+    "qwen3.8-27b-off::post-loop-state": 30,
+    "qwen3.8-27b-off::short-trace-final": 30
+  },
+  "independence_limitation": "several executions can come from one problem; the row-level permutation test does not model within-problem dependence",
+  "inputs": {
+    "cases_sha256": "4868e17e46121a22d43badddce6c9df74b510ba0c0810656dba13692caa3e158",
+    "normalized_measurements_sha256": "79c25bbbefae7cf2a3bfa021ae709053cfc308d6b74e520447a85ea059251caa",
+    "results_sha256": "87f9d39f84fddd8fcdce7de0b5f30bf31d92011ed97a5beba7e63d3934f81d3f"
+  },
+  "metric_measurement_coverage": {
+    "notes": [
+      "Coverage and unavailable causes come from normalized measurement statuses; unavailable status tokens are never parsed as values."
+    ],
+    "reason_definitions": {
+      "NOT_MEASURED": "The adapter did not produce a numeric value.",
+      "NOT_REQUESTED": "The metric was not requested for this profile."
+    },
+    "records": [
+      {
+        "arm_id": "short-trace-final",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "short-trace-final",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "short-trace-final",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "long-trace-final",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "long-trace-final",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "long-trace-final",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "post-loop-state",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "post-loop-state",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      },
+      {
+        "arm_id": "post-loop-state",
+        "lower_bound": 0,
+        "measured": 30,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 30,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 30
+      }
+    ],
+    "unit": "selected program profiles"
+  },
+  "models": [
+    "gpt-5.6-sol-high",
+    "gpt-5.6-sol-off",
+    "glm-5.3-high",
+    "deepseek-v4-pro-0813-off",
+    "deepseek-v4-pro-0813-high",
+    "qwen3.8-27b-off",
+    "qwen3.8-27b-high"
+  ],
+  "outputs": {
+    "cohort_accuracy_csv_sha256": "b2d10dcf5f176192c6fa5536bbfa47c68a6823e0bbc9aa05f01db9fe980e0cc1",
+    "cohort_accuracy_md_sha256": "1b02652541a6dfc861805f6c29b3fc2ac8a1ecd3e6515fbab63964e7f7e8f586",
+    "source_points_sha256": "9e670f7e3c397c0ab7888a004d2c853f02cfacb6d22693d0ccacdb568f606d6a"
+  },
+  "schema": "networkx-state-prediction-factor-cohort-v1",
+  "series": {
+    "dynamic": "model x dynamic metric, pooled across the four canonical arms",
+    "static": "model x arm x static metric"
+  },
+  "static_metrics": [
+    "Omega_CC"
+  ]
+}

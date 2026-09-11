@@ -1,0 +1,1 @@
+{"d":9,"diff":4,"digits":[9,9,9,9,9,9,9,9,9],"i":8,"k":19,"new_diff":3,"new_total":15,"result":0,"state":1,"total":12}

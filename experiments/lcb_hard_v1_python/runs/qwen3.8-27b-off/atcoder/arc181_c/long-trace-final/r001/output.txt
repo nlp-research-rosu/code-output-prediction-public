@@ -1,0 +1,94 @@
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+0123456789012345678901234567890
+01234567890123456789012345678......
+
+Wait, let me re-think this more carefully.
+
+Let me trace through the algorithm with N=33:
+
+1. P = [1, 2, 3, ..., 33]
+2. Q = [33, 32, 31, ..., 1]
+
+The grid is initially all None.
+
+For i in range(33):
+- First, we set row (P[i]-1) to 0s where it's None
+- Then, we set column (Q[33-1-i]-1) to 1s where it's None
+
+Let's trace a few iterations:
+
+i=0: P[0]=1, so row 0 gets 0s. Q[32]=1, so col 0 gets 1s where still None.
+After row 0 is set to 0s: grid[0] = [0,0,0,...,0]
+Then col 0: grid[0][0] is already 0, but grid[1..32][0] are None, so they become 1.
+So grid[0][0]=0, grid[1..32][0]=1
+
+i=1: P[1]=2, so row 1 gets 0s where None. Row 1 currently has grid[1][0]=1, rest None.
+So row 1 becomes: [1, 0, 0, ..., 0] (col 0 stays 1 since not None)
+Then Q[31]=2, so col 1 gets 1s where still None.
+grow[0][1]=0 (already set), grid[1][1]=0 (already set in this iteration), grid[2..32][1] are None so become 1.
+
+Continuing this pattern...
+
+Actually, let me think about what the final grid looks like.
+
+For each cell (r,c):
+- It first gets set when either its row is processed or its column is processed, whichever comes first.
+
+Row r is processed at iteration i=r (since P[i]=i+1, so P[r]=r+1... wait no).
+P[i] for i=0..32 is 1,2,...,33. So row (P[i]-1) = i is processed at iteration i.
+
+Column c: Q[N-1-i] where N-1-i goes from 32 down to 0 as i goes from 0 to 32.
+Q[32]=1, Q[31]=2, ..., Q[0]=33.
+So at iteration i, column (Q[32-i]-1) is processed.
+Q[32-i] = 33-(32-i) = i+1. So column (i+1-1)=i is processed at iteration i.
+
+So at iteration i:
+- Row i is filled with 0s where None
+- Column i is filled with 1s where None
+
+For cell (r,c):
+- If r <= c: Row r is processed at iteration r. At that time, if c > r, column c hasn't been processed yet. So when row r is processed, cell (r,c) is None (assuming c>r), so it gets set to 0. Then later when column c is processed, it's already 0.
+- If r > c: Column c is processed at iteration c. At that time, row r hasn't been processed yet. So when column c is processed, cell (r,c) is None, so it gets set to 1. Then later when row r is processed, it's already 1.
+- If r == c: Row r is processed first (in the same iteration), sets it to 0. Then column r tries to set it to 1, but it's already 0.
+
+So the final grid has:
+- 0 on and above the main diagonal (r <= c)
+- 1 below the main diagonal (r > c)
+
+Let me verify with small case: N=2
+P=[1,2], Q=[2,1]
+
+i=0: row 0 -> [0,0]. Col 0: grid[0][0]=0 (keep), grid[1][0]=None->1. Grid: [[0,0],[1,None]]
+i=1: row 1: grid[1][0]=1 (keep), grid[1][1]=None->0. Row 1 becomes [1,0]. Col 1: grid[0][1]=0 (keep), grid[1][1]=0 (keep). 
+Final: [[0,0],[1,0]]
+
+r<=c: (0,0)=0, (0,1)=0 ✓
+r>c: (1,0)=1 ✓
+
+So for N=33, the output should be:
+Row r: first r characters are '1', remaining (33-r) characters are '0'?
+
+Wait no. For row r:
+- Columns c where c >= r: value is 0
+- Columns c where c < r: value is 1
+
+So row r has '1'*r + '0'*(33-r)
+
+Row 0: ''*0 + '0'*33 = 33 zeros
+Row 1: '1'*1 + '0'*32
+Row 2: '1'*2 + '0'*31
+...
+Row 32: '1'*32 + '0'*1
+Row 33? No, rows are 0-32.

@@ -1,0 +1,1 @@
+{"col":4,"count":2,"dc":1,"dr":0,"row":4,"steps_left":1,"visited_mask":811457}

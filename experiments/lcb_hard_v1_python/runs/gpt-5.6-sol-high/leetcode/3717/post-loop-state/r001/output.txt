@@ -1,0 +1,1 @@
+{"count_tree":[...],"index":1001,"left_sum":6243975,"median":49936,"median_rank":504,"sum_tree":[...],"total_sum":25033020,"value":26920,"x":501}

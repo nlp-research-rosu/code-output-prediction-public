@@ -1,0 +1,1 @@
+{"group_sum": 101, "i": 1, "k": 1, "len(sums)": 1, "max_diff": 0, "prefix[i-k]": 0, "prefix[i]": 1}

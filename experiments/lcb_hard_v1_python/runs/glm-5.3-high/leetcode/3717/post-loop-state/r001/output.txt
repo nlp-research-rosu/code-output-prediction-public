@@ -1,0 +1,1 @@
+Instrumentation branch fires: index=1001, left_sum=6229537, median=49936, median_rank=501, total_sum=25032170, value=26920, x=501; count_tree and sum_tree are the final 1003-element Fenwick arrays.

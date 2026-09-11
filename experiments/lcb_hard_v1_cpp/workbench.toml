@@ -1,0 +1,50 @@
+repetitions = 1
+
+[[models]]
+id = "gpt-5.6-sol-high"
+provider = "openai-codex"
+model = "gpt-5.6-sol"
+reasoning = "high"
+timeout_seconds = 3600
+
+[[models]]
+id = "gpt-5.6-sol-off"
+provider = "openai-codex"
+model = "gpt-5.6-sol"
+reasoning = "minimal"
+timeout_seconds = 1800
+
+[[models]]
+id = "glm-5.3-high"
+provider = "zai-coding-cn"
+model = "glm-5.3"
+reasoning = "high"
+timeout_seconds = 3600
+
+[[models]]
+id = "deepseek-v4-pro-0813-off"
+provider = "openrouter"
+model = "deepseek/deepseek-v4-pro-0813"
+reasoning = "off"
+timeout_seconds = 1800
+
+[[models]]
+id = "deepseek-v4-pro-0813-high"
+provider = "openrouter"
+model = "deepseek/deepseek-v4-pro-0813"
+reasoning = "high"
+timeout_seconds = 3600
+
+[[models]]
+id = "qwen3.8-27b-off"
+provider = "openrouter"
+model = "qwen/qwen3.8-27b"
+reasoning = "off"
+timeout_seconds = 1800
+
+[[models]]
+id = "qwen3.8-27b-high"
+provider = "openrouter"
+model = "qwen/qwen3.8-27b"
+reasoning = "high"
+timeout_seconds = 3600

@@ -1,0 +1,21 @@
+{
+  "alternative": "failure factor values are larger than success factor values",
+  "analyzer_sha256": "d465c29553f8a0d23d76bc022652d7efc6c4336e148554aae8aa12c4e069e9a0",
+  "global_seed": 20260812,
+  "logistic_regressions": {
+    "config_file": "experiments/classic_algorithms_state_prediction/reports/prediction-factor-analysis/logistic-regression-config.json",
+    "config_sha256": "0e9d5edf3deb926a31c423da2ef6d6f5900c5fb94bbadf8dc62e28c8b39f0771",
+    "fit_count": 7,
+    "fit_method": "standard maximum-likelihood logistic regression",
+    "interval": "Wald 95%",
+    "model": "logit P(wrong=1) = beta0 + beta1 * log2(metric)"
+  },
+  "p_value_correction": "none",
+  "permutations": 10000,
+  "point_count": 3360,
+  "points_file": "experiments/classic_algorithms_state_prediction/reports/prediction-factor-analysis/data/source-points.csv",
+  "points_sha256": "8ba12edf8efdbd7ed0db1de37ea89bc7cfa3a695fb681ff970413f9b747add3e",
+  "prediction_count": 840,
+  "schema": "prediction-factor-analysis-v1",
+  "series_count": 49
+}

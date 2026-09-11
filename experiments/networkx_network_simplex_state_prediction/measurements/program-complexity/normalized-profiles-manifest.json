@@ -1,0 +1,82 @@
+{
+  "benchmark": "networkx_network_simplex_state_prediction",
+  "columns": [
+    "schema_version",
+    "benchmark",
+    "problem",
+    "arm",
+    "language",
+    "source_sha256",
+    "input_sha256",
+    "execution_id",
+    "metric",
+    "value",
+    "value_relation",
+    "status",
+    "not_measured_reason",
+    "adapter",
+    "adapter_version",
+    "runtime",
+    "observation_convention",
+    "repetitions",
+    "source_profile"
+  ],
+  "config": {
+    "path": "experiments/networkx_network_simplex_state_prediction/measurements/program-complexity/normalized-profiles-config.json",
+    "sha256": "d5931b83b42c03220ca3c16a89db9a163b382138aae3d8b3621a32aeb1e9cb19"
+  },
+  "coverage": {
+    "Omega_CC": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 120,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_NativeTrace": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 120,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_StateLoad": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 120,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_StateSize": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 120,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    }
+  },
+  "execution_profile_count": 120,
+  "generator": {
+    "path": "shared/metrics/scripts/normalize_profiles.py",
+    "sha256": "bb8e544c8ce8baa856dae5589d9f0998b3889aa024ace5329696b0806df10faa"
+  },
+  "inputs": [
+    {
+      "path": "experiments/networkx_network_simplex_state_prediction/measurements/program-complexity/measurements.csv",
+      "sha256": "4b5c6ff5cefc6e769dca4f56ad55d2779e9f9e617fc2cbc68f67a24e4929b468"
+    },
+    {
+      "path": "experiments/networkx_network_simplex_state_prediction/measurements/program-complexity/measurement-manifest.json",
+      "sha256": "8c8d43dbabafcd8253dc72c509565e5ae1f2eee19278e50654406dbd8a37202d"
+    }
+  ],
+  "numeric_recovery_policy": "preserve",
+  "output": {
+    "path": "experiments/networkx_network_simplex_state_prediction/measurements/program-complexity/normalized-profiles.csv",
+    "sha256": "79c25bbbefae7cf2a3bfa021ae709053cfc308d6b74e520447a85ea059251caa"
+  },
+  "row_count": 480,
+  "schema_version": "program-complexity-normalized-v2",
+  "status_vocabulary": [
+    "MEASURED",
+    "LOWER_BOUND",
+    "NOT_MEASURED",
+    "NOT_REQUESTED"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "formats": [
+    "png"
+  ],
+  "target_bins": 4,
+  "dpi": 220,
+  "log1p_metrics": [
+    "Omega_CC",
+    "Omega_hat_NativeTrace",
+    "Omega_hat_StateSize",
+    "Omega_hat_StateLoad"
+  ],
+  "metric_units": {
+    "Omega_CC": "independent paths",
+    "Omega_hat_NativeTrace": "Clang coverage-region events",
+    "Omega_hat_StateSize": "runtime value cells",
+    "Omega_hat_StateLoad": "runtime value-cell observations"
+  },
+  "metric_descriptions": {
+    "Omega_CC": "Independent routes through the written source; larger means more decisions and possible paths.",
+    "Omega_hat_NativeTrace": "Number of target-source Clang coverage-region events executed; this is execution length, not time or source lines.",
+    "Omega_hat_StateSize": "Greatest number of runtime value cells reachable from live program variables at one observation point.",
+    "Omega_hat_StateLoad": "Reachable runtime value cells summed over every state observation in the run."
+  },
+  "model_order": [
+    "gpt-5.6-sol-high",
+    "gpt-5.6-sol-off",
+    "glm-5.3-high",
+    "deepseek-v4-pro-0813-off",
+    "deepseek-v4-pro-0813-high",
+    "qwen3.8-27b-off",
+    "qwen3.8-27b-high"
+  ],
+  "model_labels": {
+    "gpt-5.6-sol-high": "GPT-5.6 Sol high",
+    "gpt-5.6-sol-off": "GPT-5.6 Sol off",
+    "glm-5.3-high": "GLM-5.3 high",
+    "deepseek-v4-pro-0813-off": "DeepSeek V4 Pro 0813 off",
+    "deepseek-v4-pro-0813-high": "DeepSeek V4 Pro 0813 high",
+    "qwen3.8-27b-off": "Qwen3.8 27B off",
+    "qwen3.8-27b-high": "Qwen3.8 27B high"
+  },
+  "group_labels": {
+    "short-trace-final": "Short-trace input, final output",
+    "long-trace-final": "Long-trace input, final output",
+    "inside-loop-state": "State inside the selected loop",
+    "post-loop-state": "State after the selected loop",
+    "all-arms": "Pooled: short-trace-final, long-trace-final, inside-loop-state, post-loop-state"
+  },
+  "group_order": [
+    "short-trace-final",
+    "long-trace-final",
+    "inside-loop-state",
+    "post-loop-state",
+    "all-arms"
+  ],
+  "logistic_regression_sources": [
+    {
+      "name": "cumulative-state-load",
+      "points": "data/analysis/logistic-regression-points.csv",
+      "results": "data/analysis/logistic-regression-results.csv",
+      "curves": "data/analysis/logistic-regression-curves.csv"
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "arm_labels": {
+    "inside-loop-state": "inside-loop-state",
+    "long-trace-final": "long-trace-final",
+    "post-loop-state": "post-loop-state",
+    "short-trace-final": "short-trace-final"
+  },
+  "dynamic_analysis": {
+    "adapter_version": "clang-18.1.8-coverage-state-load-v1",
+    "arm_group": "all-arms",
+    "arms": [
+      "short-trace-final",
+      "long-trace-final",
+      "inside-loop-state",
+      "post-loop-state"
+    ],
+    "execution_profile_arms": {
+      "inside-loop-state": "inside-loop-state",
+      "long-trace-final": "long-trace-final",
+      "post-loop-state": "post-loop-state",
+      "short-trace-final": "short-trace-final"
+    },
+    "independence_limitation": "four predictions per program are analyzed as rows; the row-level permutation test does not model within-program dependence",
+    "pooling_policy": "pool every eligible prediction from the four canonical arms",
+    "profile_counts": {
+      "inside-loop-state": 152,
+      "long-trace-final": 154,
+      "post-loop-state": 152,
+      "short-trace-final": 154
+    },
+    "series": "model x metric"
+  },
+  "dynamic_pooling": {
+    "arm_group": "all-arms",
+    "arms": [
+      "short-trace-final",
+      "long-trace-final",
+      "inside-loop-state",
+      "post-loop-state"
+    ]
+  },
+  "eligible_prediction_count": 612,
+  "excluded_by_model_arm_status": {
+    "gpt-5.6-sol-off::inside-loop-state::no_response": 1,
+    "gpt-5.6-sol-off::post-loop-state::no_response": 1,
+    "qwen3.8-27b-high::inside-loop-state::no_response": 1,
+    "qwen3.8-27b-high::post-loop-state::no_response": 1
+  },
+  "experiment": "codecontests_reasoning_state_prediction",
+  "included_by_model_arm": {
+    "deepseek-v4-pro-0813-high::inside-loop-state": 22,
+    "deepseek-v4-pro-0813-high::long-trace-final": 22,
+    "deepseek-v4-pro-0813-high::post-loop-state": 22,
+    "deepseek-v4-pro-0813-high::short-trace-final": 22,
+    "deepseek-v4-pro-0813-off::inside-loop-state": 22,
+    "deepseek-v4-pro-0813-off::long-trace-final": 22,
+    "deepseek-v4-pro-0813-off::post-loop-state": 22,
+    "deepseek-v4-pro-0813-off::short-trace-final": 22,
+    "glm-5.3-high::inside-loop-state": 22,
+    "glm-5.3-high::long-trace-final": 22,
+    "glm-5.3-high::post-loop-state": 22,
+    "glm-5.3-high::short-trace-final": 22,
+    "gpt-5.6-sol-high::inside-loop-state": 22,
+    "gpt-5.6-sol-high::long-trace-final": 22,
+    "gpt-5.6-sol-high::post-loop-state": 22,
+    "gpt-5.6-sol-high::short-trace-final": 22,
+    "gpt-5.6-sol-off::inside-loop-state": 21,
+    "gpt-5.6-sol-off::long-trace-final": 22,
+    "gpt-5.6-sol-off::post-loop-state": 21,
+    "gpt-5.6-sol-off::short-trace-final": 22,
+    "qwen3.8-27b-high::inside-loop-state": 21,
+    "qwen3.8-27b-high::long-trace-final": 22,
+    "qwen3.8-27b-high::post-loop-state": 21,
+    "qwen3.8-27b-high::short-trace-final": 22,
+    "qwen3.8-27b-off::inside-loop-state": 22,
+    "qwen3.8-27b-off::long-trace-final": 22,
+    "qwen3.8-27b-off::post-loop-state": 22,
+    "qwen3.8-27b-off::short-trace-final": 22
+  },
+  "inputs": {
+    "profiles": {
+      "path": "experiments/codecontests_reasoning_state_prediction/measurements/program-complexity/profiles.json",
+      "sha256": "e93b5f78a444c5320d528801a5b163ff8d815300a1f1bb534ed1274e2ed60d6f"
+    },
+    "results": {
+      "path": "experiments/codecontests_reasoning_state_prediction/reports/prediction-factor-analysis/data/graded-predictions.json",
+      "sha256": "d6257dbf04a94347334721c0c1b71255567b0cad0691d8bbac8efdcbd484bcbb"
+    }
+  },
+  "metric_measurement_coverage": {
+    "notes": [],
+    "reason_definitions": {
+      "MEASUREMENT_FAILED": "The metric adapter did not produce a numeric value."
+    },
+    "records": [
+      {
+        "arm_id": "short-trace-final",
+        "measured": 22,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "short-trace-final",
+        "measured": 22,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "short-trace-final",
+        "measured": 22,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "long-trace-final",
+        "measured": 22,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "long-trace-final",
+        "measured": 22,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "long-trace-final",
+        "measured": 22,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "measured": 22,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "measured": 22,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "measured": 22,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "post-loop-state",
+        "measured": 22,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "post-loop-state",
+        "measured": 22,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      },
+      {
+        "arm_id": "post-loop-state",
+        "measured": 22,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 22,
+        "unavailable": 0,
+        "unavailable_by_reason": {}
+      }
+    ],
+    "unit": "selected program profiles"
+  },
+  "metrics": {
+    "dynamic": [
+      "Omega_hat_NativeTrace",
+      "Omega_hat_StateSize",
+      "Omega_hat_StateLoad"
+    ],
+    "static": [
+      "Omega_CC"
+    ]
+  },
+  "model_ids": [
+    "gpt-5.6-sol-high",
+    "gpt-5.6-sol-off",
+    "glm-5.3-high",
+    "deepseek-v4-pro-0813-off",
+    "deepseek-v4-pro-0813-high",
+    "qwen3.8-27b-off",
+    "qwen3.8-27b-high"
+  ],
+  "not_collected_prediction_count": 0,
+  "outcome_policy": {
+    "correctness_field": "semantic_correct",
+    "eligible_statuses": [
+      "correct_invalid",
+      "correct_valid",
+      "wrong_invalid",
+      "wrong_valid"
+    ],
+    "excluded_by_model_arm_status": {
+      "gpt-5.6-sol-off::inside-loop-state::no_response": 1,
+      "gpt-5.6-sol-off::post-loop-state::no_response": 1,
+      "qwen3.8-27b-high::inside-loop-state::no_response": 1,
+      "qwen3.8-27b-high::post-loop-state::no_response": 1
+    },
+    "not_collected": [],
+    "status_counts": {
+      "correct_invalid": 20,
+      "correct_valid": 244,
+      "no_response": 4,
+      "wrong_invalid": 35,
+      "wrong_valid": 313
+    }
+  },
+  "planned_prediction_count": 616,
+  "point_count": 2448,
+  "prediction_count": 616,
+  "program_count": 22,
+  "schema": "codecontests-prediction-factor-cohort-v2",
+  "series_count": 49,
+  "static_analysis": {
+    "profile_reuse_counts": {
+      "inside": 152,
+      "original": 308,
+      "post": 152
+    },
+    "series": "model x arm x metric",
+    "source_scope": "exact byte-identical source shown in each arm"
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "benchmark": "codecontests_reasoning_state_prediction",
+  "columns": [
+    "schema_version",
+    "benchmark",
+    "problem",
+    "arm",
+    "language",
+    "source_sha256",
+    "input_sha256",
+    "execution_id",
+    "metric",
+    "value",
+    "value_relation",
+    "status",
+    "not_measured_reason",
+    "adapter",
+    "adapter_version",
+    "runtime",
+    "observation_convention",
+    "repetitions",
+    "source_profile"
+  ],
+  "config": {
+    "path": "experiments/codecontests_reasoning_state_prediction/measurements/program-complexity/normalized-profiles-config.json",
+    "sha256": "3aa98624521fdf6c7171b68747d3bad7fc37b901dbade70a4c1ff7aae2c84c82"
+  },
+  "coverage": {
+    "Omega_CC": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 88,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_NativeTrace": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 88,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_StateLoad": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 88,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_StateSize": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 88,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    }
+  },
+  "execution_profile_count": 88,
+  "generator": {
+    "path": "shared/metrics/scripts/normalize_profiles.py",
+    "sha256": "bb8e544c8ce8baa856dae5589d9f0998b3889aa024ace5329696b0806df10faa"
+  },
+  "inputs": [
+    {
+      "path": "experiments/codecontests_reasoning_state_prediction/measurements/program-complexity/profiles.json",
+      "sha256": "e93b5f78a444c5320d528801a5b163ff8d815300a1f1bb534ed1274e2ed60d6f"
+    }
+  ],
+  "numeric_recovery_policy": "preserve",
+  "output": {
+    "path": "experiments/codecontests_reasoning_state_prediction/measurements/program-complexity/normalized-profiles.csv",
+    "sha256": "96cc4007491adad847fb09eb914fe34ebde88f5e1f9b0a8353ea0cb876d8475f"
+  },
+  "row_count": 352,
+  "schema_version": "program-complexity-normalized-v2",
+  "status_vocabulary": [
+    "MEASURED",
+    "LOWER_BOUND",
+    "NOT_MEASURED",
+    "NOT_REQUESTED"
+  ]
+}

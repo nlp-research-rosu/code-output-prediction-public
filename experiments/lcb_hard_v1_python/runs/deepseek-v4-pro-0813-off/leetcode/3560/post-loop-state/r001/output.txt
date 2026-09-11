@@ -1,0 +1,1 @@
+{"dist[i][j]": 12, "i": 0, "j": 1, "mask": 4, "p": 8, "popcount(mask)": 1}

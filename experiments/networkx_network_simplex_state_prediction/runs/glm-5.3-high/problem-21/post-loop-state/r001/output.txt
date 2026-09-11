@@ -1,0 +1,1 @@
+Unable to compute the exact network-simplex potentials without executing the full pivot sequence.

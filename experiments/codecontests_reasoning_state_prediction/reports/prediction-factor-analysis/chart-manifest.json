@@ -1,0 +1,102 @@
+{
+  "analysis_sources": [
+    {
+      "available_series_count": 49,
+      "excluded_series_count": 0,
+      "include_groups": [],
+      "include_scopes": [],
+      "name": "default",
+      "points_file": "experiments/codecontests_reasoning_state_prediction/reports/prediction-factor-analysis/data/analysis/raw-points.csv",
+      "points_sha256": "c675475742fd1bde3a98cf5695383288a082f1e14fadd50bae612cda5e78cc85",
+      "selected_series_count": 49,
+      "series_results_file": "experiments/codecontests_reasoning_state_prediction/reports/prediction-factor-analysis/data/analysis/series-results.csv",
+      "series_results_sha256": "912e642d92a43d3916e1ba54ac626e807ff7c160082e37ff47d1a57bd931ec6e"
+    }
+  ],
+  "chart_count": 7,
+  "chart_counts_by_scope": {
+    "dynamic": 3,
+    "static": 4
+  },
+  "chart_data_file": "chart-data.csv",
+  "chart_data_row_count": 168,
+  "chart_data_sha256": "4f8e226064823048c74a67345e6ecf925afcb18dc100608f2e98dfdca7ad55f0",
+  "config_file": "experiments/codecontests_reasoning_state_prediction/reports/prediction-factor-analysis/chart-config.json",
+  "config_sha256": "c7dc855eb442ca2666ad2434d3af19d17d4b4ae841a74fc6819668a1b994881a",
+  "generator_sha256": "644fa84fd055af4800b942396393ac9490c70a9a33192f0f9f6030c35c5c0603",
+  "logistic_chart_data_file": "logistic-chart-data.csv",
+  "logistic_chart_data_row_count": 28,
+  "logistic_chart_data_sha256": "c291751fc86fbe3f76f07ad282c7fa7459d7a617f14c95169eebda6ebe9171eb",
+  "logistic_regression_sources": [
+    {
+      "curve_point_count": 1680,
+      "curves_file": "data/analysis/logistic-regression-curves.csv",
+      "curves_sha256": "e4627119704908a69aac71a75a8e9684ac09568d90fd213ea546406ce823b37a",
+      "name": "cumulative-state-load",
+      "point_count": 612,
+      "points_file": "data/analysis/logistic-regression-points.csv",
+      "points_sha256": "85be093d7ece089a4c1c07b7202ec7ef8eff21c885df0b181de01b9f6563b851",
+      "result_count": 7,
+      "results_file": "data/analysis/logistic-regression-results.csv",
+      "results_sha256": "1ebf004accc4b2f3d4dc1044abc0de8a280828c1015f10f96b15957c7356eb32"
+    }
+  ],
+  "numpy_version": "2.1.3",
+  "output_sha256": {
+    "chart-data.csv": "4f8e226064823048c74a67345e6ecf925afcb18dc100608f2e98dfdca7ad55f0",
+    "charts.md": "31f41ed32d633c6615a1430a09d06b00b15ee320d44277c3202117546eefb8ae",
+    "charts/dynamic/all-arms/omega-hat-nativetrace.png": "5416f45857b2fbae94a6107c99b45e9c4ff3be0f1692fea07813d6a1fe36679d",
+    "charts/dynamic/all-arms/omega-hat-stateload.png": "2cf98ae95925cf981484cbc4221f2e48cbe05b9e12ffcd63d388a2288da2a765",
+    "charts/dynamic/all-arms/omega-hat-statesize.png": "2fe5f7ccabb7d58d9f37234b7f70a83e2606992016902cad06bb29fb974fa767",
+    "charts/static/inside-loop-state/omega-cc.png": "b1abf9bd7bd1c16bf4c8e4bcd296e30ae71a5756f70c6e925c51e99bd8228c7d",
+    "charts/static/long-trace-final/omega-cc.png": "6928f77e5150a6ee39e0070828dc140a89600098560fafb6b28ebe4fd4772fa8",
+    "charts/static/post-loop-state/omega-cc.png": "cc3166ad9de28299704d673db1613dfb39cc1234236c5fda202363056fcb7a03",
+    "charts/static/short-trace-final/omega-cc.png": "457b49d48132d57101f50e6a96a5ed73f82e0f6b621324f05e325bfe4e9731f9",
+    "logistic-chart-data.csv": "c291751fc86fbe3f76f07ad282c7fa7459d7a617f14c95169eebda6ebe9171eb"
+  },
+  "point_count": 2448,
+  "python_version": "3.12.11",
+  "schema": "generate-analysis-charts-v4",
+  "series_count": 49,
+  "style": {
+    "binned_accuracy": {
+      "capsize": 3,
+      "color": "#f05a28",
+      "elinewidth": 1.4,
+      "label": "binned accuracy + Wilson 95% CI",
+      "marker": "square",
+      "markersize": 6,
+      "matplotlib_marker": "s"
+    },
+    "logistic_fit": {
+      "band_alpha": 0.16,
+      "color": "#2478d4",
+      "label": "logistic fit + 95% confidence band",
+      "linewidth": 2
+    },
+    "overall_accuracy": {
+      "color": "#81817c",
+      "dash_pattern": [
+        3,
+        3
+      ],
+      "label": "overall accuracy",
+      "linewidth": 1.4
+    },
+    "prediction_outcome": {
+      "alpha": 0.45,
+      "color": "#8b8b86",
+      "label": "prediction outcome",
+      "marker": "circle",
+      "matplotlib_marker": "o",
+      "size": 18
+    },
+    "schema": "prediction-factor-chart-style-v1",
+    "statistics_annotation": {
+      "color": "#555550",
+      "fontsize": 7.5,
+      "lines": 2,
+      "placement": "panel-header"
+    }
+  }
+}

@@ -1,0 +1,1 @@
+{"l":[0, followed by 252 ones, followed by 499 twos, followed by 252 ones],"list(queue)":[252,752],"node":753,"nxt":754,"out":[false, followed by 251 trues, followed by 501 falses, followed by 251 trues]}

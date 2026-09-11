@@ -1,0 +1,90 @@
+{
+  "benchmark": "lcb_hard_v1_python",
+  "columns": [
+    "schema_version",
+    "benchmark",
+    "problem",
+    "arm",
+    "language",
+    "source_sha256",
+    "input_sha256",
+    "execution_id",
+    "metric",
+    "value",
+    "value_relation",
+    "status",
+    "not_measured_reason",
+    "adapter",
+    "adapter_version",
+    "runtime",
+    "observation_convention",
+    "repetitions",
+    "source_profile"
+  ],
+  "config": {
+    "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/normalized-profiles-config.json",
+    "sha256": "53f5a0d6938aaa60b3799d5083c1cdcd7b9fa0277970dba5faf27f5618e37350"
+  },
+  "coverage": {
+    "Omega_CC": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 1132,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_NativeTrace": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 1132,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_StateLoad": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 1132,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_StateSize": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 1132,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    }
+  },
+  "execution_profile_count": 1132,
+  "generator": {
+    "path": "shared/metrics/scripts/normalize_profiles.py",
+    "sha256": "bb8e544c8ce8baa856dae5589d9f0998b3889aa024ace5329696b0806df10faa"
+  },
+  "inputs": [
+    {
+      "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/short-trace-final/python/profiles.jsonl",
+      "sha256": "220f157797279b82e09624a83e8f273952c9467385f6b74fdf6737e21a6b4adf"
+    },
+    {
+      "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/long-trace-final/python/profiles.jsonl",
+      "sha256": "47519a3d46f5c3aa56c01d75e3e6492c4479625da506844c2949f7c9517dc0f8"
+    },
+    {
+      "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/inside-loop-state/python/profiles.jsonl",
+      "sha256": "25cffe1c97d7a3df07ad1cfd179e58ef89931d8d6e2723a11e7d10b44d56b3a9"
+    },
+    {
+      "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/post-loop-state/python/profiles.jsonl",
+      "sha256": "7dbe3b11afdd2cc0be3c041a8bdc6cc98b5fb818ae3c4ffacc2b4e2fb29717f3"
+    }
+  ],
+  "numeric_recovery_policy": "assume_equal",
+  "output": {
+    "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/normalized-profiles.csv",
+    "sha256": "fe463152b66a4658d1189bcd46adec506bc5fb008c2384348673947a73cda1ad"
+  },
+  "row_count": 4528,
+  "schema_version": "program-complexity-normalized-v2",
+  "status_vocabulary": [
+    "MEASURED",
+    "LOWER_BOUND",
+    "NOT_MEASURED",
+    "NOT_REQUESTED"
+  ]
+}

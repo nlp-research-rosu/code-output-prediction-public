@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "<string>", line 79, in <module>
+  File "<string>", line 77, in main
+  File "<string>", line 37, in canTraverseAllPairs
+UnboundLocalError: cannot access local variable 'factor' where it is not associated with a value

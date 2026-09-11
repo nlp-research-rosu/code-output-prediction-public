@@ -1,0 +1,1 @@
+{"n":10,"([&](){ std::vector<long long> state; for (auto value : s) state.push_back(value()); return state; })()":[0,1,1,0,1,0,0,971875007,1,0,0,862857149,0,730769236,734615390,815535720,...]}

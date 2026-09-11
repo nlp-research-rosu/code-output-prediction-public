@@ -1,0 +1,90 @@
+{
+  "benchmark": "classic_algorithms_state_prediction",
+  "columns": [
+    "schema_version",
+    "benchmark",
+    "problem",
+    "arm",
+    "language",
+    "source_sha256",
+    "input_sha256",
+    "execution_id",
+    "metric",
+    "value",
+    "value_relation",
+    "status",
+    "not_measured_reason",
+    "adapter",
+    "adapter_version",
+    "runtime",
+    "observation_convention",
+    "repetitions",
+    "source_profile"
+  ],
+  "config": {
+    "path": "experiments/classic_algorithms_state_prediction/measurements/program-complexity/normalized-profiles-config.json",
+    "sha256": "f7c7832a8f9dab490e2e85a9ec4098e4bb6c7d56b38fcf1b6d57daab3d96eea7"
+  },
+  "coverage": {
+    "Omega_CC": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 120,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_NativeTrace": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 120,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_StateLoad": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 120,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    },
+    "Omega_hat_StateSize": {
+      "LOWER_BOUND": 0,
+      "MEASURED": 120,
+      "NOT_MEASURED": 0,
+      "NOT_REQUESTED": 0
+    }
+  },
+  "execution_profile_count": 120,
+  "generator": {
+    "path": "shared/metrics/scripts/normalize_profiles.py",
+    "sha256": "bb8e544c8ce8baa856dae5589d9f0998b3889aa024ace5329696b0806df10faa"
+  },
+  "inputs": [
+    {
+      "path": "experiments/classic_algorithms_state_prediction/measurements/program-complexity/short-trace-final/python/profiles.jsonl",
+      "sha256": "dc4608d8dde2bacb6fc6db4837ebc06eadef0ccfaaed0dd9b100b8f4737d48a0"
+    },
+    {
+      "path": "experiments/classic_algorithms_state_prediction/measurements/program-complexity/long-trace-final/python/profiles.jsonl",
+      "sha256": "6dc5965c1244c7a64ef430f96209a7c08a8230dcb7837ff8539018dc51e59d64"
+    },
+    {
+      "path": "experiments/classic_algorithms_state_prediction/measurements/program-complexity/inside-loop-state/python/profiles.jsonl",
+      "sha256": "5ee60ae778ec747eb8bd8b027fb52825738b03977584eb6f3844adc8413892aa"
+    },
+    {
+      "path": "experiments/classic_algorithms_state_prediction/measurements/program-complexity/post-loop-state/python/profiles.jsonl",
+      "sha256": "a41c2a580622c0d35a263b9a089e6c289b3621a78edbad5777273739cc018af5"
+    }
+  ],
+  "numeric_recovery_policy": "preserve",
+  "output": {
+    "path": "experiments/classic_algorithms_state_prediction/measurements/program-complexity/normalized-profiles.csv",
+    "sha256": "30a60cfd79236697c153c45a7fab15e4b1c15978f62cbf3e28fa9b663e6f1425"
+  },
+  "row_count": 480,
+  "schema_version": "program-complexity-normalized-v2",
+  "status_vocabulary": [
+    "MEASURED",
+    "LOWER_BOUND",
+    "NOT_MEASURED",
+    "NOT_REQUESTED"
+  ]
+}

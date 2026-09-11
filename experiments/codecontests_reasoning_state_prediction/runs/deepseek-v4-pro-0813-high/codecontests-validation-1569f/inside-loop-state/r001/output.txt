@@ -1,0 +1,1 @@
+{"flag":1,"group":2,"mp.size()":24,"pos":5,"vector<int>(c,c+n+1)":[0,3,2,0,0,0,0],"vector<int>(maps,maps+n)":[1,1,2,1,2,1]}

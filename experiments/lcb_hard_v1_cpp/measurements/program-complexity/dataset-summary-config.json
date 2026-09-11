@@ -1,0 +1,19 @@
+{
+  "schema": "program-complexity-dataset-summary-config-v1",
+  "rows": [
+    {
+      "dataset_id": "lcb_hard_v1_cpp-cpp20",
+      "label": "lcb_hard_v1_cpp (C++20)",
+      "static_profiles": [
+        "short-trace-final/cpp/profiles.jsonl"
+      ],
+      "dynamic_profiles": [
+        "short-trace-final/cpp/profiles.jsonl",
+        "long-trace-final/cpp/profiles.jsonl",
+        "inside-loop-state/cpp/profiles.jsonl",
+        "post-loop-state/cpp/profiles.jsonl"
+      ],
+      "note": "Static medians use one clean source per case. Dynamic medians use the four canonical execution identities per case when supported by the Clang adapter."
+    }
+  ]
+}

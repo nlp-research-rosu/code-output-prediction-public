@@ -1,0 +1,1 @@
+{"i":501,"k":[501 ones followed by 501 zeros],"l":[-1,0,1,...,499 followed by 501 zeros],"r":[1,2,3,...,501 followed by 501 zeros]}

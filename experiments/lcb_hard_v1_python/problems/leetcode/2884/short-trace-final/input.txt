@@ -1,0 +1,1 @@
+{"forbidden":["aaa","cb"],"word":"cbaaaabc"}

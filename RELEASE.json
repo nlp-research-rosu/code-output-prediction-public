@@ -1,0 +1,15 @@
+{
+  "release": "2026-09-11",
+  "source_snapshot_commit": "1d7d40bfdcf49d50cfdad24d39913f569684047e",
+  "experiments": [
+    "classic_algorithms_state_prediction",
+    "codecontests_reasoning_state_prediction",
+    "lcb_hard_v1_cpp",
+    "lcb_hard_v1_python",
+    "networkx_network_simplex_state_prediction"
+  ],
+  "native_sessions_included": true,
+  "raw_measurement_evidence_included": true,
+  "analysis_regeneration_requires_model_calls": false,
+  "reproduction_python": "3.12.11"
+}

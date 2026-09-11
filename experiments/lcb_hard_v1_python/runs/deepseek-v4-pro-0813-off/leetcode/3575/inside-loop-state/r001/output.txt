@@ -1,0 +1,1 @@
+{"i":7,"j":15,"len(right[i][j])":5,"nums[i]":38,"sorted(right[i][j])":[0,2,4,6,8],"x":2}

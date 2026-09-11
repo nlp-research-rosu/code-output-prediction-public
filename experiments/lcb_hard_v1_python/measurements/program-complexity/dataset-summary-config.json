@@ -1,0 +1,20 @@
+{
+  "schema": "program-complexity-dataset-summary-config-v1",
+  "rows": [
+    {
+      "dataset_id": "lcb_hard_v1_python-python",
+      "label": "lcb_hard_v1_python (Python)",
+      "numeric_recovery_policy": "assume_equal",
+      "static_profiles": [
+        "short-trace-final/python/profiles.jsonl"
+      ],
+      "dynamic_profiles": [
+        "short-trace-final/python/profiles.jsonl",
+        "long-trace-final/python/profiles.jsonl",
+        "inside-loop-state/python/profiles.jsonl",
+        "post-loop-state/python/profiles.jsonl"
+      ],
+      "note": "Static medians use one clean source per case. Dynamic medians use the four canonical execution identities per case."
+    }
+  ]
+}

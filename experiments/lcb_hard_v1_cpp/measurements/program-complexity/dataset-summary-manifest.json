@@ -1,0 +1,77 @@
+{
+  "config": {
+    "path": "dataset-summary-config.json",
+    "sha256": "02b4f67303e2944e58545486fd49fab347080f7eb2cf2984433fd5042d00f895"
+  },
+  "metrics": {
+    "dynamic": [
+      "Omega_hat_NativeTrace",
+      "Omega_hat_StateSize",
+      "Omega_hat_StateLoad"
+    ],
+    "static": [
+      "Omega_CC"
+    ]
+  },
+  "rows": [
+    {
+      "dataset_id": "lcb_hard_v1_cpp-cpp20",
+      "dynamic_profiles": {
+        "files": [
+          {
+            "path": "short-trace-final/cpp/profiles.jsonl",
+            "sha256": "4ffd37a7aad6033b6f8f329a90d07c85af8b9560943fd1c76ad10cce7fb3b7c3"
+          },
+          {
+            "path": "long-trace-final/cpp/profiles.jsonl",
+            "sha256": "e4112933188e81708c8bd294e95fb6515af574b24d106149fe06c35bfe4a796d"
+          },
+          {
+            "path": "inside-loop-state/cpp/profiles.jsonl",
+            "sha256": "0d28a7cebd519fe1bbdeabc79b527051c4f4ee0de03480b065fe5971d9041a54"
+          },
+          {
+            "path": "post-loop-state/cpp/profiles.jsonl",
+            "sha256": "6765e40a51794f01951ad3f61e3fffb5023689417e3d30f91bd766ef394bea21"
+          }
+        ],
+        "selected": 140,
+        "unavailable": 0,
+        "unique_executions": 140
+      },
+      "label": "lcb_hard_v1_cpp (C++20)",
+      "language": "C++20 benchmark source",
+      "metric_coverage": {
+        "Omega_CC": {
+          "measured": 35,
+          "unavailable": 0
+        },
+        "Omega_hat_NativeTrace": {
+          "measured": 140,
+          "unavailable": 0
+        },
+        "Omega_hat_StateLoad": {
+          "measured": 140,
+          "unavailable": 0
+        },
+        "Omega_hat_StateSize": {
+          "measured": 140,
+          "unavailable": 0
+        }
+      },
+      "note": "Static medians use one clean source per case. Dynamic medians use the four canonical execution identities per case when supported by the Clang adapter.",
+      "programs": 35,
+      "static_profiles": {
+        "files": [
+          {
+            "path": "short-trace-final/cpp/profiles.jsonl",
+            "sha256": "4ffd37a7aad6033b6f8f329a90d07c85af8b9560943fd1c76ad10cce7fb3b7c3"
+          }
+        ],
+        "selected": 35,
+        "unique": 35
+      }
+    }
+  ],
+  "schema": "program-complexity-dataset-summary-v1"
+}

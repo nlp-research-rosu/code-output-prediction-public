@@ -1,0 +1,1 @@
+For each query q from 0 through 4999, the output is q + 11 + (q mod 2), each on its own line. Thus the lines are 11, 13, 13, 15, 15, …, 5009, 5009, 5011.

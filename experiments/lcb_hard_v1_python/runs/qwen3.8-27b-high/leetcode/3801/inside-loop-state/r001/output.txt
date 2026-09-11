@@ -1,0 +1,1 @@
+{"b": 0, "c": 9, "cnt": 48, "len(dp[b])": 48, "mul": 1, "result": 0, "total": 0}

@@ -1,0 +1,1 @@
+{"excluded":985,"index":1001,"max_diff":99695,"max_sum":100696,"min_diff":-99797,"min_sum":0,"x":1001,"y":26682}

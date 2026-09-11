@@ -1,0 +1,1 @@
+{"a.size()":20,"answer":12,"candidates.size()":1248,"count":11}

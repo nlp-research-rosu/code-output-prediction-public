@@ -1,0 +1,1 @@
+{"cnt":1000,"dp[i + 1]":[500 zeros, then C(1000,r) mod 998244353 for r=500 down to 0],"dp[i]":[1000 zeros,1],"i":0,"j":1000,"k":501}

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<stdin>", line 46, in <module>
+  File "<stdin>", line 36, in main
+UnboundLocalError: cannot access local variable 'new_dist' where it is not associated with a value

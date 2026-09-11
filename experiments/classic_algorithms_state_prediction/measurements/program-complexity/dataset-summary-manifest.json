@@ -1,0 +1,77 @@
+{
+  "config": {
+    "path": "dataset-summary-config.json",
+    "sha256": "1cfb3958ca8cc9f72d7081dac03d929f0ec7668b4e83abbf71339971c5266719"
+  },
+  "metrics": {
+    "dynamic": [
+      "Omega_hat_NativeTrace",
+      "Omega_hat_StateSize",
+      "Omega_hat_StateLoad"
+    ],
+    "static": [
+      "Omega_CC"
+    ]
+  },
+  "rows": [
+    {
+      "dataset_id": "classic_algorithms_state_prediction",
+      "dynamic_profiles": {
+        "files": [
+          {
+            "path": "short-trace-final/python/profiles.jsonl",
+            "sha256": "dc4608d8dde2bacb6fc6db4837ebc06eadef0ccfaaed0dd9b100b8f4737d48a0"
+          },
+          {
+            "path": "long-trace-final/python/profiles.jsonl",
+            "sha256": "9cae73e2ee257e1adf16290013af4dfde42961b23e4315a82ce5693f32a4a65c"
+          },
+          {
+            "path": "inside-loop-state/python/profiles.jsonl",
+            "sha256": "24bc45f5c5799ab7ac2a406ff9321b95ed748828ef917f1623c5da868694d372"
+          },
+          {
+            "path": "post-loop-state/python/profiles.jsonl",
+            "sha256": "4ce18f90d510823a45eed0be4752ed3632f5387cf52c68a1c4295c71db65283e"
+          }
+        ],
+        "selected": 120,
+        "unavailable": 0,
+        "unique_executions": 120
+      },
+      "label": "Classic algorithms state prediction",
+      "language": "Python 3.12.11",
+      "metric_coverage": {
+        "Omega_CC": {
+          "measured": 30,
+          "unavailable": 0
+        },
+        "Omega_hat_NativeTrace": {
+          "measured": 120,
+          "unavailable": 0
+        },
+        "Omega_hat_StateLoad": {
+          "measured": 117,
+          "unavailable": 3
+        },
+        "Omega_hat_StateSize": {
+          "measured": 117,
+          "unavailable": 3
+        }
+      },
+      "note": "Static medians use one clean source per case. Dynamic medians use the four canonical execution identities per case.",
+      "programs": 30,
+      "static_profiles": {
+        "files": [
+          {
+            "path": "short-trace-final/python/profiles.jsonl",
+            "sha256": "dc4608d8dde2bacb6fc6db4837ebc06eadef0ccfaaed0dd9b100b8f4737d48a0"
+          }
+        ],
+        "selected": 30,
+        "unique": 30
+      }
+    }
+  ],
+  "schema": "program-complexity-dataset-summary-v1"
+}

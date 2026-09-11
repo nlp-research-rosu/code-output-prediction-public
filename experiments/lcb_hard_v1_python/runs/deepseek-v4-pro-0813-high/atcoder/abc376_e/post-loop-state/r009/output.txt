@@ -1,0 +1,1 @@
+{"answer":121099392,"k":501,"maximum":996,"selected":[],"total":122646,"value":149}

@@ -1,0 +1,4 @@
+# Release hashes and native evidence require identical bytes on every platform.
+* -text
+experiments/**/problems/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+experiments/**/runs/** whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab

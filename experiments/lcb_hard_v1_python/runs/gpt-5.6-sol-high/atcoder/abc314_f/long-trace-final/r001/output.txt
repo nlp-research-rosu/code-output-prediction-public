@@ -1,0 +1,1 @@
+For j>=2: (503-j-(H_502-H_(j-1))) mod 998244353; output for j=1 equals output for j=2.

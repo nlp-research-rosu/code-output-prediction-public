@@ -1,0 +1,1 @@
+{"k":300000,"m":300000,"n":1,"nxt":[-1 repeated 300000 times],"pre":[0 repeated 300000 times],"uf.p":[0,1,2,...,300000],"uf.sz":[1 repeated 300001 times],"([&](){ std::vector<long long> state; for (auto value : b) state.push_back(value.value); return state; })()":[0,100,0 repeated 299999 times]}

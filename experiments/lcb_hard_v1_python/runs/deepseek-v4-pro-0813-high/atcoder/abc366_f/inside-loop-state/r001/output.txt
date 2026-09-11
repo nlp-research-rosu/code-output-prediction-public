@@ -1,0 +1,1 @@
+{"[value for value in dp if value != -math.inf]":[1,11,20,28,35,41,52,57,61,64,66,67],"a":1,"b":11,"i":5}

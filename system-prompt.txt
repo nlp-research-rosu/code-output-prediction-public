@@ -1,0 +1,7 @@
+Given the program and input below, determine the exact output.
+
+{{problem}}
+
+Respond in this format:
+
+{{output}}

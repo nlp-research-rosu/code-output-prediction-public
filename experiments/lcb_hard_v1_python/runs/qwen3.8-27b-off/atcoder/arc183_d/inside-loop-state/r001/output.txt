@@ -1,0 +1,1 @@
+{"centroid": 0, "dfs_order[matched[1]]": [998], "dfs_order[v]": [512], "len(heap)": 1, "len(ops)": 499, "matched": [-2, 998], "s": -3, "v": 512}

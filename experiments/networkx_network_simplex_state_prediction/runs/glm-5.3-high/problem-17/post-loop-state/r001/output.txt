@@ -1,0 +1,1 @@
+I cannot reliably determine the exact node-potentials JSON without executing the full network simplex pivot sequence.

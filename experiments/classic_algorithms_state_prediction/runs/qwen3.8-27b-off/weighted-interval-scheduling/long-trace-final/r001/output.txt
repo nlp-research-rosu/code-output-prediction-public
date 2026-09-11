@@ -1,0 +1,1 @@
+{"maximum_weight":1243}

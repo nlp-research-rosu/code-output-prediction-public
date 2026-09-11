@@ -1,0 +1,1 @@
+{"mst_weight":17034,"u":0,"uf.parent":[0 repeated 1003 times],"uf.rank":[1,0 repeated 1002 times],"v":1002,"weight":17}

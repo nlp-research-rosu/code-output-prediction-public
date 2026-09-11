@@ -1,0 +1,1 @@
+{"k":0,"len(dp)":34,"len(products)":11,"limit":1000,"new_state":[1,6],"p":0,"sorted(products)":[9,12,16,36,48,81,108,144,324,432,1001],"total":4,"v":432,"x":2}

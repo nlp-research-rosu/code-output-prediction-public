@@ -1,0 +1,1 @@
+{"c":"S","current_c":0,"current_r":0,"res":[],"sorted(seen)":[[0,0]],"target_c":23,"target_r":-17}

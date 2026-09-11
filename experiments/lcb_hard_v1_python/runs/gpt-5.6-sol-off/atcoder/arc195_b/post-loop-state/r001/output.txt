@@ -1,0 +1,1 @@
+{"S":10499,"count_A_neg1":0,"count_B_neg1":0,"i":2,"j":1,"len(fixed_A)":2,"len(fixed_B)":2,"matched":0}

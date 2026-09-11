@@ -1,0 +1,1 @@
+I cannot reliably determine the exact 1002-line output without executing the program.

@@ -1,0 +1,2 @@
+metric,language,total_profiles,measured_profiles,not_measured_profiles,minimum,q25,median,q75,maximum,mean,population_standard_deviation
+Omega_CC,python,283,283,0,3.0,9.0,16.0,21.0,212.0,18.031802120141343,17.450253755069596

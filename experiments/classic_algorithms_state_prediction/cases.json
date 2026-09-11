@@ -1,0 +1,2277 @@
+{
+  "arms": [
+    "short-trace-final",
+    "long-trace-final",
+    "inside-loop-state",
+    "post-loop-state"
+  ],
+  "case_count": 30,
+  "cases": [
+    {
+      "algorithm_reference": "Floyd, Algorithm 97: Shortest Path",
+      "algorithm_reference_url": "https://doi.org/10.1145/367766.368168",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "5cc4540af213f382d76cf51218e166af454513b6b9857024f668e68fcaefa369",
+          "input_variant": "long",
+          "oracle_bytes": 442,
+          "oracle_sha256": "b999e9a2fe5f68d113fe98a30e889245fa66110f1981d8e56c0604e1370f2a71",
+          "source_sha256": "5804beeed6da8248755671f1fa0156fb9391d0211acf4721341e5609eeec62ca",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "5cc4540af213f382d76cf51218e166af454513b6b9857024f668e68fcaefa369",
+          "input_variant": "long",
+          "oracle_bytes": 423,
+          "oracle_sha256": "3f6cced0919abada60c74569e9b384a4367047e3caf406af2614d7108aed435f",
+          "source_sha256": "775407e75748629150f961da9519f8e154548d8549180b91d5b2305aba9b952e",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "5cc4540af213f382d76cf51218e166af454513b6b9857024f668e68fcaefa369",
+          "input_variant": "long",
+          "oracle_bytes": 439,
+          "oracle_sha256": "f2d68845d53ae43056c3fc93788bb2b05df2711ec872abe3faf18cb5430a77be",
+          "source_sha256": "9d17c05acc418593eee12134813afd99d708435eeeda69b2ad49b0da654f09dc",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "0a451db957898d26b47a08ecf51bb3f3636bf1c4bd17abd75801558a0847b145",
+          "input_variant": "short",
+          "oracle_bytes": 79,
+          "oracle_sha256": "7164ed8c13b8ef9ee91d042371103bdcd2934b80641afc47ec99b4641d030bfe",
+          "source_sha256": "775407e75748629150f961da9519f8e154548d8549180b91d5b2305aba9b952e",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "floyd-warshall",
+      "category": "graph dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "int"
+        ],
+        "fields": [
+          "dist",
+          "n"
+        ],
+        "inside_loop_fraction": 0.7795138888888888,
+        "inside_loop_occurrence": 1347,
+        "post_loop_baseline_line": 13,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 10,
+        "long_executions": 1728,
+        "long_to_short_ratio": 13.824,
+        "short_executions": 125,
+        "statement": "candidate = dist[i][k] + dist[k][j]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Floyd-Warshall Algorithm",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, matrix multiplication",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "c6ad96c03076f36ed4ccff040f160cdd2e51b27a2f211cc70bade1d481dea1fe",
+          "input_variant": "long",
+          "oracle_bytes": 1343,
+          "oracle_sha256": "5ccb4be36d5bc6d711af87527490071d30f67397aa01d0566459f10f5a2af7d6",
+          "source_sha256": "d14c37da76f60c56069c7f46b92147d6742eca26c92b2fff0cf884a6bcad204b",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "c6ad96c03076f36ed4ccff040f160cdd2e51b27a2f211cc70bade1d481dea1fe",
+          "input_variant": "long",
+          "oracle_bytes": 597,
+          "oracle_sha256": "3aeb21bceb65c63a1cf223be21dd49f6168a3dc14c14f9836abdda48cf5caca8",
+          "source_sha256": "68ca495a573b908038e25a437b5645e41e22d15134d61451faec1cc0497f5dfd",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "c6ad96c03076f36ed4ccff040f160cdd2e51b27a2f211cc70bade1d481dea1fe",
+          "input_variant": "long",
+          "oracle_bytes": 1409,
+          "oracle_sha256": "bd4f3fce67f80a3b6eb1c27d3e8a97422f6e9031125cae35448af80a0ff49250",
+          "source_sha256": "385794978766e82d130ad30bf099609ff4d3bf4cd56c256035f513f5c6025e28",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "bf769dd65068be3d7efba4afb2167ff8b136a5b7091c69132fb31aa2ee9e10f9",
+          "input_variant": "short",
+          "oracle_bytes": 65,
+          "oracle_sha256": "92368204855c17e42e94e689e4be1d672864dfc1f804b6de4119041cad8c610d",
+          "source_sha256": "68ca495a573b908038e25a437b5645e41e22d15134d61451faec1cc0497f5dfd",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "matrix-multiplication",
+      "category": "numerical",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "int",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "left",
+          "n",
+          "result",
+          "right"
+        ],
+        "inside_loop_fraction": 0.7795138888888888,
+        "inside_loop_occurrence": 1347,
+        "post_loop_baseline_line": 15,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 13,
+        "long_executions": 1728,
+        "long_to_short_ratio": 27.0,
+        "short_executions": 64,
+        "statement": "total += left[i][k] * right[k][j]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Naive Matrix Multiplication",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Aarseth, Gravitational N-Body Simulations",
+      "algorithm_reference_url": "https://doi.org/10.1017/CBO9780511535246",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "346d6a85c895530c35f3dbbf3aa0f2cc9fbbb26a58b4f60ec1fdf0a4d692997c",
+          "input_variant": "long",
+          "oracle_bytes": 353,
+          "oracle_sha256": "eb11334a9de570af381d30b03e03626ae5d832158d1936aa75476fa2de6b665e",
+          "source_sha256": "2372ba07e6d90044748b6858a5be1d4a27d8f639c79f39afff89d686742128cd",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "346d6a85c895530c35f3dbbf3aa0f2cc9fbbb26a58b4f60ec1fdf0a4d692997c",
+          "input_variant": "long",
+          "oracle_bytes": 348,
+          "oracle_sha256": "59485210fb439dbc63906d7c33de75d57621dc7247a63e604b745aec8a2eb435",
+          "source_sha256": "9084ccaa993e74d51ae07ba1abe536a76505a605ebb0303e9caa5ce328e09e77",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "346d6a85c895530c35f3dbbf3aa0f2cc9fbbb26a58b4f60ec1fdf0a4d692997c",
+          "input_variant": "long",
+          "oracle_bytes": 348,
+          "oracle_sha256": "59485210fb439dbc63906d7c33de75d57621dc7247a63e604b745aec8a2eb435",
+          "source_sha256": "3ec355061f87811be265b446b0a8978cef908c2270915dfe47153f3744565019",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "cf400fea485ffed33be5ce6e0e604247b041e958aa703aaf024cb90fd3ad7841",
+          "input_variant": "short",
+          "oracle_bytes": 129,
+          "oracle_sha256": "085ae094410a75b6f4f9fd4415bafadf5da9326ccc0fa77644b8c60e4ddcfbd6",
+          "source_sha256": "9084ccaa993e74d51ae07ba1abe536a76505a605ebb0303e9caa5ce328e09e77",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "n-body",
+      "category": "simulation",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list"
+        ],
+        "fields": [
+          "positions",
+          "velocities"
+        ],
+        "inside_loop_fraction": 0.7798245614035088,
+        "inside_loop_occurrence": 889,
+        "post_loop_baseline_line": 29,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 17,
+        "long_executions": 1140,
+        "long_to_short_ratio": 25.333333333333332,
+        "short_executions": 45,
+        "statement": "dx = positions[j][0] - positions[i][0]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Discrete N-Body Simulation",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Knuth, Morris, and Pratt, Fast Pattern Matching in Strings",
+      "algorithm_reference_url": "https://doi.org/10.1137/0206024",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "89d5c5f285f009362c157a631d48a9ce8dda1971e339c8b6f51645ea01a7b9a9",
+          "input_variant": "long",
+          "oracle_bytes": 328,
+          "oracle_sha256": "145d8768afc95391ac7abdd4e4a5461b279c825a53b5f1b961c4a1833fe9f48d",
+          "source_sha256": "22a610bfbae56d26f46ab8d75772412515db3376471aed6d8bc9856d9fa6dc72",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "89d5c5f285f009362c157a631d48a9ce8dda1971e339c8b6f51645ea01a7b9a9",
+          "input_variant": "long",
+          "oracle_bytes": 9,
+          "oracle_sha256": "675a842d2fd134045f0dc46955190bc8e8d5d1709bed1eafd048edb897632fdb",
+          "source_sha256": "b4700940ad6cafd04aab7803999236ce4116db225a957d6d5986d16bfdc5ed83",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "89d5c5f285f009362c157a631d48a9ce8dda1971e339c8b6f51645ea01a7b9a9",
+          "input_variant": "long",
+          "oracle_bytes": 332,
+          "oracle_sha256": "3b74b9fef3a118b504d8d6a7ed63e30b16952fb9fb8ca002aa9ee54c8dacd001",
+          "source_sha256": "b3bb57e9b16e00d537e4a42477400e54953259bb89fd4bd5b0c02004fdcb3e2e",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "41dfa217f4ab53aaca4a3cbd47d8d1a7e13a7ee66ae4a10a871d5c5acd7fd992",
+          "input_variant": "short",
+          "oracle_bytes": 5,
+          "oracle_sha256": "87895cccf6ac345a1e61185b907cb96b47ddf138e87f9dbf0756238185388d40",
+          "source_sha256": "b4700940ad6cafd04aab7803999236ce4116db225a957d6d5986d16bfdc5ed83",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "kmp",
+      "category": "string",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "int",
+          "list",
+          "str",
+          "str"
+        ],
+        "fields": [
+          "lps",
+          "matched",
+          "matches",
+          "pattern",
+          "text"
+        ],
+        "inside_loop_fraction": 0.7772727272727272,
+        "inside_loop_occurrence": 171,
+        "post_loop_baseline_line": 31,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 23,
+        "long_executions": 220,
+        "long_to_short_ratio": 3.6666666666666665,
+        "short_executions": 60,
+        "statement": "ch = text[index]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Knuth-Morris-Pratt Pattern Matching",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, longest common subsequence",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "36a616ea549d1225f2da866e9b0a981d59a5726cc65901465049a872d636a905",
+          "input_variant": "long",
+          "oracle_bytes": 207,
+          "oracle_sha256": "57673f3ca4218c3852666dd062d4b602ed97e1a64b685903e26afe7d572ef94d",
+          "source_sha256": "10561c096c27b5bf1b047c5bec5c3db1ed1d2f72bf9b044a4cabea268682c23f",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "36a616ea549d1225f2da866e9b0a981d59a5726cc65901465049a872d636a905",
+          "input_variant": "long",
+          "oracle_bytes": 3,
+          "oracle_sha256": "54183f4323f377b737433a1e98229ead0fdc686f93bab057ecb612daa94002b5",
+          "source_sha256": "659f71362978d77223f7340e6f4e914c120667e504fd4ef28a951875c32dad79",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "36a616ea549d1225f2da866e9b0a981d59a5726cc65901465049a872d636a905",
+          "input_variant": "long",
+          "oracle_bytes": 214,
+          "oracle_sha256": "905d22b634a2757aada1230606dbe76447154b6c80f0177d24594808b4d20463",
+          "source_sha256": "a8488b85cce7dfb17b3fadc15465414d0a7763167bf4681a3886fa37d0dbf340",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "02ec6eddcbe2f9ea423661cd0153e13aefbb44596ef2d27da2479a657e9bceda",
+          "input_variant": "short",
+          "oracle_bytes": 2,
+          "oracle_sha256": "06e9d52c1720fca412803e3b07c4b228ff113e303f4c7ab94665319d832bbfb7",
+          "source_sha256": "659f71362978d77223f7340e6f4e914c120667e504fd4ef28a951875c32dad79",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "longest-common-subsequence",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "str",
+          "list",
+          "str"
+        ],
+        "fields": [
+          "left",
+          "previous",
+          "right"
+        ],
+        "inside_loop_fraction": 0.7799707602339181,
+        "inside_loop_occurrence": 1067,
+        "post_loop_baseline_line": 13,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 8,
+        "long_executions": 1368,
+        "long_to_short_ratio": 8.142857142857142,
+        "short_executions": 168,
+        "statement": "if left[i - 1] == right[j - 1]:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Longest Common Subsequence",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, matrix-chain multiplication",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "c1e05b2220256514d09fdd73fe2e13d638f52a084fdd14c5bf9ca4ae768e5f5a",
+          "input_variant": "long",
+          "oracle_bytes": 1582,
+          "oracle_sha256": "7ad9afca738be6c72755407d069e6a7196b38998f9c2428a9d7c2d2a751c1c89",
+          "source_sha256": "66df0f2905ca069ef448e59ebfb7f9353a7540f615ad551bf85d33f5c2378adf",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "c1e05b2220256514d09fdd73fe2e13d638f52a084fdd14c5bf9ca4ae768e5f5a",
+          "input_variant": "long",
+          "oracle_bytes": 23,
+          "oracle_sha256": "21d0ed1e6259e7719ccaee37c3c27a05261e0969c58d8d8b94468395d7478d30",
+          "source_sha256": "2c9e3ceacba4c2a1d87133c05b9c001668cfc3d90b3f9e88916aa17a83fc6c07",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "c1e05b2220256514d09fdd73fe2e13d638f52a084fdd14c5bf9ca4ae768e5f5a",
+          "input_variant": "long",
+          "oracle_bytes": 1654,
+          "oracle_sha256": "c67d27c7a429bb7310c7110c33f150bb6f5864979541ab5a847ef3c6d8bd8596",
+          "source_sha256": "8c42ca94ce0d81b0ef135fb516cc4cf198df993ad2ef8755e894e59cdced3498",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "a9db714083b1315a15b1980af583ad28778ffef58016910f3cc7b80112563eea",
+          "input_variant": "short",
+          "oracle_bytes": 23,
+          "oracle_sha256": "35e52cfdb70eeb4f4c3f6a7337d7f08010ef1f9e0b155d5cd986f182284d1663",
+          "source_sha256": "2c9e3ceacba4c2a1d87133c05b9c001668cfc3d90b3f9e88916aa17a83fc6c07",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "matrix-chain-multiplication",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list"
+        ],
+        "fields": [
+          "dimensions",
+          "dp"
+        ],
+        "inside_loop_fraction": 0.7796992481203008,
+        "inside_loop_occurrence": 1037,
+        "post_loop_baseline_line": 17,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 14,
+        "long_executions": 1330,
+        "long_to_short_ratio": 23.75,
+        "short_executions": 56,
+        "statement": "cost = dp[left][split] + dp[split + 1][right] + dimensions[left] * dimensions[split + 1] * dimensions[right + 1]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Matrix Chain Multiplication",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Wagner and Fischer, The String-to-String Correction Problem",
+      "algorithm_reference_url": "https://doi.org/10.1145/321796.321811",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "11af82b5a7a1f15181854dec12591934f131b4e79f47828e2f4e0182d7d675ea",
+          "input_variant": "long",
+          "oracle_bytes": 240,
+          "oracle_sha256": "9d5d1349fa67c2f71f9d6724291188fa55119668e526624b009822a3dd932f81",
+          "source_sha256": "ee0806afd496cab1aecd11f78f1a58d9b72353300b0871ad7ef252cfc11ad080",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "11af82b5a7a1f15181854dec12591934f131b4e79f47828e2f4e0182d7d675ea",
+          "input_variant": "long",
+          "oracle_bytes": 3,
+          "oracle_sha256": "32c2643e0dc65524c9f1f6f9f00937322fd68d59986bc381d9ff2285d23e353d",
+          "source_sha256": "0480558cda308aea5a35f763ebc24d9eeb1d6bd1ed5e199e506ffd21eef57285",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "11af82b5a7a1f15181854dec12591934f131b4e79f47828e2f4e0182d7d675ea",
+          "input_variant": "long",
+          "oracle_bytes": 240,
+          "oracle_sha256": "6ed68fe6800a611303df54168d74ee4a3f64475c39d2220befe131f9ea599d9b",
+          "source_sha256": "3d2a28adcb883840b3c7488b5247e3b05c0b55021aaa07542a4c5267a1484f30",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "7ba65a361c7d71c3c0efbbd4d90aa74cd254385a51e35d7f16004d9892cbfafa",
+          "input_variant": "short",
+          "oracle_bytes": 3,
+          "oracle_sha256": "25d4f2a86deb5e2574bb3210b67bb24fcc4afb19f93a7b65a057daa874a9d18e",
+          "source_sha256": "0480558cda308aea5a35f763ebc24d9eeb1d6bd1ed5e199e506ffd21eef57285",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "edit-distance",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "str",
+          "str"
+        ],
+        "fields": [
+          "previous",
+          "source",
+          "target"
+        ],
+        "inside_loop_fraction": 0.7796052631578947,
+        "inside_loop_occurrence": 1185,
+        "post_loop_baseline_line": 13,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 8,
+        "long_executions": 1520,
+        "long_to_short_ratio": 9.047619047619047,
+        "short_executions": 168,
+        "statement": "if source[i - 1] == target[j - 1]:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Levenshtein Edit Distance",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, 0/1 knapsack",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "b329bccfa229852f5f919d5b9c270354b1e8300358775956df4959c2ccad6022",
+          "input_variant": "long",
+          "oracle_bytes": 553,
+          "oracle_sha256": "e09ecf7ec40cc03ec887633ebbc996bc5b3004227b34a5203b2cca97a355e768",
+          "source_sha256": "6272e748c0f68af8eed9b160b3320792f6d55f1321d6fa8dd1e379f2d9676824",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "b329bccfa229852f5f919d5b9c270354b1e8300358775956df4959c2ccad6022",
+          "input_variant": "long",
+          "oracle_bytes": 4,
+          "oracle_sha256": "33a8ee57a72a5a276025b0b436811f6ab55757534345255d35ef39eaad1a9709",
+          "source_sha256": "809be7ddafb4c42e254cecf64d6162bfce7e6790c438ffc840d5de7d691771a2",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "b329bccfa229852f5f919d5b9c270354b1e8300358775956df4959c2ccad6022",
+          "input_variant": "long",
+          "oracle_bytes": 559,
+          "oracle_sha256": "763da286f5f6ce66bff6874f3f442d48a60118caa4abbff1e9f575faf7ce388b",
+          "source_sha256": "dfc5c64c71a15d2c899116d090f663f981e816cfc7395e989a8991c2d2123474",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "87994656ecedab86685628a85187a65c2d14b13794c4f15debcc4332f40caf18",
+          "input_variant": "short",
+          "oracle_bytes": 4,
+          "oracle_sha256": "5ab07e71db18dc04363cf2c8e392dad5a699fe5bcf01daf4e70ad34e7dbbb43a",
+          "source_sha256": "809be7ddafb4c42e254cecf64d6162bfce7e6790c438ffc840d5de7d691771a2",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "knapsack-01",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list"
+        ],
+        "fields": [
+          "dp",
+          "items"
+        ],
+        "inside_loop_fraction": 0.78,
+        "inside_loop_occurrence": 1560,
+        "post_loop_baseline_line": 9,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 7,
+        "long_executions": 2000,
+        "long_to_short_ratio": 8.333333333333334,
+        "short_executions": 240,
+        "statement": "if weight <= current_capacity:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "0/1 Knapsack",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Held and Karp, A Dynamic Programming Approach to Sequencing Problems",
+      "algorithm_reference_url": "https://doi.org/10.1137/0110015",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "9119ff3bb3f5de1d3524aa52974face2852c94f7bcf098ed2ce8e6b094209069",
+          "input_variant": "long",
+          "oracle_bytes": 9988,
+          "oracle_sha256": "e9f260b1c0d613188ac8c73cb0428db7f137d631f151f9b16f97f90d492a0c53",
+          "source_sha256": "8078f3ccadbd89dfc8ef700d3f166075d8c55386503fc5f187e2642ad402b9cb",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "9119ff3bb3f5de1d3524aa52974face2852c94f7bcf098ed2ce8e6b094209069",
+          "input_variant": "long",
+          "oracle_bytes": 4,
+          "oracle_sha256": "6af2f5b785a8930f0bd3edc833e18fa191167ab0535ef359b19a1982a6984e96",
+          "source_sha256": "52e396495bb04098508153ba63b985d33d2bc8681af13ea9a8889ff40609d79f",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "9119ff3bb3f5de1d3524aa52974face2852c94f7bcf098ed2ce8e6b094209069",
+          "input_variant": "long",
+          "oracle_bytes": 11664,
+          "oracle_sha256": "ca94c3c39c7e9ec2e5154834b586297964b8fc13e6f6424243a015ffe9ee1aae",
+          "source_sha256": "4a74c7e845c1f4a59a47da34b93aa7d9927e0fa87fe6301e0132757aaee97d3b",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "0502244c86807b44b7ae199a539ed8b10e73fdc2e80bb1f4604a8f135ea10a08",
+          "input_variant": "short",
+          "oracle_bytes": 3,
+          "oracle_sha256": "d6ba4fb19951b0a0175af857ec4891947aaf65d7de043c48a38b2daf2df0a329",
+          "source_sha256": "52e396495bb04098508153ba63b985d33d2bc8681af13ea9a8889ff40609d79f",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "traveling-salesperson-held-karp",
+      "category": "subset dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list"
+        ],
+        "fields": [
+          "distances",
+          "dp"
+        ],
+        "inside_loop_fraction": 0.7797884187082406,
+        "inside_loop_occurrence": 2801,
+        "post_loop_baseline_line": 27,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 21,
+        "long_executions": 3592,
+        "long_to_short_ratio": 21.76969696969697,
+        "short_executions": 165,
+        "statement": "candidate = dp[state] + distances[previous][last]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Traveling Salesperson (Held-Karp)",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Edmonds and Karp, Theoretical Improvements in Algorithmic Efficiency for Network Flow Problems",
+      "algorithm_reference_url": "https://doi.org/10.1145/321694.321699",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "585b7ec3545e0eaff535604a0cc41f3bc3b87e28c7acef79244ab666c47d3295",
+          "input_variant": "long",
+          "oracle_bytes": 3074,
+          "oracle_sha256": "f6936f6f754b34735a705b00b70382c6589a307225c325c56a691293336b6e91",
+          "source_sha256": "f13dabbd7793b0587d8c9b7eabac3079879e26a992dd0c1501665fb2990c943b",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "585b7ec3545e0eaff535604a0cc41f3bc3b87e28c7acef79244ab666c47d3295",
+          "input_variant": "long",
+          "oracle_bytes": 3,
+          "oracle_sha256": "877a8799041017f1719854e4e295c6dca56cd1cf1b1914d1bfed9281f7fc2686",
+          "source_sha256": "42ab43c40f7e2ffc566fdf3667951f6eeef46a3e928ba600e134bceb1dfdb271",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "585b7ec3545e0eaff535604a0cc41f3bc3b87e28c7acef79244ab666c47d3295",
+          "input_variant": "long",
+          "oracle_bytes": 3074,
+          "oracle_sha256": "4947f1b9a42d0ba27bafc97b6b295f6e9b6f2d3673bb634d45fedabc4e3d50e6",
+          "source_sha256": "209541a20ba8c938f88c44388d500f664121ad369ca9d684066ef7ce6e33794b",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "e230f8f9805cfa8b8f39e2db08a6a88169e2607ae0e869bde8cdd1c91ebeedd4",
+          "input_variant": "short",
+          "oracle_bytes": 3,
+          "oracle_sha256": "1a252402972f6057fa53cc172b52b9ffca698e18311facd0f3b06ecaaef79e17",
+          "source_sha256": "42ab43c40f7e2ffc566fdf3667951f6eeef46a3e928ba600e134bceb1dfdb271",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "edmonds-karp",
+      "category": "graph",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "int",
+          "int",
+          "int"
+        ],
+        "fields": [
+          "adjacency",
+          "edges",
+          "flow",
+          "sink",
+          "source"
+        ],
+        "inside_loop_fraction": 0.7799511002444988,
+        "inside_loop_occurrence": 4147,
+        "post_loop_baseline_line": 48,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 27,
+        "long_executions": 5317,
+        "long_to_short_ratio": 49.691588785046726,
+        "short_executions": 107,
+        "statement": "neighbor = edges[edge_index][0]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "adapted from PR 5 head c40257a4d45262c52084bfb7fe5f03c401bd4d56",
+      "title": "Edmonds-Karp Maximum Flow",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, dynamic programming",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "88ada8933a70135170268c2f52959940bf8afa319ffdd5df11dd157b7b073e62",
+          "input_variant": "long",
+          "oracle_bytes": 896,
+          "oracle_sha256": "fa6573820af9b2bb2a45acf270a0d03bf1a94e6fce6c44707dbc9b16906a3087",
+          "source_sha256": "29ad2e6ac7e438bd7ab31393ec978e73f8f13cc6b767ff67a20e87bc4c23c584",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "88ada8933a70135170268c2f52959940bf8afa319ffdd5df11dd157b7b073e62",
+          "input_variant": "long",
+          "oracle_bytes": 20,
+          "oracle_sha256": "2ae47a4cafb902d1b8fc7fa71dbffdc37bfe5690f9de73b1f40be710d2ee96dc",
+          "source_sha256": "d643331f4ff27ad525e5d96e280813703327e38be8c25a736de8772b50b86bca",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "88ada8933a70135170268c2f52959940bf8afa319ffdd5df11dd157b7b073e62",
+          "input_variant": "long",
+          "oracle_bytes": 794,
+          "oracle_sha256": "abab9a43a0a7a9a965831fcf20d3794ac466913bd40a8f74afb8618dd99358a6",
+          "source_sha256": "a8f658d0eb6493e27209f7e428368176dda2df714a525f1dcabc22ee4ddb5ffa",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "b41ea43eda01d8944557e014cbdfd10e06998c227bd553d6f9f8f1ade653c167",
+          "input_variant": "short",
+          "oracle_bytes": 20,
+          "oracle_sha256": "cc347e928268586a602947ac9dca2a84e496866246699e44ba315f0e36dc8242",
+          "source_sha256": "d643331f4ff27ad525e5d96e280813703327e38be8c25a736de8772b50b86bca",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "coin-change",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "int",
+          "list",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "amount",
+          "choice",
+          "coins",
+          "dp"
+        ],
+        "inside_loop_fraction": 0.7791907514450868,
+        "inside_loop_occurrence": 674,
+        "post_loop_baseline_line": 16,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 13,
+        "long_executions": 865,
+        "long_to_short_ratio": 6.006944444444445,
+        "short_executions": 144,
+        "statement": "if coin <= current and dp[current - coin] + 1 < dp[current]:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Minimum Coin Change",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, rod cutting",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "1ed20bec8fb64a1bef46ce2a75912b7bbcb09688304862a560d225188eb12346",
+          "input_variant": "long",
+          "oracle_bytes": 345,
+          "oracle_sha256": "ee1a9a1db770e71d03b5e73a25256875f03e83782670b492c29ee796dfe2e80c",
+          "source_sha256": "7589a290af2c50c2937556fd910c29ad3ad1b000dfa2354c47fc138bc18faadc",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "1ed20bec8fb64a1bef46ce2a75912b7bbcb09688304862a560d225188eb12346",
+          "input_variant": "long",
+          "oracle_bytes": 24,
+          "oracle_sha256": "b9bbe2ca7d45ab4476772f110a77b4ed76621f74fd398dd3fc11d26cc26697f3",
+          "source_sha256": "d1044aa01ab59eaec613dd1b127bd526ad098107d98968857f662410a90e3e40",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "1ed20bec8fb64a1bef46ce2a75912b7bbcb09688304862a560d225188eb12346",
+          "input_variant": "long",
+          "oracle_bytes": 363,
+          "oracle_sha256": "20828dd542dbbc8b1a1d0991507b29644e864bdc7e58ea29b58e424c2523e327",
+          "source_sha256": "a8a7feba756888d543a114c19225447543efaade1fe39a3e830e6b5862f2259e",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "533e8c67922f0bb0ea0b91e54d8e63ad862b5f6d63ec44cca7264e8bdc34becc",
+          "input_variant": "short",
+          "oracle_bytes": 23,
+          "oracle_sha256": "63f4068c7588b5998d8be13a2afeaf67924ff20692167b78a3388ad5bbb20250",
+          "source_sha256": "d1044aa01ab59eaec613dd1b127bd526ad098107d98968857f662410a90e3e40",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "rod-cutting",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "int",
+          "list"
+        ],
+        "fields": [
+          "best",
+          "first_cut",
+          "length",
+          "prices"
+        ],
+        "inside_loop_fraction": 0.7792207792207793,
+        "inside_loop_occurrence": 600,
+        "post_loop_baseline_line": 16,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 12,
+        "long_executions": 770,
+        "long_to_short_ratio": 9.871794871794872,
+        "short_executions": 78,
+        "statement": "candidate = prices[cut - 1] + best[current - cut]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Rod Cutting",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, longest increasing subsequence",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "9f7429ede0b225eb96e804aaf5056b90ee88c562dd680004a3a433eb272b4739",
+          "input_variant": "long",
+          "oracle_bytes": 745,
+          "oracle_sha256": "c42f50facce6d19f41b87a4c5a798aa204560c5e8f79892292aded7d2e691f1a",
+          "source_sha256": "58ab5f41430c55114fa1613a6f4bcff82dd28e2225ab9037a0e2e1d0e1207d59",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "9f7429ede0b225eb96e804aaf5056b90ee88c562dd680004a3a433eb272b4739",
+          "input_variant": "long",
+          "oracle_bytes": 64,
+          "oracle_sha256": "93473fe6c5dd524c618ba1bd93b2aa7428bd047bc4827782c42cc5f9f0ca58e9",
+          "source_sha256": "56c02e1c968c6a894ec252aea6bba01a9e8bcf024fe09d260180db2c7abebb75",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "9f7429ede0b225eb96e804aaf5056b90ee88c562dd680004a3a433eb272b4739",
+          "input_variant": "long",
+          "oracle_bytes": 750,
+          "oracle_sha256": "b2e7d27cea30a2caa44bb50e302c3d9e1f2a01dae60184ba48b79624ba63d933",
+          "source_sha256": "e9ee28bec62fee46855e97e3bed6677d629be5457179e30b9df30f538efcdac4",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "b23e1fef2128bd6267414a9778d954499ab358831bcfc82819f34c3050f9bad6",
+          "input_variant": "short",
+          "oracle_bytes": 18,
+          "oracle_sha256": "e343d5de60422e2e4c7a347f9816c605a32188644bad0e5d8008685337181339",
+          "source_sha256": "56c02e1c968c6a894ec252aea6bba01a9e8bcf024fe09d260180db2c7abebb75",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "longest-increasing-subsequence",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "length",
+          "parent",
+          "values"
+        ],
+        "inside_loop_fraction": 0.779746835443038,
+        "inside_loop_occurrence": 2464,
+        "post_loop_baseline_line": 19,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 11,
+        "long_executions": 3160,
+        "long_to_short_ratio": 20.65359477124183,
+        "short_executions": 153,
+        "statement": "if values[left] < values[right] and length[left] + 1 > length[right]:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Longest Increasing Subsequence",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Kleinberg and Tardos, Algorithm Design, weighted interval scheduling",
+      "algorithm_reference_url": "https://www.pearson.com/en-us/subject-catalog/p/algorithm-design/P200000003259",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "71bf3d44fb29acc687bc78e38dcd280463ce26fb0712451b8ac27d67e7fd75bf",
+          "input_variant": "long",
+          "oracle_bytes": 6209,
+          "oracle_sha256": "7d2eab110bb0516fcaa15e6d16b917e6770c62e8168eed2cfcc9d1e5825e3b26",
+          "source_sha256": "5ccb5e944a7ea509fdfa72c930e0aa25828183f4d14714b05ee5f3c6296fa7c3",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "71bf3d44fb29acc687bc78e38dcd280463ce26fb0712451b8ac27d67e7fd75bf",
+          "input_variant": "long",
+          "oracle_bytes": 24,
+          "oracle_sha256": "d738dcbcddffed00200c3e9086db4a218b84a49d6adb41d7c62a2ef680ea977f",
+          "source_sha256": "5872947e51421f5c3fa8a2d6edd29f55add18c94a8793cdc538705e463e81092",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "71bf3d44fb29acc687bc78e38dcd280463ce26fb0712451b8ac27d67e7fd75bf",
+          "input_variant": "long",
+          "oracle_bytes": 6339,
+          "oracle_sha256": "e2185a892ce6e577b57d5898b7c9807f876d8cc9d0d41a8e506d324c2a0f909e",
+          "source_sha256": "50ffa2ce9b42e095759fc1176240321aabecba6d835fb0fdabac134bf88329e0",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "8d73e9e5f26cb9421cb77a3eb26746e09d8b945b40b5cf3a2ef09ed449f6d47e",
+          "input_variant": "short",
+          "oracle_bytes": 23,
+          "oracle_sha256": "ecd0a797084f6ae40c8213a3013790bd054cd93934f9bb7735368f4f9d1dbbe0",
+          "source_sha256": "5872947e51421f5c3fa8a2d6edd29f55add18c94a8793cdc538705e463e81092",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "weighted-interval-scheduling",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "dp",
+          "intervals",
+          "predecessor",
+          "take"
+        ],
+        "inside_loop_fraction": 0.7791666666666667,
+        "inside_loop_occurrence": 187,
+        "post_loop_baseline_line": 20,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 13,
+        "long_executions": 240,
+        "long_to_short_ratio": 6.0,
+        "short_executions": 40,
+        "statement": "include = weight + dp[predecessor[index - 1] + 1]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Weighted Interval Scheduling",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Classical interval dynamic programming recurrence",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "19e289fc3da545b79fc9df7cac6e2fce178114b4b6f89ff9e9a06ea13e91af2b",
+          "input_variant": "long",
+          "oracle_bytes": 6512,
+          "oracle_sha256": "e9439d52bfea6f95d50e1c6c8b92f8fcef1d588d8c4450a110402b164a877391",
+          "source_sha256": "240d4250370661e37a57c5782ee79fb45aa6dfd8bd8de59116e5f8bfa63d4cf4",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "19e289fc3da545b79fc9df7cac6e2fce178114b4b6f89ff9e9a06ea13e91af2b",
+          "input_variant": "long",
+          "oracle_bytes": 14,
+          "oracle_sha256": "b4fe3b7636549dd2af0fae51ff450b0e5696246aaa7b416f65cda8b8c8901ff7",
+          "source_sha256": "c1b93967af0e03cdb5363c0aa064f876ba2e01b26ae08dc70df174036bad5a78",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "19e289fc3da545b79fc9df7cac6e2fce178114b4b6f89ff9e9a06ea13e91af2b",
+          "input_variant": "long",
+          "oracle_bytes": 6726,
+          "oracle_sha256": "5b1a085faeadf5be7b9a4abcf1ddd8ce4fb1f8f6a42f79616d02145ef93ecc02",
+          "source_sha256": "f2a031ba2d64c403704e6622033e5fbdcd66e48f60485fbab607fe07142be68d",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "c5bca0fb7a412d8515a1fcd1e0f43c42acfb83a908e98738113290806b4464ee",
+          "input_variant": "short",
+          "oracle_bytes": 14,
+          "oracle_sha256": "7ed361de7fcfd1696d7813c609e87fcd021ae3249c26e870e1d768e14d07b81d",
+          "source_sha256": "c1b93967af0e03cdb5363c0aa064f876ba2e01b26ae08dc70df174036bad5a78",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "longest-palindromic-subsequence",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "str"
+        ],
+        "fields": [
+          "dp",
+          "text"
+        ],
+        "inside_loop_fraction": 0.779874213836478,
+        "inside_loop_occurrence": 1116,
+        "post_loop_baseline_line": 15,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 11,
+        "long_executions": 1431,
+        "long_to_short_ratio": 9.352941176470589,
+        "short_executions": 153,
+        "statement": "if text[left] == text[right]:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Longest Palindromic Subsequence",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Classical palindrome-table and minimum-cut dynamic programming",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "c74a3b881a1394921a5f9295dbfca730c2a7dfc096f5830ee9a6dc52f1dbcffd",
+          "input_variant": "long",
+          "oracle_bytes": 9809,
+          "oracle_sha256": "9bc25e6bbaee22e0e9a4e1a5d41000cef755d7c7f77f6fbd4bfd57984d449576",
+          "source_sha256": "8fcae68327cd534046ced7b3a853c4b5f968e28d0ff6aff9f6a8b5dc9c89cea5",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "c74a3b881a1394921a5f9295dbfca730c2a7dfc096f5830ee9a6dc52f1dbcffd",
+          "input_variant": "long",
+          "oracle_bytes": 20,
+          "oracle_sha256": "3809b08d94a27e059285963606d1063d162c2f3f1c4f8a85e9da46f8137da9c1",
+          "source_sha256": "c292ba530eeeae0791133aca5c69a73c36813e73c776c48ecd75a58734a2e7df",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "c74a3b881a1394921a5f9295dbfca730c2a7dfc096f5830ee9a6dc52f1dbcffd",
+          "input_variant": "long",
+          "oracle_bytes": 9795,
+          "oracle_sha256": "879ebbc17c3c6514b8925bf6e5c36e1efb2f48057c197ce75a340c918fae46c7",
+          "source_sha256": "0bb49cd65db87fc1c4841cf636aeb6f7ee4295cae2e62d6abf18f48a57292194",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "0319e5540310d0dec58b4392273c67e0ae558ae64aa84b16a1c132b0bfd409ec",
+          "input_variant": "short",
+          "oracle_bytes": 19,
+          "oracle_sha256": "0a0bf10fd43b06467f32b389d475cd84503188d058b7adc3e915dd29fda46b69",
+          "source_sha256": "c292ba530eeeae0791133aca5c69a73c36813e73c776c48ecd75a58734a2e7df",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "palindrome-partitioning",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "str"
+        ],
+        "fields": [
+          "cuts",
+          "palindrome",
+          "text"
+        ],
+        "inside_loop_fraction": 0.7792682926829269,
+        "inside_loop_occurrence": 639,
+        "post_loop_baseline_line": 14,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 11,
+        "long_executions": 820,
+        "long_to_short_ratio": 7.809523809523809,
+        "short_executions": 105,
+        "statement": "if text[left] == text[right] and (right - left <= 2 or palindrome[left + 1][right - 1]):"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Minimum Palindrome Partitioning",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Bellman, Dynamic Programming",
+      "algorithm_reference_url": "https://press.princeton.edu/books/paperback/9780691146683/dynamic-programming",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "30f8a5b79146389a4ec9c2720a64db8542e93d460eea660ba2ed106aa5854d1d",
+          "input_variant": "long",
+          "oracle_bytes": 9546,
+          "oracle_sha256": "7a1f73357a255e2f057e0dbff3f06ff3698838caee8f1420866d4f4e9cf2463b",
+          "source_sha256": "711939ea97ac2c0f924b9385870942b0cb028c7ac26f5630fcc6662ff4978cab",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "30f8a5b79146389a4ec9c2720a64db8542e93d460eea660ba2ed106aa5854d1d",
+          "input_variant": "long",
+          "oracle_bytes": 19,
+          "oracle_sha256": "ca0fc7fde240070bfd666960f51c382bece263cf02c56039f7636eed513a7414",
+          "source_sha256": "fb46a6fbdfec166f5108539c755112b43eec576ca51060733e0faa0ccf5ef14c",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "30f8a5b79146389a4ec9c2720a64db8542e93d460eea660ba2ed106aa5854d1d",
+          "input_variant": "long",
+          "oracle_bytes": 9196,
+          "oracle_sha256": "a68ceeab3b660c89bf94f2f99ccbc792e81dcd7f4e2a62e6e0e57d752a18d8c0",
+          "source_sha256": "e86b9328c0adbd407ef803036cc4364daac9cfc7bcfc3d5f3946099665216ca9",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "159a17debdf160ff34c310ab9202326f1744ec0abc6b2023d1b833035f5fd671",
+          "input_variant": "short",
+          "oracle_bytes": 20,
+          "oracle_sha256": "9cbd431870d49928836bd233ddbc6c80337d6210fd8b6939a92067e2bd39d86e",
+          "source_sha256": "fb46a6fbdfec166f5108539c755112b43eec576ca51060733e0faa0ccf5ef14c",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "subset-sum",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "int",
+          "list"
+        ],
+        "fields": [
+          "dp",
+          "target",
+          "values"
+        ],
+        "inside_loop_fraction": 0.7796296296296297,
+        "inside_loop_occurrence": 1263,
+        "post_loop_baseline_line": 13,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 12,
+        "long_executions": 1620,
+        "long_to_short_ratio": 6.328125,
+        "short_executions": 256,
+        "statement": "dp[index][total] = dp[index - 1][total] or (total >= value and dp[index - 1][total - value])"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Subset Sum",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Classical grid dynamic programming recurrence",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "f52aa46fad5558f2d320b8eddab0a23d6e261616815a3c07d2d70ddf2c2f6cc5",
+          "input_variant": "long",
+          "oracle_bytes": 2509,
+          "oracle_sha256": "bd2b9e4497e55850b88c10914bfbe9e0e114e9e343b91875de816368cd4eaa7e",
+          "source_sha256": "4716487bc9b48465bc0e32b324d397e5f3e658203ca91b3e4764e74bb1315b31",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "f52aa46fad5558f2d320b8eddab0a23d6e261616815a3c07d2d70ddf2c2f6cc5",
+          "input_variant": "long",
+          "oracle_bytes": 21,
+          "oracle_sha256": "9d3f3aca4db3e80e4218f1db4ebbeb90bf0c52ed0511d876de2602dd787492cf",
+          "source_sha256": "d7fd77432feaf6309eb602b3741d518866cf52866f9d319e7a59cc62108249f8",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "f52aa46fad5558f2d320b8eddab0a23d6e261616815a3c07d2d70ddf2c2f6cc5",
+          "input_variant": "long",
+          "oracle_bytes": 2687,
+          "oracle_sha256": "dc029fbd18faf5e08e44be691d6eaf1311f66394f38558eed93a48d4b10b17a8",
+          "source_sha256": "c9fec31bc182a93e288e83fe659678a0f2951a76688676d74df703ba757eca22",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "bb2ad0cd7bb71a4018f9c2f210b522a2926f25ca7adad3669be78f9029a1fc39",
+          "input_variant": "short",
+          "oracle_bytes": 20,
+          "oracle_sha256": "398b23b2ade4b4ab9ea3cd8daab28dfd6e7d35eadbbb69f7f7c2d11c542dd28a",
+          "source_sha256": "d7fd77432feaf6309eb602b3741d518866cf52866f9d319e7a59cc62108249f8",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "minimum-cost-grid-path",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "int",
+          "list",
+          "list",
+          "int"
+        ],
+        "fields": [
+          "columns",
+          "dp",
+          "grid",
+          "rows"
+        ],
+        "inside_loop_fraction": 0.78,
+        "inside_loop_occurrence": 312,
+        "post_loop_baseline_line": 19,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 11,
+        "long_executions": 400,
+        "long_to_short_ratio": 11.11111111111111,
+        "short_executions": 36,
+        "statement": "if row == 0 and column == 0:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Minimum-Cost Grid Path",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, optimal binary search trees",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "484d4d2428f8d460e137bb0790fb57be7ec6e5b649a7f84c7d937e212184023c",
+          "input_variant": "long",
+          "oracle_bytes": 3439,
+          "oracle_sha256": "673d76bb2deffc05c4f406aa2f985eb88084f39cd12a722307fc459480d35f26",
+          "source_sha256": "6c44d55cc009a5a62ec16b4d90d4ea41f1b4a82069fc64e0a2790e404958c7b2",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "484d4d2428f8d460e137bb0790fb57be7ec6e5b649a7f84c7d937e212184023c",
+          "input_variant": "long",
+          "oracle_bytes": 22,
+          "oracle_sha256": "5fc5a188bfd5e2d4c3024f47c51ce766103908423034257a594355e527ec7589",
+          "source_sha256": "763872752a3c8db7d892e9e028c1244b529281b4327b9d7c2ff073b0986949b3",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "484d4d2428f8d460e137bb0790fb57be7ec6e5b649a7f84c7d937e212184023c",
+          "input_variant": "long",
+          "oracle_bytes": 3501,
+          "oracle_sha256": "c1f7e33092bf3be8ddb17329a0fee0c01144471d39cafa5495c493484546bc26",
+          "source_sha256": "843551dff03e92314572a9f75a7ed94637d994b5eb04428c5b958feebb5d7866",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "515b59ab9c77ab751baa53aa202dc550abdb95108dad8d03843e700c9065a7db",
+          "input_variant": "short",
+          "oracle_bytes": 21,
+          "oracle_sha256": "aacf7e00866c86ba6291b88c356da0550f2c4607ddbe616550f4649a4c65118b",
+          "source_sha256": "763872752a3c8db7d892e9e028c1244b529281b4327b9d7c2ff073b0986949b3",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "optimal-binary-search-tree",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "cost",
+          "frequencies",
+          "root"
+        ],
+        "inside_loop_fraction": 0.78,
+        "inside_loop_occurrence": 2028,
+        "post_loop_baseline_line": 26,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 18,
+        "long_executions": 2600,
+        "long_to_short_ratio": 21.666666666666668,
+        "short_executions": 120,
+        "statement": "candidate = total"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Optimal Binary Search Tree",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Classical egg-dropping dynamic programming recurrence",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "c0d1001f89751fba994561958f85769861c5c743d509fed9ebffba1c3b3deb8f",
+          "input_variant": "long",
+          "oracle_bytes": 1226,
+          "oracle_sha256": "f59f501b7c4dd7707c1cee28b094704a9e900c9ac47c400e072aed7d0b09881b",
+          "source_sha256": "c45c77ff61eee80472da0386875313459c6a1baef0b1fe578165478bbcd4b7cd",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "c0d1001f89751fba994561958f85769861c5c743d509fed9ebffba1c3b3deb8f",
+          "input_variant": "long",
+          "oracle_bytes": 21,
+          "oracle_sha256": "70acd3b29f43ca20c9d773a01910a1a6782c9aca16b9afd5a8c90bcdb43e7b93",
+          "source_sha256": "9ea0dcb3dd0bb9e899d20354e7eb4b304dcce5bc95dbc417e4394a6968d381fd",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "c0d1001f89751fba994561958f85769861c5c743d509fed9ebffba1c3b3deb8f",
+          "input_variant": "long",
+          "oracle_bytes": 1238,
+          "oracle_sha256": "15646bdaab877cd698aec5729a11e57e6cd4f4313bf153141f77547818530bfe",
+          "source_sha256": "f86d6b21fdaeaa43be4a063236bec6bb90ae0866cdf2477692855b29ad8dadb2",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "0cf8615e554945b30b9cfa3e6f1263bec57b78324b93e90be33e2e823481c307",
+          "input_variant": "short",
+          "oracle_bytes": 21,
+          "oracle_sha256": "06ae3482cb91e038982057c0627d7c9d5265e9107ca4ec23b5ff44e664d3cb34",
+          "source_sha256": "9ea0dcb3dd0bb9e899d20354e7eb4b304dcce5bc95dbc417e4394a6968d381fd",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "egg-dropping",
+      "category": "dynamic programming",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "int",
+          "int"
+        ],
+        "fields": [
+          "choice",
+          "dp",
+          "eggs",
+          "floors"
+        ],
+        "inside_loop_fraction": 0.779951690821256,
+        "inside_loop_occurrence": 3229,
+        "post_loop_baseline_line": 18,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 14,
+        "long_executions": 4140,
+        "long_to_short_ratio": 19.714285714285715,
+        "short_executions": 210,
+        "statement": "candidate = 1 + max(dp[egg - 1][drop - 1], dp[egg][floor - drop])"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Egg Dropping",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Dijkstra, A Note on Two Problems in Connexion with Graphs",
+      "algorithm_reference_url": "https://doi.org/10.1007/BF01386390",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "6a77e3feb20dc8fd78ae0f30f0187a3f1db4514cfec4ff993c9141506b72208e",
+          "input_variant": "long",
+          "oracle_bytes": 404,
+          "oracle_sha256": "80c495fe543aeb8ca00ede88e8cb73ad19388c46065ad2b85e8c10dec35f4c56",
+          "source_sha256": "c4e607fd42b2000e7ee179198bddedb2fc1109504c9b24db62b084be78fafafe",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "6a77e3feb20dc8fd78ae0f30f0187a3f1db4514cfec4ff993c9141506b72208e",
+          "input_variant": "long",
+          "oracle_bytes": 115,
+          "oracle_sha256": "f724265b47ce9879b98972811a395b549469c31848253bd117b198de2434c64f",
+          "source_sha256": "cad43cecd1d550410c3b846c97748ca5f112b08f555ae5573cee9d477b893cb1",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "6a77e3feb20dc8fd78ae0f30f0187a3f1db4514cfec4ff993c9141506b72208e",
+          "input_variant": "long",
+          "oracle_bytes": 395,
+          "oracle_sha256": "56c937b54bbc7e60c3078f6da0f5fb6226c76ed6a5f38eb032d4a1f6e2aef651",
+          "source_sha256": "1323aea45d426bde5c57d5b0c55f0bbc05a0167b21d68cd4aeb4bc36029f84f7",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "23bd43108175eb18fd7fd0af9550310585bf0968b67f3cf356d2414b7b521d56",
+          "input_variant": "short",
+          "oracle_bytes": 41,
+          "oracle_sha256": "3b155b0ad9bb2e3c5d2877c13df2c64c6b3edb5582377dca9afd6ae59e817b43",
+          "source_sha256": "cad43cecd1d550410c3b846c97748ca5f112b08f555ae5573cee9d477b893cb1",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "dijkstra",
+      "category": "graph",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "dist",
+          "parent",
+          "visited"
+        ],
+        "inside_loop_fraction": 0.7793427230046949,
+        "inside_loop_occurrence": 332,
+        "post_loop_baseline_line": 30,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 25,
+        "long_executions": 426,
+        "long_to_short_ratio": 6.870967741935484,
+        "short_executions": 62,
+        "statement": "candidate = distance + weight"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Dijkstra Shortest Paths",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Bellman, On a Routing Problem",
+      "algorithm_reference_url": "https://doi.org/10.1090/S0002-9939-1958-0102435-2",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "2bffb10bba74ae291587bc0288eef0d4c64cbaea4ea43d6726496086535644e6",
+          "input_variant": "long",
+          "oracle_bytes": 2422,
+          "oracle_sha256": "9f51c2207a560dcb14920ee1bf36215f9b04a93894112af7873c7b21a7939399",
+          "source_sha256": "70c7454cb482df91fa74535c79a126e4441046d5ec49bc62e686d415102a6bcb",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "2bffb10bba74ae291587bc0288eef0d4c64cbaea4ea43d6726496086535644e6",
+          "input_variant": "long",
+          "oracle_bytes": 106,
+          "oracle_sha256": "25ef5d94da6b4aeeed0c998d7cf5d6108f6b4c66f9d1eb95496c832a344f6041",
+          "source_sha256": "7656553caa2b4e2a7717934d4518203f54a17f4d9514f263790cc880da4cc05a",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "2bffb10bba74ae291587bc0288eef0d4c64cbaea4ea43d6726496086535644e6",
+          "input_variant": "long",
+          "oracle_bytes": 2422,
+          "oracle_sha256": "bc72b950b1c3ea412e02caa213a3905e65f7385b560eceb9d9deb17f839528cc",
+          "source_sha256": "4642f005482b0d57d1eeb3721bed02febb890561fe4ad7047ba6981c951736be",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "cf5cf5623f40db7a6fd33ec0b962a324e8b453425effcb6a673269caee60d505",
+          "input_variant": "short",
+          "oracle_bytes": 45,
+          "oracle_sha256": "1c43423d397b7f4058bd08e0d7c23fbc4aa445b8179468738a7194238a552362",
+          "source_sha256": "7656553caa2b4e2a7717934d4518203f54a17f4d9514f263790cc880da4cc05a",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "bellman-ford",
+      "category": "graph",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "dist",
+          "edges",
+          "parent"
+        ],
+        "inside_loop_fraction": 0.6666666666666666,
+        "inside_loop_occurrence": 884,
+        "post_loop_baseline_line": 22,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 16,
+        "long_executions": 1326,
+        "long_to_short_ratio": 13.393939393939394,
+        "short_executions": 99,
+        "statement": "if dist[left] != infinity and dist[left] + weight < dist[right]:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Bellman-Ford Shortest Paths",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Prim, Shortest Connection Networks and Some Generalizations",
+      "algorithm_reference_url": "https://doi.org/10.1002/j.1538-7305.1957.tb01515.x",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "3fda658b73a619f2b7b4c96d2ccfa5396445610fdfa9c540952da593046d246c",
+          "input_variant": "long",
+          "oracle_bytes": 2248,
+          "oracle_sha256": "65690fc3e97ca9685e92098fe87dc176ec501d0ad9fd2f6787f03c08ae4a57bb",
+          "source_sha256": "a72065325cfa32cbedbb7d585aa263c81459b963b834cd56247ca0a267d5a6b8",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "3fda658b73a619f2b7b4c96d2ccfa5396445610fdfa9c540952da593046d246c",
+          "input_variant": "long",
+          "oracle_bytes": 14,
+          "oracle_sha256": "224ecb0edf62481ef68dcac6d1c7f7c44138f62a22ded0b736e65f3e30530594",
+          "source_sha256": "3df949d3865ccaaadb0b7484a470de4a955e9dcdcedd61a8bf63f41b426807d3",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "3fda658b73a619f2b7b4c96d2ccfa5396445610fdfa9c540952da593046d246c",
+          "input_variant": "long",
+          "oracle_bytes": 2243,
+          "oracle_sha256": "a0896d6da216ff80e112872139cb4f3cdafd192b4eb8aed53d9d6502e63604ab",
+          "source_sha256": "77e83dc771ce8843ce9b94adab35a29d4394eb677bc878ab9f4f02d0a0a262ad",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "4d3914145ab16860719de6cd5c7a21fcbc6d06edf689aa7b9a2b53388a56f6d9",
+          "input_variant": "short",
+          "oracle_bytes": 14,
+          "oracle_sha256": "8530e051c3683cc32745e4bc1cff88160fbf2ca3b691e52fe463a3500a202bce",
+          "source_sha256": "3df949d3865ccaaadb0b7484a470de4a955e9dcdcedd61a8bf63f41b426807d3",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "prim",
+      "category": "graph",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "in_tree",
+          "key",
+          "matrix",
+          "parent"
+        ],
+        "inside_loop_fraction": 0.7795857988165681,
+        "inside_loop_occurrence": 527,
+        "post_loop_baseline_line": 20,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 16,
+        "long_executions": 676,
+        "long_to_short_ratio": 10.5625,
+        "short_executions": 64,
+        "statement": "weight = matrix[node][neighbor]"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Prim Minimum Spanning Tree",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Kruskal, On the Shortest Spanning Subtree of a Graph",
+      "algorithm_reference_url": "https://doi.org/10.1090/S0002-9939-1956-0078686-7",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "a2de88e68d88a6320a4adc77053dbe80923a7458ddc5444c1c8704eb66d098f4",
+          "input_variant": "long",
+          "oracle_bytes": 412,
+          "oracle_sha256": "ce35729208c271a48fe336b34ab7afd8d032554b69f0e85c41c3faff5ce0d221",
+          "source_sha256": "629397f63efc859fe9cfe0e33034a4c6023c67e0967a9aeb3828a3b18db1e4e9",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "a2de88e68d88a6320a4adc77053dbe80923a7458ddc5444c1c8704eb66d098f4",
+          "input_variant": "long",
+          "oracle_bytes": 15,
+          "oracle_sha256": "c6a9491010634a7433ac0f827b8669d1138522d44ab0cc9b09131ed726611faa",
+          "source_sha256": "4c5efc7a8fc8d5dcff19f4f6a7300d622046c65a88a6de1dfe30b11e46f1c275",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "a2de88e68d88a6320a4adc77053dbe80923a7458ddc5444c1c8704eb66d098f4",
+          "input_variant": "long",
+          "oracle_bytes": 554,
+          "oracle_sha256": "fe0ff92749a362b7b7253e7ed30f045afb796b80816eabd7dfe760dc730c615a",
+          "source_sha256": "e838cfdcb8a6e121d675f72b437fb4b8e3d7d7896367f50dcfebd3d8e91e3898",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "c64733f9a915e0ebbe34333c070e48f7089c1f6a246e5b79048a7b308fa4e042",
+          "input_variant": "short",
+          "oracle_bytes": 14,
+          "oracle_sha256": "a6fc672d52eb22f1a818897e2b6a58acec721ceaef73e3c9a4dd7cf9d404d579",
+          "source_sha256": "4c5efc7a8fc8d5dcff19f4f6a7300d622046c65a88a6de1dfe30b11e46f1c275",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "kruskal",
+      "category": "graph",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "list",
+          "int"
+        ],
+        "fields": [
+          "parent",
+          "rank",
+          "selected",
+          "total"
+        ],
+        "inside_loop_fraction": 0.09803921568627451,
+        "inside_loop_occurrence": 25,
+        "post_loop_baseline_line": 31,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 20,
+        "long_executions": 255,
+        "long_to_short_ratio": 7.5,
+        "short_executions": 34,
+        "statement": "left_root = find(left)"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Kruskal Minimum Spanning Tree",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Kahn, Topological Sorting of Large Networks",
+      "algorithm_reference_url": "https://doi.org/10.1145/368996.369025",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "14814b27c3c54d198567d3c892c791506b80e355accbacc5e3c7d16a8a6961d6",
+          "input_variant": "long",
+          "oracle_bytes": 246,
+          "oracle_sha256": "ebed33021b4682820feab53e9a33814bd11c586943c10575f6f726c2a3117e84",
+          "source_sha256": "a4b7d9eee31b355e0c27c95363cf889382589cf0fc7166736bfdd07345862c2c",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "14814b27c3c54d198567d3c892c791506b80e355accbacc5e3c7d16a8a6961d6",
+          "input_variant": "long",
+          "oracle_bytes": 157,
+          "oracle_sha256": "1cf36a1c4228c94983e27b48aa9e65d546fa328a9ec6d207d37cd591d15d8b03",
+          "source_sha256": "18e976d43207ef76fad6b36bb92398545afc5e27fdae297e741a49b7020d0f54",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "14814b27c3c54d198567d3c892c791506b80e355accbacc5e3c7d16a8a6961d6",
+          "input_variant": "long",
+          "oracle_bytes": 301,
+          "oracle_sha256": "da523955325ffda587995d1216bc7f2394f814e093443635735621d7484b77b6",
+          "source_sha256": "7d330c8ead4f138ee8188b1a8237caeee4eff2da7cef70ad5c025c183d6d5e7d",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "e7d1cd3abf65aa0f2539eec64125281c554f12e5060619162370a0f432fd4c45",
+          "input_variant": "short",
+          "oracle_bytes": 28,
+          "oracle_sha256": "73c32ed478812f8660f61dab1704496aef29996f234c42ef17b29350a193d218",
+          "source_sha256": "18e976d43207ef76fad6b36bb92398545afc5e27fdae297e741a49b7020d0f54",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "kahn-topological-sort",
+      "category": "graph",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "list"
+        ],
+        "fields": [
+          "indegree",
+          "order",
+          "queue"
+        ],
+        "inside_loop_fraction": 0.7769230769230769,
+        "inside_loop_occurrence": 202,
+        "post_loop_baseline_line": 23,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 20,
+        "long_executions": 260,
+        "long_to_short_ratio": 10.833333333333334,
+        "short_executions": 24,
+        "statement": "indegree[neighbor] -= 1"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Kahn Topological Sort",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Introduction to Algorithms, merge sort",
+      "algorithm_reference_url": "https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "d7084853488765dcaf7c1da03499fa93e21a246f8938c43abdc6d07dc7b87baa",
+          "input_variant": "long",
+          "oracle_bytes": 2798,
+          "oracle_sha256": "0942b1cbbf7f50fa00d9cc0b9324c9b861ed852c7edf7f6cf9665259e64dbf5e",
+          "source_sha256": "48f84c1d37e314881a69c05b8df5ddb4940784d4995b60ccdaaef3b8b641d68d",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "d7084853488765dcaf7c1da03499fa93e21a246f8938c43abdc6d07dc7b87baa",
+          "input_variant": "long",
+          "oracle_bytes": 1365,
+          "oracle_sha256": "c27c4fc6483646ee0a898e3b8ee6d0a90764b520bc4511f8a5bc6e008b888642",
+          "source_sha256": "7155035b1a592e4a908ea7f823edac2ce6d724359f15ac545c7915ca192dd711",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "d7084853488765dcaf7c1da03499fa93e21a246f8938c43abdc6d07dc7b87baa",
+          "input_variant": "long",
+          "oracle_bytes": 2762,
+          "oracle_sha256": "474331721a24cee40d2c363bf1f09a3e98e799508d80384b8ecd01163e768108",
+          "source_sha256": "9d989932d1e1c93c288442a41cd70ceaaaf5cc67d2297baa126dcf830dbe1627",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "6f1f922721cbda2c1bda768987bb109e0ca44e7186ffa23f2b2eef8ee898b221",
+          "input_variant": "short",
+          "oracle_bytes": 139,
+          "oracle_sha256": "ba1b336d1be88dd7bed71dbeed3f618cfa54c4af377d8237ddb201ab586b73d9",
+          "source_sha256": "7155035b1a592e4a908ea7f823edac2ce6d724359f15ac545c7915ca192dd711",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "merge-sort",
+      "category": "sorting",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list",
+          "int"
+        ],
+        "fields": [
+          "buffer",
+          "values",
+          "width"
+        ],
+        "inside_loop_fraction": 0.77978515625,
+        "inside_loop_occurrence": 1597,
+        "post_loop_baseline_line": 24,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 16,
+        "long_executions": 2048,
+        "long_to_short_ratio": 12.8,
+        "short_executions": 160,
+        "statement": "if left < middle and (right >= end or values[left] <= values[right]):"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Bottom-Up Merge Sort",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Williams, Algorithm 232: Heapsort",
+      "algorithm_reference_url": "https://doi.org/10.1145/512274.512284",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "375d688cf570c5c148326ceb1e716b3371412dac2b20dc07833f7aab9a895699",
+          "input_variant": "long",
+          "oracle_bytes": 1384,
+          "oracle_sha256": "877086964e45eba1634b37afbd2b504ac18218254390e8c2b108d0194c32dc9d",
+          "source_sha256": "78b3c1e09271ea0f918a987537e4585e7686db75a0d793f4be7f3afa9d4c01d0",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "375d688cf570c5c148326ceb1e716b3371412dac2b20dc07833f7aab9a895699",
+          "input_variant": "long",
+          "oracle_bytes": 1365,
+          "oracle_sha256": "13252c3aef442c7ce13b98333832dc177c454935649bcc09a0d8719ca3ae760c",
+          "source_sha256": "c20ec5f5d2940ac846eb4592db961e9298ab79e37797e874fd91fa93f42779cb",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "375d688cf570c5c148326ceb1e716b3371412dac2b20dc07833f7aab9a895699",
+          "input_variant": "long",
+          "oracle_bytes": 1384,
+          "oracle_sha256": "35695b52e3d46962c5ea4fde0cb5bfd761d30001fd94513470b51ab773ddabc6",
+          "source_sha256": "2041faaa0f86983ba48a134e8fe29ad3ef850791eb4d074869bfcf3679b119b3",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "0cc670a98c9da7c643180db708379356ae14e7c15ca4cd51f34e34d2a43f4dbd",
+          "input_variant": "short",
+          "oracle_bytes": 137,
+          "oracle_sha256": "3a2da8ffaa89c5b39ce3319a0746651baef96efb9e00946f20825761bffdb6bc",
+          "source_sha256": "c20ec5f5d2940ac846eb4592db961e9298ab79e37797e874fd91fa93f42779cb",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "heap-sort",
+      "category": "sorting",
+      "checkpoints": {
+        "field_types": [
+          "int",
+          "list"
+        ],
+        "fields": [
+          "n",
+          "values"
+        ],
+        "inside_loop_fraction": 0.7764705882352941,
+        "inside_loop_occurrence": 198,
+        "post_loop_baseline_line": 23,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 22,
+        "long_executions": 255,
+        "long_to_short_ratio": 8.225806451612904,
+        "short_executions": 31,
+        "statement": "sift_down(0, end)"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Heap Sort",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Karp and Rabin, Efficient Randomized Pattern-Matching Algorithms",
+      "algorithm_reference_url": "https://doi.org/10.1147/rd.312.0249",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "4f3b3a94c5fec4ffde918b2d7d586f89a7307b297020e12c6a741528003cfb30",
+          "input_variant": "long",
+          "oracle_bytes": 424,
+          "oracle_sha256": "854b0e372a78ff375302cca140eeae9d75e946d9743d73ad21f1aca43b3c820a",
+          "source_sha256": "207c55c464c02dd6660460b4a6fda362537de4d411f018c028d72d136736d7f3",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "4f3b3a94c5fec4ffde918b2d7d586f89a7307b297020e12c6a741528003cfb30",
+          "input_variant": "long",
+          "oracle_bytes": 9,
+          "oracle_sha256": "9c296fe6fe31fa201399a93fb44f483df2a33a41abfb4359aba19b48804cc559",
+          "source_sha256": "13479d5d61acb20e0addadc72c4c8a36c76fd6319c421bed9a829bb52baa2a1e",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "4f3b3a94c5fec4ffde918b2d7d586f89a7307b297020e12c6a741528003cfb30",
+          "input_variant": "long",
+          "oracle_bytes": 428,
+          "oracle_sha256": "8d8b24281f8398d728fcf220323dc66fbe752c85022d97ad003c0199e846f18c",
+          "source_sha256": "f489982d3dadd2e652a4f3d0efbe29f9d5e364b8ae235e989384da11d945ae33",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "cc02204fc06eb46d6a9ee64baa8019c7ff828e34e427f1a5b4e84dbd78abe491",
+          "input_variant": "short",
+          "oracle_bytes": 5,
+          "oracle_sha256": "e78449a78976a01ba606c523fd27c61be4249ea6bc6c110775f9a6c618bbe3d2",
+          "source_sha256": "13479d5d61acb20e0addadc72c4c8a36c76fd6319c421bed9a829bb52baa2a1e",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "rabin-karp",
+      "category": "string",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "str",
+          "int",
+          "str",
+          "int"
+        ],
+        "fields": [
+          "matches",
+          "pattern",
+          "pattern_hash",
+          "text",
+          "window_hash"
+        ],
+        "inside_loop_fraction": 0.7777777777777778,
+        "inside_loop_occurrence": 238,
+        "post_loop_baseline_line": 23,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 18,
+        "long_executions": 306,
+        "long_to_short_ratio": 4.636363636363637,
+        "short_executions": 66,
+        "statement": "if window_hash == pattern_hash and text[start:start + length] == pattern:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Rabin-Karp String Matching",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Gusfield, Algorithms on Strings, Trees, and Sequences",
+      "algorithm_reference_url": "https://doi.org/10.1017/CBO9780511574931",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "8c5c683bb189a670aff31224520a2836f212605037303656112c579445327492",
+          "input_variant": "long",
+          "oracle_bytes": 1001,
+          "oracle_sha256": "f12f0f7894c87ae3ddd5de1e3bba28c29b0649939de8720606d446a86f55e2d7",
+          "source_sha256": "1525360d6fad4193ebd649415522b02ceea13282adaca53edeffb8215bfc6e96",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "8c5c683bb189a670aff31224520a2836f212605037303656112c579445327492",
+          "input_variant": "long",
+          "oracle_bytes": 642,
+          "oracle_sha256": "9a6d65d677219265b90e071662ea97bd97966f53a1bb8a975de96fd8e8acae44",
+          "source_sha256": "517326399dda02a1334e8ae408e095bd5c018b658b6e9d9fa1eb2c537a3c1b55",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "8c5c683bb189a670aff31224520a2836f212605037303656112c579445327492",
+          "input_variant": "long",
+          "oracle_bytes": 1001,
+          "oracle_sha256": "63c60514c6ce9d0cf5b11e4f30a76c315a97fdca65b8995f1f3cbed64cbf2832",
+          "source_sha256": "1dc7bd6db7daa0ea65e2d7ea11596099ea0d4b2e397f1a9826c6f3452220dd4e",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "c629963fb7c5fd98ac4fcb1dfaf8700f82f6592eebe40ecb812ea04b251d69d6",
+          "input_variant": "short",
+          "oracle_bytes": 142,
+          "oracle_sha256": "51051596dfe256f05198a7684dd09cec0d417e084c2cd9077308d356db3bf692",
+          "source_sha256": "517326399dda02a1334e8ae408e095bd5c018b658b6e9d9fa1eb2c537a3c1b55",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "z-algorithm",
+      "category": "string",
+      "checkpoints": {
+        "field_types": [
+          "int",
+          "int",
+          "str",
+          "list"
+        ],
+        "fields": [
+          "left",
+          "right",
+          "text",
+          "z"
+        ],
+        "inside_loop_fraction": 0.7774294670846394,
+        "inside_loop_occurrence": 248,
+        "post_loop_baseline_line": 17,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 10,
+        "long_executions": 319,
+        "long_to_short_ratio": 4.6231884057971016,
+        "short_executions": 69,
+        "statement": "if index <= right:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Z Algorithm",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    },
+    {
+      "algorithm_reference": "Andrew, Another Efficient Algorithm for Convex Hulls in Two Dimensions",
+      "algorithm_reference_url": "https://doi.org/10.1016/0020-0190(79)90072-3",
+      "arms": {
+        "inside-loop-state": {
+          "input_sha256": "374a7fbc5a1b91aa646c5b9ac13f26afd61c219bb37e52de97f3c23e41746330",
+          "input_variant": "long",
+          "oracle_bytes": 2413,
+          "oracle_sha256": "dd6b54181209afc9a366d5aa872b41af4a1939c4d0301bed0344da1ef22defd2",
+          "source_sha256": "a70119840ef4bbed05a4b69176bf50398f656ecb3910c650bf27797725f0ebe2",
+          "source_variant": "inside-loop-state"
+        },
+        "long-trace-final": {
+          "input_sha256": "374a7fbc5a1b91aa646c5b9ac13f26afd61c219bb37e52de97f3c23e41746330",
+          "input_variant": "long",
+          "oracle_bytes": 141,
+          "oracle_sha256": "ebd5a48ae27bb2a04797591e4739adb9b23e859a58d1a11219dbf3dd5e53a4da",
+          "source_sha256": "d22e8aad564e8d615850248a98b2e4cdab808b057eb3f4d0fe8c36f1392b6713",
+          "source_variant": "clean"
+        },
+        "post-loop-state": {
+          "input_sha256": "374a7fbc5a1b91aa646c5b9ac13f26afd61c219bb37e52de97f3c23e41746330",
+          "input_variant": "long",
+          "oracle_bytes": 2402,
+          "oracle_sha256": "b64919dc2d894a2830d1e98570bcf1c523949ab4a0b0341c529e62c8770c59b7",
+          "source_sha256": "8038d7c65ab9dffca32cb731c4f559787b81d988ff11093d21221048d779f782",
+          "source_variant": "post-loop-state"
+        },
+        "short-trace-final": {
+          "input_sha256": "377583a4cbeeb1e5f25bbf47519928393c23cddb08e34a006e529922f22ebb33",
+          "input_variant": "short",
+          "oracle_bytes": 101,
+          "oracle_sha256": "83c14209048d71392dd64d3cd8c3c963d5ea0f0b601acf9bbcc4d126fbffcb33",
+          "source_sha256": "d22e8aad564e8d615850248a98b2e4cdab808b057eb3f4d0fe8c36f1392b6713",
+          "source_variant": "clean"
+        }
+      },
+      "case_id": "andrew-monotone-chain",
+      "category": "computational geometry",
+      "checkpoints": {
+        "field_types": [
+          "list",
+          "list"
+        ],
+        "fields": [
+          "lower",
+          "points"
+        ],
+        "inside_loop_fraction": 0.7772727272727272,
+        "inside_loop_occurrence": 171,
+        "post_loop_baseline_line": 24,
+        "serialization": "canonical compact JSON"
+      },
+      "core_loop": {
+        "baseline_line": 15,
+        "long_executions": 220,
+        "long_to_short_ratio": 7.333333333333333,
+        "short_executions": 30,
+        "statement": "while len(lower) >= 2 and cross(lower[-2], lower[-1], point) <= 0:"
+      },
+      "language": "python",
+      "selection": "selected before model evaluation as a canonical state-rich algorithm comparable to the original ten-program pilot",
+      "source_origin": "repository-authored textbook implementation",
+      "title": "Andrew Monotone Chain Convex Hull",
+      "validation": {
+        "deterministic_oracles": true,
+        "long_increases_core_loop": true,
+        "repeated_executions": 3,
+        "state_arms_share_input": true,
+        "state_projection_changed": true,
+        "state_projection_schema_matches": true
+      }
+    }
+  ],
+  "experiment": "classic_algorithms_state_prediction",
+  "prediction_count_per_model": 120
+}

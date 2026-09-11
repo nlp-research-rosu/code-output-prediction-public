@@ -1,0 +1,1 @@
+{"minimum_cost":78612}

@@ -1,0 +1,1 @@
+The program outputs a JSON dump of the complete `f` and `g` matrices when the operation count reaches 1035, then exits.

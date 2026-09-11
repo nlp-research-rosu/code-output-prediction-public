@@ -1,0 +1,1 @@
+{"coupons": [[1002, 7]], "d": 5, "l": 1002, "max_discount": 6, "price": 997, "total_cost": 498500}

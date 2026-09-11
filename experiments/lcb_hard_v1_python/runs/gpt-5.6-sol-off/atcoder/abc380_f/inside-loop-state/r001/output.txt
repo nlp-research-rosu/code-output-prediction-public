@@ -1,0 +1,1 @@
+{"a_hand":160,"cards":[1,4,7,10,2,5,8,11,3,6,9,12],"i":7,"new_a_hand":32,"new_table":1488,"pick":6,"pick_options":[6,8,10,null],"t_hand":3,"table":1360,"turn":1}

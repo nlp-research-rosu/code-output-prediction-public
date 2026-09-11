@@ -1,0 +1,1 @@
+{"answer":0,"damage[index]":1,"elapsed":0,"hits[index]":1,"index":480,"len(order)":1440}

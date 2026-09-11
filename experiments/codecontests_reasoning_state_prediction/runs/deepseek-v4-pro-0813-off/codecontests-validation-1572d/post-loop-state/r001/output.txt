@@ -1,0 +1,1 @@
+{"ans":0,"q.size()":0,"u":6,"([&](){ std::vector<int> state; for (int x = 1; x <= tp; ++x) { state.push_back(dis[id[x]]); state.push_back(pr[id[x]]); } return state; })()":[-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0,-1,0]}

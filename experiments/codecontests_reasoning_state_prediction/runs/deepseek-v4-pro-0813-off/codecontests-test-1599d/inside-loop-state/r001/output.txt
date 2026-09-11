@@ -1,0 +1,1 @@
+{"dir_x":5,"dir_y":5,"k":9,"idx":0,"destLayer":2}

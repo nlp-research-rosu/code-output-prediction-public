@@ -1,0 +1,9 @@
+{
+  "benchmark": "networkx_network_simplex_state_prediction",
+  "source_format": "networkx-measurements-csv",
+  "sources": [
+    "measurements.csv",
+    "measurement-manifest.json"
+  ],
+  "static_adapter": "python-control-flow-v2"
+}

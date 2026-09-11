@@ -1,0 +1,1 @@
+{"FACT[-5:]":[1,1,2,6,24],"INV[-5:]":[1,1,0,0,0],"INV_FACT[-5:]":[1,1,0,0,0],"factorial":2,"inverse":0,"inverse_factorial":0,"len(INV)":1003,"size":1002}

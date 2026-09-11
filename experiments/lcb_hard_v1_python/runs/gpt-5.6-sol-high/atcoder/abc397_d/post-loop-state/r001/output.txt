@@ -1,0 +1,1 @@
+{"difference":1999,"discriminant":99248736,"high":2000,"low":1999,"middle":1999,"n":7999999998,"numerator":7136,"root":9962}

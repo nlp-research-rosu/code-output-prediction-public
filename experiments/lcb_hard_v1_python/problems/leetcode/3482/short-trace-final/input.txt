@@ -1,0 +1,1 @@
+{"costs":[100,1,1,10,5],"target":"abcdef","words":["abdef","abc","d","def","ef"]}

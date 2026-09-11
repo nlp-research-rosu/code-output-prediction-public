@@ -1,0 +1,24 @@
+import json
+
+def main():
+    __target_count = 0
+    source = input().strip()
+    target = input().strip()
+    previous = list(range(len(target) + 1))
+    for i in range(1, len(source) + 1):
+        current = [i] + [0] * len(target)
+        for j in range(1, len(target) + 1):
+            __target_count += 1
+            if __target_count == 1185:
+                print(json.dumps({'previous': previous, 'source': source, 'target': target}, separators=(",", ":"), sort_keys=True))
+                return
+            if source[i - 1] == target[j - 1]:
+                current[j] = previous[j - 1]
+            else:
+                current[j] = 1 + min(previous[j], current[j - 1], previous[j - 1])
+        previous = current
+    print(previous[-1])
+
+
+if __name__ == "__main__":
+    main()

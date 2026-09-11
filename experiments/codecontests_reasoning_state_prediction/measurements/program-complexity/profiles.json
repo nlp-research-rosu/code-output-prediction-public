@@ -1,0 +1,2213 @@
+{
+  "schema": "codecontests-complexity-profile-v4-four-metrics",
+  "skill": {
+    "name": "measure-program-complexity",
+    "version": "measure-program-complexity-v4",
+    "path": "skills/measure-program-complexity/SKILL.md"
+  },
+  "benchmark": "CodeContests reasoning and state prediction-arm benchmark",
+  "program_count": 22,
+  "measured_scope": "Exact clean and instrumented sources plus all four canonical execution profiles",
+  "tools": {
+    "container_image": "silkeh/clang@sha256:9388794775d1393c16b6897b4775b6d3e29459319de0bfafec59a20262e1fa68",
+    "container_platform": "linux/amd64",
+    "network": "disabled",
+    "root_filesystem": "read-only",
+    "ast_and_lexer": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+    "coverage": "Debian LLVM version 18.1.8",
+    "adapter_sha256": "39005b8723fb19aa6105f351af23eb4988692dcbf612cd93c79408f66a60a8c6"
+  },
+  "metric_names": {
+    "cyclomatic_complexity": "Omega_CC",
+    "native_trace_length": "Omega_hat_NativeTrace",
+    "state_size": "Omega_hat_StateSize",
+    "state_load": "Omega_hat_StateLoad"
+  },
+  "dynamic_adapter_version": "clang-18.1.8-coverage-state-load-v1",
+  "state_adapter": {
+    "path": "experiments/codecontests_reasoning_state_prediction/measurements/program-complexity/state_runtime.hpp",
+    "sha256": "f9835c65997ef4df98a733adc590cdef7246d17c57b3acf0fb36aaaacffd1bbb",
+    "observation": "incremental observation after binding or supported-container state changes",
+    "state_load_aggregation": "sum of the reachable-value count over the same complete observation series used for StateSize"
+  },
+  "programs": [
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 58249376,
+          "state_size": 840185,
+          "state_load": 41166621651798,
+          "state_observation_count": 49003920,
+          "state_measurement_status": "OK",
+          "input_sha256": "66cad223eb4b52b45ee49a6f14a923756f9c308fb0a2f62f02808d1d2491969e",
+          "source_sha256": "14ddc455906166c8cc9ba66260dd1ee85ca6354b865eda03f0f3871dae33ae17",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 58258370,
+          "state_size": 840619,
+          "state_load": 41173337298488,
+          "state_observation_count": 49011906,
+          "state_measurement_status": "OK",
+          "input_sha256": "d72b57384d564b166e605cb1fe15b30202227d8df8021b4e67f0275e92852971",
+          "source_sha256": "14ddc455906166c8cc9ba66260dd1ee85ca6354b865eda03f0f3871dae33ae17",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 58233084,
+          "state_size": 840524,
+          "state_load": 41157227775110,
+          "state_observation_count": 48992738,
+          "state_measurement_status": "OK",
+          "input_sha256": "d72b57384d564b166e605cb1fe15b30202227d8df8021b4e67f0275e92852971",
+          "source_sha256": "bfcc98152560bffe5dfc4d96ac7ad6087d8a47a1cf596714f45a7366a323508a",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 58233011,
+          "state_size": 840524,
+          "state_load": 41157233657412,
+          "state_observation_count": 48992745,
+          "state_measurement_status": "OK",
+          "input_sha256": "d72b57384d564b166e605cb1fe15b30202227d8df8021b4e67f0275e92852971",
+          "source_sha256": "8526c634fe8de6d447557c0456ea3013ff50b851688579983204c869ac4dcb57",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=42; on the long-trace input, Omega_hat_NativeTrace=58,258,370 native events and Omega_hat_StateSize=840,619 peak reachable runtime value cells, with Omega_hat_StateLoad=41,173,337,298,488 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1580f",
+      "rating": 3300,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "14ddc455906166c8cc9ba66260dd1ee85ca6354b865eda03f0f3871dae33ae17",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 42
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 42,
+          "source_sha256": "14ddc455906166c8cc9ba66260dd1ee85ca6354b865eda03f0f3871dae33ae17"
+        },
+        "inside": {
+          "cyclomatic_complexity": 50,
+          "source_sha256": "bfcc98152560bffe5dfc4d96ac7ad6087d8a47a1cf596714f45a7366a323508a"
+        },
+        "post": {
+          "cyclomatic_complexity": 50,
+          "source_sha256": "8526c634fe8de6d447557c0456ea3013ff50b851688579983204c869ac4dcb57"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 194,
+          "state_size": 70,
+          "state_load": 6874,
+          "state_observation_count": 155,
+          "state_measurement_status": "OK",
+          "input_sha256": "8b8d92f6cd116121a9e352a9d6bbbeea5f82cc1c848aaea202eee9901fb39d86",
+          "source_sha256": "ad373333e07dc4e3b058568facb985af09bac3ef8991907c430b33236999f394",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 5325,
+          "state_size": 1108,
+          "state_load": 2793543,
+          "state_observation_count": 3174,
+          "state_measurement_status": "OK",
+          "input_sha256": "73a6420953313f0860ecac8f963f63bd594f27eacb54f75047c6e7f224445982",
+          "source_sha256": "ad373333e07dc4e3b058568facb985af09bac3ef8991907c430b33236999f394",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 6517,
+          "state_size": 1108,
+          "state_load": 6401288,
+          "state_observation_count": 6395,
+          "state_measurement_status": "OK",
+          "input_sha256": "73a6420953313f0860ecac8f963f63bd594f27eacb54f75047c6e7f224445982",
+          "source_sha256": "acc1b2cc8cfb5ad702c4fd69f49f49e609d604888c2fc3c44a8fa83a57d3de81",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 6693,
+          "state_size": 1108,
+          "state_load": 6582454,
+          "state_observation_count": 6564,
+          "state_measurement_status": "OK",
+          "input_sha256": "73a6420953313f0860ecac8f963f63bd594f27eacb54f75047c6e7f224445982",
+          "source_sha256": "0933389f16bc0f8f1a15f83914fd800b2881de1ed6b02e9104c48207b1cde312",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=84; on the long-trace input, Omega_hat_NativeTrace=5,325 native events and Omega_hat_StateSize=1,108 peak reachable runtime value cells, with Omega_hat_StateLoad=2,793,543 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1615g",
+      "rating": 3300,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "ad373333e07dc4e3b058568facb985af09bac3ef8991907c430b33236999f394",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 84
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 84,
+          "source_sha256": "ad373333e07dc4e3b058568facb985af09bac3ef8991907c430b33236999f394"
+        },
+        "inside": {
+          "cyclomatic_complexity": 92,
+          "source_sha256": "acc1b2cc8cfb5ad702c4fd69f49f49e609d604888c2fc3c44a8fa83a57d3de81"
+        },
+        "post": {
+          "cyclomatic_complexity": 92,
+          "source_sha256": "0933389f16bc0f8f1a15f83914fd800b2881de1ed6b02e9104c48207b1cde312"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 101190,
+          "state_size": 4002117,
+          "state_load": 2823867851,
+          "state_observation_count": 733,
+          "state_measurement_status": "OK",
+          "input_sha256": "665093871dbe3de8e75d8a816a8378ca11e9e560947ddf4d94207a1e2173820b",
+          "source_sha256": "933b32aa65d3b25d1afa06e801f5b72dff619eaf7fc4ac6a4a0270e85d49214c",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 105223,
+          "state_size": 4002178,
+          "state_load": 12567049367,
+          "state_observation_count": 3168,
+          "state_measurement_status": "OK",
+          "input_sha256": "e4a285c493f93a570627f5a05671eae6a4363f4464831e0f98d5ba3690d0ee67",
+          "source_sha256": "933b32aa65d3b25d1afa06e801f5b72dff619eaf7fc4ac6a4a0270e85d49214c",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 104008,
+          "state_size": 4002178,
+          "state_load": 11758615723,
+          "state_observation_count": 2966,
+          "state_measurement_status": "OK",
+          "input_sha256": "e4a285c493f93a570627f5a05671eae6a4363f4464831e0f98d5ba3690d0ee67",
+          "source_sha256": "0a2dad56c9e815f7f708d26c2a62b89ce07f5ea76c71a50f36d86924cf05b943",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 103972,
+          "state_size": 4002178,
+          "state_load": 11898690449,
+          "state_observation_count": 3001,
+          "state_measurement_status": "OK",
+          "input_sha256": "e4a285c493f93a570627f5a05671eae6a4363f4464831e0f98d5ba3690d0ee67",
+          "source_sha256": "aa9020619d95e0c11306c231f42dc16fbedc1b8833557cfba9a3855ceab5d625",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=86; on the long-trace input, Omega_hat_NativeTrace=105,223 native events and Omega_hat_StateSize=4,002,178 peak reachable runtime value cells, with Omega_hat_StateLoad=12,567,049,367 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1599d",
+      "rating": 3200,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "933b32aa65d3b25d1afa06e801f5b72dff619eaf7fc4ac6a4a0270e85d49214c",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 86
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 86,
+          "source_sha256": "933b32aa65d3b25d1afa06e801f5b72dff619eaf7fc4ac6a4a0270e85d49214c"
+        },
+        "inside": {
+          "cyclomatic_complexity": 94,
+          "source_sha256": "0a2dad56c9e815f7f708d26c2a62b89ce07f5ea76c71a50f36d86924cf05b943"
+        },
+        "post": {
+          "cyclomatic_complexity": 94,
+          "source_sha256": "aa9020619d95e0c11306c231f42dc16fbedc1b8833557cfba9a3855ceab5d625"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 2469,
+          "state_size": 1478716,
+          "state_load": 909408818,
+          "state_observation_count": 622,
+          "state_measurement_status": "OK",
+          "input_sha256": "56128c78d54bd858b1f0a7710cc6ed6c0ee23efbe9034d42dc8ce6339a26f6bf",
+          "source_sha256": "d7fe25a19d626e555247a54b1650138c821111d60e20cca5c73ec3112ca1e525",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 20737394,
+          "state_size": 1478716,
+          "state_load": 4501797683908,
+          "state_observation_count": 3044410,
+          "state_measurement_status": "OK",
+          "input_sha256": "16115f14b1d3589d0841b36fa922b477b58347dad5e3d021df0ae33ab64fa7a6",
+          "source_sha256": "d7fe25a19d626e555247a54b1650138c821111d60e20cca5c73ec3112ca1e525",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 3687795,
+          "state_size": 1478716,
+          "state_load": 189201355791,
+          "state_observation_count": 127957,
+          "state_measurement_status": "OK",
+          "input_sha256": "16115f14b1d3589d0841b36fa922b477b58347dad5e3d021df0ae33ab64fa7a6",
+          "source_sha256": "f3186b205da6d6dcc9ea29d1c2d2e8b3e694f96a5c55cf87108c065fb309d17d",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 4331747,
+          "state_size": 1478716,
+          "state_load": 194205315507,
+          "state_observation_count": 131341,
+          "state_measurement_status": "OK",
+          "input_sha256": "16115f14b1d3589d0841b36fa922b477b58347dad5e3d021df0ae33ab64fa7a6",
+          "source_sha256": "f412e755c350f9ce1c88cfff52e57c62ae92474f822504d6558ee65de9e4ed4d",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=24; on the long-trace input, Omega_hat_NativeTrace=20,737,394 native events and Omega_hat_StateSize=1,478,716 peak reachable runtime value cells, with Omega_hat_StateLoad=4,501,797,683,908 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1603e",
+      "rating": 3200,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "d7fe25a19d626e555247a54b1650138c821111d60e20cca5c73ec3112ca1e525",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 24
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 24,
+          "source_sha256": "d7fe25a19d626e555247a54b1650138c821111d60e20cca5c73ec3112ca1e525"
+        },
+        "inside": {
+          "cyclomatic_complexity": 32,
+          "source_sha256": "f3186b205da6d6dcc9ea29d1c2d2e8b3e694f96a5c55cf87108c065fb309d17d"
+        },
+        "post": {
+          "cyclomatic_complexity": 32,
+          "source_sha256": "f412e755c350f9ce1c88cfff52e57c62ae92474f822504d6558ee65de9e4ed4d"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 1337,
+          "state_size": 457776,
+          "state_load": 151484570,
+          "state_observation_count": 336,
+          "state_measurement_status": "OK",
+          "input_sha256": "8ad616db4fe9bd467b7ab16879f97c77503d2b22431ce9705293bfe707f20a7f",
+          "source_sha256": "3b1188cf9f4294e77fd38eb7d8098dfcfb19fbdd0ef6e9a3fe8d63adfeb2abbf",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 607758,
+          "state_size": 457776,
+          "state_load": 54207437289,
+          "state_observation_count": 118420,
+          "state_measurement_status": "OK",
+          "input_sha256": "b3e5d9410e92ec6feb64678dbc4fc691cb4660d89a83baf0e0a219123c05b450",
+          "source_sha256": "3b1188cf9f4294e77fd38eb7d8098dfcfb19fbdd0ef6e9a3fe8d63adfeb2abbf",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 36748,
+          "state_size": 463089,
+          "state_load": 20733502691,
+          "state_observation_count": 44804,
+          "state_measurement_status": "OK",
+          "input_sha256": "b3e5d9410e92ec6feb64678dbc4fc691cb4660d89a83baf0e0a219123c05b450",
+          "source_sha256": "9864fd100347bbad0e115c788da3250c68253007614da622a5ee02799527370f",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 36955,
+          "state_size": 463088,
+          "state_load": 20758637829,
+          "state_observation_count": 44859,
+          "state_measurement_status": "OK",
+          "input_sha256": "b3e5d9410e92ec6feb64678dbc4fc691cb4660d89a83baf0e0a219123c05b450",
+          "source_sha256": "ef77878c7f3b869738b3ff6a4965c679f33909d0914e136f66f6c522b7b20c01",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=25; on the long-trace input, Omega_hat_NativeTrace=607,758 native events and Omega_hat_StateSize=457,776 peak reachable runtime value cells, with Omega_hat_StateLoad=54,207,437,289 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1608f",
+      "rating": 3200,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "3b1188cf9f4294e77fd38eb7d8098dfcfb19fbdd0ef6e9a3fe8d63adfeb2abbf",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 25
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 25,
+          "source_sha256": "3b1188cf9f4294e77fd38eb7d8098dfcfb19fbdd0ef6e9a3fe8d63adfeb2abbf"
+        },
+        "inside": {
+          "cyclomatic_complexity": 33,
+          "source_sha256": "9864fd100347bbad0e115c788da3250c68253007614da622a5ee02799527370f"
+        },
+        "post": {
+          "cyclomatic_complexity": 33,
+          "source_sha256": "ef77878c7f3b869738b3ff6a4965c679f33909d0914e136f66f6c522b7b20c01"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 5714,
+          "state_size": 32724,
+          "state_load": 168597991,
+          "state_observation_count": 7345,
+          "state_measurement_status": "OK",
+          "input_sha256": "7f143eea0a3c840bf12e8184b4972d492f981fbb9a266339cd86299dae1d4413",
+          "source_sha256": "a71a99b21177af38ad289c00ff979be40a690e727f285153ed3faee690b3a321",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 15049,
+          "state_size": 32835,
+          "state_load": 316956724,
+          "state_observation_count": 11873,
+          "state_measurement_status": "OK",
+          "input_sha256": "76e3b7b1ea299988012bab23cbfde0d8790d1c57e7f0994947beee3f546bc9a5",
+          "source_sha256": "a71a99b21177af38ad289c00ff979be40a690e727f285153ed3faee690b3a321",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 8943,
+          "state_size": 32763,
+          "state_load": 204519776,
+          "state_observation_count": 8402,
+          "state_measurement_status": "OK",
+          "input_sha256": "76e3b7b1ea299988012bab23cbfde0d8790d1c57e7f0994947beee3f546bc9a5",
+          "source_sha256": "bb1f2ab66b584a159dee436bfee61e9740c864d881dce54d93f0220164d96c1a",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 8891,
+          "state_size": 32763,
+          "state_load": 205469759,
+          "state_observation_count": 8431,
+          "state_measurement_status": "OK",
+          "input_sha256": "76e3b7b1ea299988012bab23cbfde0d8790d1c57e7f0994947beee3f546bc9a5",
+          "source_sha256": "6bac151ec0f25226a8145178cf0e367fb811beb86ff6196070e20565c4d00642",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=37; on the long-trace input, Omega_hat_NativeTrace=15,049 native events and Omega_hat_StateSize=32,835 peak reachable runtime value cells, with Omega_hat_StateLoad=316,956,724 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1615h",
+      "rating": 3000,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "a71a99b21177af38ad289c00ff979be40a690e727f285153ed3faee690b3a321",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 37
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 37,
+          "source_sha256": "a71a99b21177af38ad289c00ff979be40a690e727f285153ed3faee690b3a321"
+        },
+        "inside": {
+          "cyclomatic_complexity": 45,
+          "source_sha256": "bb1f2ab66b584a159dee436bfee61e9740c864d881dce54d93f0220164d96c1a"
+        },
+        "post": {
+          "cyclomatic_complexity": 45,
+          "source_sha256": "6bac151ec0f25226a8145178cf0e367fb811beb86ff6196070e20565c4d00642"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 473,
+          "state_size": 239,
+          "state_load": 95040,
+          "state_observation_count": 422,
+          "state_measurement_status": "OK",
+          "input_sha256": "6575c487ddb8c661ec94ac0aa126db71015d196d35a568acfd62ad87a004ec72",
+          "source_sha256": "89b65341f1c6fe3a0a9df0a69ade235027daa7f39d3002954f6f632919791b3f",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 2634,
+          "state_size": 202,
+          "state_load": 351855,
+          "state_observation_count": 1749,
+          "state_measurement_status": "OK",
+          "input_sha256": "a23a879e789c630dbbae0133f0eb5577c8e5e3a711d2d32ec6d6c244f930f0a1",
+          "source_sha256": "89b65341f1c6fe3a0a9df0a69ade235027daa7f39d3002954f6f632919791b3f",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 464,
+          "state_size": 205,
+          "state_load": 54746,
+          "state_observation_count": 274,
+          "state_measurement_status": "OK",
+          "input_sha256": "a23a879e789c630dbbae0133f0eb5577c8e5e3a711d2d32ec6d6c244f930f0a1",
+          "source_sha256": "feb96da038972104d010503bb0068d9694d4cebae2d34993c61d2dcd7002c600",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 378,
+          "state_size": 204,
+          "state_load": 56528,
+          "state_observation_count": 283,
+          "state_measurement_status": "OK",
+          "input_sha256": "a23a879e789c630dbbae0133f0eb5577c8e5e3a711d2d32ec6d6c244f930f0a1",
+          "source_sha256": "b5f0a9481460f80246bf1a24dda90224f8dc49a793565d9ab27a357e86c4e053",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=18; on the long-trace input, Omega_hat_NativeTrace=2,634 native events and Omega_hat_StateSize=202 peak reachable runtime value cells, with Omega_hat_StateLoad=351,855 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1552g",
+      "rating": 3000,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "89b65341f1c6fe3a0a9df0a69ade235027daa7f39d3002954f6f632919791b3f",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 18
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 18,
+          "source_sha256": "89b65341f1c6fe3a0a9df0a69ade235027daa7f39d3002954f6f632919791b3f"
+        },
+        "inside": {
+          "cyclomatic_complexity": 26,
+          "source_sha256": "feb96da038972104d010503bb0068d9694d4cebae2d34993c61d2dcd7002c600"
+        },
+        "post": {
+          "cyclomatic_complexity": 26,
+          "source_sha256": "b5f0a9481460f80246bf1a24dda90224f8dc49a793565d9ab27a357e86c4e053"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 9950,
+          "state_size": 8692110,
+          "state_load": 30961555303243,
+          "state_observation_count": 4866682,
+          "state_measurement_status": "OK",
+          "input_sha256": "26b7657bcd3b796488b0a9677b14cced50fbbf3da549885bc44c2917cf610cff",
+          "source_sha256": "2301e337b5fb3f9549acef3c07f9bd5019e6234c7a2311a7c4f57763e18e5b83",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 150522,
+          "state_size": 8692304,
+          "state_load": 31005550097240,
+          "state_observation_count": 4871749,
+          "state_measurement_status": "OK",
+          "input_sha256": "0b0d290fe1c8a4b6c275d3cd68f10e26117cce6a7a535e05cb67a9483c2ca982",
+          "source_sha256": "2301e337b5fb3f9549acef3c07f9bd5019e6234c7a2311a7c4f57763e18e5b83",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 118714,
+          "state_size": 8692014,
+          "state_load": 30965699084189,
+          "state_observation_count": 4867196,
+          "state_measurement_status": "OK",
+          "input_sha256": "0b0d290fe1c8a4b6c275d3cd68f10e26117cce6a7a535e05cb67a9483c2ca982",
+          "source_sha256": "bd6341080b17f11d66607db0012ce4f3cf4107ce205c35c39ff21ea2a4d40857",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 118625,
+          "state_size": 8692013,
+          "state_load": 30965722726988,
+          "state_observation_count": 4867199,
+          "state_measurement_status": "OK",
+          "input_sha256": "0b0d290fe1c8a4b6c275d3cd68f10e26117cce6a7a535e05cb67a9483c2ca982",
+          "source_sha256": "9b44483ac309757aa4c354b7152a87dcbcef7f14befc99fd5d5420fba2550477",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": "Added a post-include macro rename for the global `visit` array to avoid Clang/libstdc++ `std::visit` ambiguity; source control flow and variable operations are unchanged.",
+        "inside": "Added a post-include macro rename for the global `visit` array to avoid Clang/libstdc++ `std::visit` ambiguity; source control flow and variable operations are unchanged.",
+        "post": "Added a post-include macro rename for the global `visit` array to avoid Clang/libstdc++ `std::visit` ambiguity; source control flow and variable operations are unchanged."
+      },
+      "language": "C++ (gnu++14)",
+      "plain_english_profile": "Omega_CC=60; on the long-trace input, Omega_hat_NativeTrace=150,522 native events and Omega_hat_StateSize=8,692,304 peak reachable runtime value cells, with Omega_hat_StateLoad=31,005,550,097,240 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1569f",
+      "rating": 3000,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "2301e337b5fb3f9549acef3c07f9bd5019e6234c7a2311a7c4f57763e18e5b83",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 60
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 60,
+          "source_sha256": "2301e337b5fb3f9549acef3c07f9bd5019e6234c7a2311a7c4f57763e18e5b83"
+        },
+        "inside": {
+          "cyclomatic_complexity": 68,
+          "source_sha256": "bd6341080b17f11d66607db0012ce4f3cf4107ce205c35c39ff21ea2a4d40857"
+        },
+        "post": {
+          "cyclomatic_complexity": 68,
+          "source_sha256": "9b44483ac309757aa4c354b7152a87dcbcef7f14befc99fd5d5420fba2550477"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 17610,
+          "state_size": 126917,
+          "state_load": 2943713730,
+          "state_observation_count": 23612,
+          "state_measurement_status": "OK",
+          "input_sha256": "c8391dd8e574d61edf3a7c188f1bce010f51566bb2347b029afb3faa08679767",
+          "source_sha256": "c6871efc570f44806a970f43053b081d731f519c2b4a95b2aa54ee53df958fcf",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 94129,
+          "state_size": 126917,
+          "state_load": 17161896034,
+          "state_observation_count": 135644,
+          "state_measurement_status": "OK",
+          "input_sha256": "ce0eb773178bbc4bdc901ed4555433f201b9cbbd416231d7a0b82b41c1e59270",
+          "source_sha256": "c6871efc570f44806a970f43053b081d731f519c2b4a95b2aa54ee53df958fcf",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 1931,
+          "state_size": 126917,
+          "state_load": 268420712,
+          "state_observation_count": 2532,
+          "state_measurement_status": "OK",
+          "input_sha256": "ce0eb773178bbc4bdc901ed4555433f201b9cbbd416231d7a0b82b41c1e59270",
+          "source_sha256": "a29023c7f4c26bae0b4eef37581882d729a33402e3f2d96d9c4e4e82f216cc0f",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 1903,
+          "state_size": 126917,
+          "state_load": 284284662,
+          "state_observation_count": 2657,
+          "state_measurement_status": "OK",
+          "input_sha256": "ce0eb773178bbc4bdc901ed4555433f201b9cbbd416231d7a0b82b41c1e59270",
+          "source_sha256": "437fad31af4f51960c3b7aff0ceecd6ad236aeccd08417e320d5ef307f021027",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=28; on the long-trace input, Omega_hat_NativeTrace=94,129 native events and Omega_hat_StateSize=126,917 peak reachable runtime value cells, with Omega_hat_StateLoad=17,161,896,034 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1572e",
+      "rating": 3000,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "c6871efc570f44806a970f43053b081d731f519c2b4a95b2aa54ee53df958fcf",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 28
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 28,
+          "source_sha256": "c6871efc570f44806a970f43053b081d731f519c2b4a95b2aa54ee53df958fcf"
+        },
+        "inside": {
+          "cyclomatic_complexity": 36,
+          "source_sha256": "a29023c7f4c26bae0b4eef37581882d729a33402e3f2d96d9c4e4e82f216cc0f"
+        },
+        "post": {
+          "cyclomatic_complexity": 36,
+          "source_sha256": "437fad31af4f51960c3b7aff0ceecd6ad236aeccd08417e320d5ef307f021027"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 371,
+          "state_size": 42,
+          "state_load": 7814,
+          "state_observation_count": 234,
+          "state_measurement_status": "OK",
+          "input_sha256": "4f701d041f6b57b35a63af3be10f040298aa86385ad4da04b1daa6df2663a712",
+          "source_sha256": "6e44abb67b8129df7e6c9c2bb7f0603020a46107f0b5aaa85480dcf00b6d8ee5",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 2577,
+          "state_size": 213,
+          "state_load": 288995,
+          "state_observation_count": 1429,
+          "state_measurement_status": "OK",
+          "input_sha256": "37a901c4f91c375e5b2ce915089751f68aa2f80e3a9590fee8edc1247ea80612",
+          "source_sha256": "6e44abb67b8129df7e6c9c2bb7f0603020a46107f0b5aaa85480dcf00b6d8ee5",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 1846,
+          "state_size": 212,
+          "state_load": 270178,
+          "state_observation_count": 1326,
+          "state_measurement_status": "OK",
+          "input_sha256": "37a901c4f91c375e5b2ce915089751f68aa2f80e3a9590fee8edc1247ea80612",
+          "source_sha256": "261f2a5460690985d0feaadb3435366c997ed89f15809dc921c0a13726ae899d",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 1815,
+          "state_size": 213,
+          "state_load": 275715,
+          "state_observation_count": 1355,
+          "state_measurement_status": "OK",
+          "input_sha256": "37a901c4f91c375e5b2ce915089751f68aa2f80e3a9590fee8edc1247ea80612",
+          "source_sha256": "a0fc871a1b48fb4e584cbafab20aa03968f5864a8503fcc17f35616d670b41fb",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=23; on the long-trace input, Omega_hat_NativeTrace=2,577 native events and Omega_hat_StateSize=213 peak reachable runtime value cells, with Omega_hat_StateLoad=288,995 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1553h",
+      "rating": 2900,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "6e44abb67b8129df7e6c9c2bb7f0603020a46107f0b5aaa85480dcf00b6d8ee5",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 23
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 23,
+          "source_sha256": "6e44abb67b8129df7e6c9c2bb7f0603020a46107f0b5aaa85480dcf00b6d8ee5"
+        },
+        "inside": {
+          "cyclomatic_complexity": 31,
+          "source_sha256": "261f2a5460690985d0feaadb3435366c997ed89f15809dc921c0a13726ae899d"
+        },
+        "post": {
+          "cyclomatic_complexity": 31,
+          "source_sha256": "a0fc871a1b48fb4e584cbafab20aa03968f5864a8503fcc17f35616d670b41fb"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 3627,
+          "state_size": 25200111,
+          "state_load": 62438640242,
+          "state_observation_count": 2489,
+          "state_measurement_status": "OK",
+          "input_sha256": "a2f5b5c4b5f17740e75fa5913cbf0bcde3191c7cb615765a3dfa89ab90e0e728",
+          "source_sha256": "646dbc65fdea7bc8e3170908e4578902800b470e97d05e2454f0d26884e92df7",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 17917,
+          "state_size": 25200169,
+          "state_load": 405236280252,
+          "state_observation_count": 16092,
+          "state_measurement_status": "OK",
+          "input_sha256": "f55be964bd2cc68afe5b9ad8f942604e10918169e7160750406727f80984c504",
+          "source_sha256": "646dbc65fdea7bc8e3170908e4578902800b470e97d05e2454f0d26884e92df7",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 7468,
+          "state_size": 25200162,
+          "state_load": 175461364750,
+          "state_observation_count": 6974,
+          "state_measurement_status": "OK",
+          "input_sha256": "f55be964bd2cc68afe5b9ad8f942604e10918169e7160750406727f80984c504",
+          "source_sha256": "667c28dbcfd364ae586ae9cd21bf6fd959db38f0147f2a6cb6289ec447eb9a22",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 7931,
+          "state_size": 25200162,
+          "state_load": 189044239492,
+          "state_observation_count": 7513,
+          "state_measurement_status": "OK",
+          "input_sha256": "f55be964bd2cc68afe5b9ad8f942604e10918169e7160750406727f80984c504",
+          "source_sha256": "b3c2da25bedf53cb9761b05fae26f46e4cf88607b5e31132dd26180b52bbaf2b",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=76; on the long-trace input, Omega_hat_NativeTrace=17,917 native events and Omega_hat_StateSize=25,200,169 peak reachable runtime value cells, with Omega_hat_StateLoad=405,236,280,252 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1608e",
+      "rating": 2800,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "646dbc65fdea7bc8e3170908e4578902800b470e97d05e2454f0d26884e92df7",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 76
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 76,
+          "source_sha256": "646dbc65fdea7bc8e3170908e4578902800b470e97d05e2454f0d26884e92df7"
+        },
+        "inside": {
+          "cyclomatic_complexity": 84,
+          "source_sha256": "667c28dbcfd364ae586ae9cd21bf6fd959db38f0147f2a6cb6289ec447eb9a22"
+        },
+        "post": {
+          "cyclomatic_complexity": 84,
+          "source_sha256": "b3c2da25bedf53cb9761b05fae26f46e4cf88607b5e31132dd26180b52bbaf2b"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 888,
+          "state_size": 9937295,
+          "state_load": 4040733206,
+          "state_observation_count": 421,
+          "state_measurement_status": "OK",
+          "input_sha256": "eb418658a51efc355a88b1c44df821bcabf17ae92e052c3f3f3790755404491d",
+          "source_sha256": "4ef728a87836baeb0af64467718c76401006223c75d5b80c74b59eb56b109b72",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 1887,
+          "state_size": 9937295,
+          "state_load": 9933542529,
+          "state_observation_count": 1014,
+          "state_measurement_status": "OK",
+          "input_sha256": "2215213a1789f807060a057e634ddb262a27f09b8292f964f58f42acbe1d0616",
+          "source_sha256": "4ef728a87836baeb0af64467718c76401006223c75d5b80c74b59eb56b109b72",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 1793,
+          "state_size": 9937306,
+          "state_load": 10817965812,
+          "state_observation_count": 1103,
+          "state_measurement_status": "OK",
+          "input_sha256": "2215213a1789f807060a057e634ddb262a27f09b8292f964f58f42acbe1d0616",
+          "source_sha256": "e4be3de81a2d2af89166e441b8d5adf8e73d19e2c217707d996b1af00c028ff1",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 1703,
+          "state_size": 9937306,
+          "state_load": 10976962293,
+          "state_observation_count": 1119,
+          "state_measurement_status": "OK",
+          "input_sha256": "2215213a1789f807060a057e634ddb262a27f09b8292f964f58f42acbe1d0616",
+          "source_sha256": "10b3ea8d407a851cbb94d856638ba9ee3b5658eb0b43ab595c686887ee58e23a",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=37; on the long-trace input, Omega_hat_NativeTrace=1,887 native events and Omega_hat_StateSize=9,937,295 peak reachable runtime value cells, with Omega_hat_StateLoad=9,933,542,529 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1572d",
+      "rating": 2800,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "4ef728a87836baeb0af64467718c76401006223c75d5b80c74b59eb56b109b72",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 37
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 37,
+          "source_sha256": "4ef728a87836baeb0af64467718c76401006223c75d5b80c74b59eb56b109b72"
+        },
+        "inside": {
+          "cyclomatic_complexity": 47,
+          "source_sha256": "e4be3de81a2d2af89166e441b8d5adf8e73d19e2c217707d996b1af00c028ff1"
+        },
+        "post": {
+          "cyclomatic_complexity": 47,
+          "source_sha256": "10b3ea8d407a851cbb94d856638ba9ee3b5658eb0b43ab595c686887ee58e23a"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 2124,
+          "state_size": 200424,
+          "state_load": 208350789,
+          "state_observation_count": 1064,
+          "state_measurement_status": "OK",
+          "input_sha256": "7a8e064d952789abfdfd6043d44530bd5de0228d7963b1c4a3a194695b246bdd",
+          "source_sha256": "c416bb8d3b25fd4c76bdb6e17ff595707f9479e2af79b63f90090979b8df2512",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 50271,
+          "state_size": 201774,
+          "state_load": 4912863519,
+          "state_observation_count": 24466,
+          "state_measurement_status": "OK",
+          "input_sha256": "f34973899b03d91dd93fd9ca7bca992fc2b381fea1800c11fc29bf25c01efe97",
+          "source_sha256": "c416bb8d3b25fd4c76bdb6e17ff595707f9479e2af79b63f90090979b8df2512",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 3086,
+          "state_size": 200204,
+          "state_load": 274981556,
+          "state_observation_count": 1397,
+          "state_measurement_status": "OK",
+          "input_sha256": "f34973899b03d91dd93fd9ca7bca992fc2b381fea1800c11fc29bf25c01efe97",
+          "source_sha256": "395db0129fb099ac1b5af30458379f3c64b2c8e1ba3267544689e9a721e0a1a2",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 3349,
+          "state_size": 200231,
+          "state_load": 302812024,
+          "state_observation_count": 1536,
+          "state_measurement_status": "OK",
+          "input_sha256": "f34973899b03d91dd93fd9ca7bca992fc2b381fea1800c11fc29bf25c01efe97",
+          "source_sha256": "a34fa455cb2724c38f9fc74f8d38161dbfbff4a0a0d9c9c94c1bfa734b45a015",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=128; on the long-trace input, Omega_hat_NativeTrace=50,271 native events and Omega_hat_StateSize=201,774 peak reachable runtime value cells, with Omega_hat_StateLoad=4,912,863,519 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1617e",
+      "rating": 2700,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "c416bb8d3b25fd4c76bdb6e17ff595707f9479e2af79b63f90090979b8df2512",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 128
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 128,
+          "source_sha256": "c416bb8d3b25fd4c76bdb6e17ff595707f9479e2af79b63f90090979b8df2512"
+        },
+        "inside": {
+          "cyclomatic_complexity": 136,
+          "source_sha256": "395db0129fb099ac1b5af30458379f3c64b2c8e1ba3267544689e9a721e0a1a2"
+        },
+        "post": {
+          "cyclomatic_complexity": 136,
+          "source_sha256": "a34fa455cb2724c38f9fc74f8d38161dbfbff4a0a0d9c9c94c1bfa734b45a015"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 2028,
+          "state_size": 2041765,
+          "state_load": 977810827294,
+          "state_observation_count": 510772,
+          "state_measurement_status": "OK",
+          "input_sha256": "8ac1f9fa9e2847575b2ced3fd892b2845557a6c485f5fa9413a699b8efbc3ad3",
+          "source_sha256": "1d2e0467d959ffad5c713fa10c2142c44b5f542e00ce390504aea6f73e976053",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 7387,
+          "state_size": 2041833,
+          "state_load": 981523833176,
+          "state_observation_count": 512584,
+          "state_measurement_status": "OK",
+          "input_sha256": "5ca513ae33f231741e8f5bce074557104f0ac96debe4329731eb41fe859f6fa9",
+          "source_sha256": "1d2e0467d959ffad5c713fa10c2142c44b5f542e00ce390504aea6f73e976053",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 3975,
+          "state_size": 2041801,
+          "state_load": 978954476445,
+          "state_observation_count": 511326,
+          "state_measurement_status": "OK",
+          "input_sha256": "5ca513ae33f231741e8f5bce074557104f0ac96debe4329731eb41fe859f6fa9",
+          "source_sha256": "05cf93795d2245abb6f842b4f278fe70746b159f5aba398e285981a3d3ab0415",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 3936,
+          "state_size": 2041801,
+          "state_load": 978984848378,
+          "state_observation_count": 511341,
+          "state_measurement_status": "OK",
+          "input_sha256": "5ca513ae33f231741e8f5bce074557104f0ac96debe4329731eb41fe859f6fa9",
+          "source_sha256": "91b04a25af0d8354eca4b22a5c307be7e0d71719c1e56c1036c67f37cec6a7d0",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=42; on the long-trace input, Omega_hat_NativeTrace=7,387 native events and Omega_hat_StateSize=2,041,833 peak reachable runtime value cells, with Omega_hat_StateLoad=981,523,833,176 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1567f",
+      "rating": 2700,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "1d2e0467d959ffad5c713fa10c2142c44b5f542e00ce390504aea6f73e976053",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 42
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 42,
+          "source_sha256": "1d2e0467d959ffad5c713fa10c2142c44b5f542e00ce390504aea6f73e976053"
+        },
+        "inside": {
+          "cyclomatic_complexity": 50,
+          "source_sha256": "05cf93795d2245abb6f842b4f278fe70746b159f5aba398e285981a3d3ab0415"
+        },
+        "post": {
+          "cyclomatic_complexity": 50,
+          "source_sha256": "91b04a25af0d8354eca4b22a5c307be7e0d71719c1e56c1036c67f37cec6a7d0"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 1209,
+          "state_size": 163,
+          "state_load": 228330,
+          "state_observation_count": 2088,
+          "state_measurement_status": "OK",
+          "input_sha256": "a00a4e49bac1dc0515ea109cbef81f6fec9f42207b2ac47d95d4f9fb95859331",
+          "source_sha256": "7daa73692acaf41812edcde3c45ecdfa6e0c91a99ce6e3557836323cf0386084",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 1513963426,
+          "state_size": 11912938,
+          "state_load": 29414118644551660,
+          "state_observation_count": 3661362747,
+          "state_measurement_status": "OK",
+          "input_sha256": "03d3d7a8c8364341064965d240bc633999a3624096573e7dd9ff9b2e4332d221",
+          "source_sha256": "7daa73692acaf41812edcde3c45ecdfa6e0c91a99ce6e3557836323cf0386084",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 8102841,
+          "state_size": 2100036,
+          "state_load": 35511036245914,
+          "state_observation_count": 19503059,
+          "state_measurement_status": "OK",
+          "input_sha256": "03d3d7a8c8364341064965d240bc633999a3624096573e7dd9ff9b2e4332d221",
+          "source_sha256": "54d2aa075790d96b16094d1110b1ff4cc42e649f39b55cf10a14e19f5a25bdd0",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 16200040,
+          "state_size": 2100035,
+          "state_load": 51166072353683,
+          "state_observation_count": 28200158,
+          "state_measurement_status": "OK",
+          "input_sha256": "03d3d7a8c8364341064965d240bc633999a3624096573e7dd9ff9b2e4332d221",
+          "source_sha256": "121cb978200a7d65abf8d20a567bf9a991547f94cb17d49e90c39970b27fb179",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=86; on the long-trace input, Omega_hat_NativeTrace=1,513,963,426 native events and Omega_hat_StateSize=11,912,938 peak reachable runtime value cells, with Omega_hat_StateLoad=29,414,118,644,551,660 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1574f",
+      "rating": 2700,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "7daa73692acaf41812edcde3c45ecdfa6e0c91a99ce6e3557836323cf0386084",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 86
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 86,
+          "source_sha256": "7daa73692acaf41812edcde3c45ecdfa6e0c91a99ce6e3557836323cf0386084"
+        },
+        "inside": {
+          "cyclomatic_complexity": 96,
+          "source_sha256": "54d2aa075790d96b16094d1110b1ff4cc42e649f39b55cf10a14e19f5a25bdd0"
+        },
+        "post": {
+          "cyclomatic_complexity": 96,
+          "source_sha256": "121cb978200a7d65abf8d20a567bf9a991547f94cb17d49e90c39970b27fb179"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 2095,
+          "state_size": 1082351,
+          "state_load": 1334498244,
+          "state_observation_count": 1238,
+          "state_measurement_status": "OK",
+          "input_sha256": "4badc34556ceafd1c2c4699ce5b2a3bc32594a4b7e29c24a4068f61563022cdc",
+          "source_sha256": "e49cc24f56c43dda6796ffbf38185eb1f4f689c19e9ec2b7010717fbd33f09cd",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 164275450,
+          "state_size": 1082455,
+          "state_load": 123221869874820,
+          "state_observation_count": 113842314,
+          "state_measurement_status": "OK",
+          "input_sha256": "01bf10bc19e4055efc275e06e8439f42cb308446a927457954f085b1c36f701a",
+          "source_sha256": "e49cc24f56c43dda6796ffbf38185eb1f4f689c19e9ec2b7010717fbd33f09cd",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 839,
+          "state_size": 1082353,
+          "state_load": 624486447,
+          "state_observation_count": 582,
+          "state_measurement_status": "OK",
+          "input_sha256": "01bf10bc19e4055efc275e06e8439f42cb308446a927457954f085b1c36f701a",
+          "source_sha256": "de821758d705b3efd9657c5b7021e5d724533788eed2c97f5213f6ee05a90127",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 753,
+          "state_size": 1082352,
+          "state_load": 634227280,
+          "state_observation_count": 591,
+          "state_measurement_status": "OK",
+          "input_sha256": "01bf10bc19e4055efc275e06e8439f42cb308446a927457954f085b1c36f701a",
+          "source_sha256": "651daa060f41dcbf742f65839b776fde4796201d3b99d00773278bba61645417",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=21; on the long-trace input, Omega_hat_NativeTrace=164,275,450 native events and Omega_hat_StateSize=1,082,455 peak reachable runtime value cells, with Omega_hat_StateLoad=123,221,869,874,820 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1580b",
+      "rating": 2600,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "e49cc24f56c43dda6796ffbf38185eb1f4f689c19e9ec2b7010717fbd33f09cd",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 21
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 21,
+          "source_sha256": "e49cc24f56c43dda6796ffbf38185eb1f4f689c19e9ec2b7010717fbd33f09cd"
+        },
+        "inside": {
+          "cyclomatic_complexity": 29,
+          "source_sha256": "de821758d705b3efd9657c5b7021e5d724533788eed2c97f5213f6ee05a90127"
+        },
+        "post": {
+          "cyclomatic_complexity": 29,
+          "source_sha256": "651daa060f41dcbf742f65839b776fde4796201d3b99d00773278bba61645417"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 341,
+          "state_size": 70,
+          "state_load": 9170,
+          "state_observation_count": 201,
+          "state_measurement_status": "OK",
+          "input_sha256": "15a15c047478f3e0e3cab6ed3f632a29e89952fba136b5a78394d1c0ad79c6e5",
+          "source_sha256": "ab4e36e90fc02ef9ec4e2ca7dec9cf4caee8e6aaeed78b0ea3ac83c28ac8147c",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 45221,
+          "state_size": 930,
+          "state_load": 12322184,
+          "state_observation_count": 14980,
+          "state_measurement_status": "OK",
+          "input_sha256": "cf6d365ac492de069f119d50091851656ea5679fa08c558d3f071a383b4e0df0",
+          "source_sha256": "ab4e36e90fc02ef9ec4e2ca7dec9cf4caee8e6aaeed78b0ea3ac83c28ac8147c",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 4562,
+          "state_size": 479,
+          "state_load": 475722,
+          "state_observation_count": 1803,
+          "state_measurement_status": "OK",
+          "input_sha256": "cf6d365ac492de069f119d50091851656ea5679fa08c558d3f071a383b4e0df0",
+          "source_sha256": "b327432c0b51f79599142f457651ed07c753892f7bc8fc32eae261455a14a8df",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 4930,
+          "state_size": 522,
+          "state_load": 564916,
+          "state_observation_count": 1978,
+          "state_measurement_status": "OK",
+          "input_sha256": "cf6d365ac492de069f119d50091851656ea5679fa08c558d3f071a383b4e0df0",
+          "source_sha256": "3435dafe215df6aaa0d67c6cfc947efc0a0e44650fe50967a6ba0b248d4b7fe6",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=55; on the long-trace input, Omega_hat_NativeTrace=45,221 native events and Omega_hat_StateSize=930 peak reachable runtime value cells, with Omega_hat_StateLoad=12,322,184 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1599j",
+      "rating": 2600,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "ab4e36e90fc02ef9ec4e2ca7dec9cf4caee8e6aaeed78b0ea3ac83c28ac8147c",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 55
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 55,
+          "source_sha256": "ab4e36e90fc02ef9ec4e2ca7dec9cf4caee8e6aaeed78b0ea3ac83c28ac8147c"
+        },
+        "inside": {
+          "cyclomatic_complexity": 63,
+          "source_sha256": "b327432c0b51f79599142f457651ed07c753892f7bc8fc32eae261455a14a8df"
+        },
+        "post": {
+          "cyclomatic_complexity": 63,
+          "source_sha256": "3435dafe215df6aaa0d67c6cfc947efc0a0e44650fe50967a6ba0b248d4b7fe6"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 963,
+          "state_size": 2796,
+          "state_load": 2080621,
+          "state_observation_count": 764,
+          "state_measurement_status": "OK",
+          "input_sha256": "479def58965386a05050611157259ef82bfeb49b520e8bff8f6ffde3b23af8a8",
+          "source_sha256": "d7b30d4383431a38ca1bd0ea4847aec892b939921afb04a5e0975d8dfe5a98c9",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 9765064,
+          "state_size": 395926,
+          "state_load": 1344652839825,
+          "state_observation_count": 6488120,
+          "state_measurement_status": "OK",
+          "input_sha256": "b5fabe923ecc6b7534566fbeb72577fd896c2d74b9374afe3bed49a16217cf73",
+          "source_sha256": "d7b30d4383431a38ca1bd0ea4847aec892b939921afb04a5e0975d8dfe5a98c9",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 14587,
+          "state_size": 3310,
+          "state_load": 28664383,
+          "state_observation_count": 9567,
+          "state_measurement_status": "OK",
+          "input_sha256": "b5fabe923ecc6b7534566fbeb72577fd896c2d74b9374afe3bed49a16217cf73",
+          "source_sha256": "8c7846a3a40110fa05257b67da8e6f63f945c711305a1df88b97e8d00396db64",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 4686010,
+          "state_size": 199318,
+          "state_load": 314421572899,
+          "state_observation_count": 3113026,
+          "state_measurement_status": "OK",
+          "input_sha256": "b5fabe923ecc6b7534566fbeb72577fd896c2d74b9374afe3bed49a16217cf73",
+          "source_sha256": "b6b18517a3e59e80fb145dd8b32144c363e2872690c8f1c80a42a71bbc7adff3",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=47; on the long-trace input, Omega_hat_NativeTrace=9,765,064 native events and Omega_hat_StateSize=395,926 peak reachable runtime value cells, with Omega_hat_StateLoad=1,344,652,839,825 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1569e",
+      "rating": 2600,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "d7b30d4383431a38ca1bd0ea4847aec892b939921afb04a5e0975d8dfe5a98c9",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 47
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 47,
+          "source_sha256": "d7b30d4383431a38ca1bd0ea4847aec892b939921afb04a5e0975d8dfe5a98c9"
+        },
+        "inside": {
+          "cyclomatic_complexity": 55,
+          "source_sha256": "8c7846a3a40110fa05257b67da8e6f63f945c711305a1df88b97e8d00396db64"
+        },
+        "post": {
+          "cyclomatic_complexity": 55,
+          "source_sha256": "b6b18517a3e59e80fb145dd8b32144c363e2872690c8f1c80a42a71bbc7adff3"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 110,
+          "state_size": 1011054,
+          "state_load": 145590447,
+          "state_observation_count": 147,
+          "state_measurement_status": "OK",
+          "input_sha256": "ece3d232c1ca9ef8a80b6fdb1585b8f5cf653b9dd023b0521c8da64db859ffac",
+          "source_sha256": "50fa6366595a53ba7e82bd4bc65563c718c29a2a4b9c1b4e6f80fab5bdeabd90",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 41386,
+          "state_size": 1011696,
+          "state_load": 44184529715,
+          "state_observation_count": 43696,
+          "state_measurement_status": "OK",
+          "input_sha256": "e7a0a218331b68b73ad7ba079fd54be2a7cd8090a6e96eba3f4ee3001dc1d2dc",
+          "source_sha256": "50fa6366595a53ba7e82bd4bc65563c718c29a2a4b9c1b4e6f80fab5bdeabd90",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 2866,
+          "state_size": 1011696,
+          "state_load": 4453997983,
+          "state_observation_count": 4407,
+          "state_measurement_status": "OK",
+          "input_sha256": "e7a0a218331b68b73ad7ba079fd54be2a7cd8090a6e96eba3f4ee3001dc1d2dc",
+          "source_sha256": "c2fff1ad8c28452ca3e75e2efc59934a22d91572d3cde13bc7c743de6d34b147",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 2768,
+          "state_size": 1011696,
+          "state_load": 4459054592,
+          "state_observation_count": 4412,
+          "state_measurement_status": "OK",
+          "input_sha256": "e7a0a218331b68b73ad7ba079fd54be2a7cd8090a6e96eba3f4ee3001dc1d2dc",
+          "source_sha256": "cf6f023469c0bb5ffbb00877e5468516893961999aa07f0ecb8ade5ed40b2096",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=13; on the long-trace input, Omega_hat_NativeTrace=41,386 native events and Omega_hat_StateSize=1,011,696 peak reachable runtime value cells, with Omega_hat_StateLoad=44,184,529,715 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1586f",
+      "rating": 2500,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "50fa6366595a53ba7e82bd4bc65563c718c29a2a4b9c1b4e6f80fab5bdeabd90",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 13
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 13,
+          "source_sha256": "50fa6366595a53ba7e82bd4bc65563c718c29a2a4b9c1b4e6f80fab5bdeabd90"
+        },
+        "inside": {
+          "cyclomatic_complexity": 21,
+          "source_sha256": "c2fff1ad8c28452ca3e75e2efc59934a22d91572d3cde13bc7c743de6d34b147"
+        },
+        "post": {
+          "cyclomatic_complexity": 21,
+          "source_sha256": "cf6f023469c0bb5ffbb00877e5468516893961999aa07f0ecb8ade5ed40b2096"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 475,
+          "state_size": 33,
+          "state_load": 14256,
+          "state_observation_count": 574,
+          "state_measurement_status": "OK",
+          "input_sha256": "fdcb27265764b2a73c62380d364aa177b18028a2d6fffe621bac5a23affde265",
+          "source_sha256": "67dbad2177030b263347ba9ff0c3aa5d2e1eb57d456d177fad25eee3f31a9a76",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 17617324,
+          "state_size": 2289,
+          "state_load": 29408855404,
+          "state_observation_count": 12861182,
+          "state_measurement_status": "OK",
+          "input_sha256": "360f25d334dd3eaa6f292d435c7982dff837d18936d1fefe83699b0b1d6fbc85",
+          "source_sha256": "67dbad2177030b263347ba9ff0c3aa5d2e1eb57d456d177fad25eee3f31a9a76",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 202474,
+          "state_size": 3313,
+          "state_load": 329414216,
+          "state_observation_count": 145021,
+          "state_measurement_status": "OK",
+          "input_sha256": "360f25d334dd3eaa6f292d435c7982dff837d18936d1fefe83699b0b1d6fbc85",
+          "source_sha256": "0e7c6745273acd61e256dc45eed260d91a4acbd2606e470d7a226f83219ed9a3",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 17086448,
+          "state_size": 3312,
+          "state_load": 28447327936,
+          "state_observation_count": 12436260,
+          "state_measurement_status": "OK",
+          "input_sha256": "360f25d334dd3eaa6f292d435c7982dff837d18936d1fefe83699b0b1d6fbc85",
+          "source_sha256": "355b4d9cf793a850c31de90bbad276f4be650b3ce01e56f464054f85d4c2ec45",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=69; on the long-trace input, Omega_hat_NativeTrace=17,617,324 native events and Omega_hat_StateSize=2,289 peak reachable runtime value cells, with Omega_hat_StateLoad=29,408,855,404 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-validation-1556f",
+      "rating": 2500,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "67dbad2177030b263347ba9ff0c3aa5d2e1eb57d456d177fad25eee3f31a9a76",
+      "split": "validation",
+      "static": {
+        "cyclomatic_complexity": 69
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 69,
+          "source_sha256": "67dbad2177030b263347ba9ff0c3aa5d2e1eb57d456d177fad25eee3f31a9a76"
+        },
+        "inside": {
+          "cyclomatic_complexity": 79,
+          "source_sha256": "0e7c6745273acd61e256dc45eed260d91a4acbd2606e470d7a226f83219ed9a3"
+        },
+        "post": {
+          "cyclomatic_complexity": 79,
+          "source_sha256": "355b4d9cf793a850c31de90bbad276f4be650b3ce01e56f464054f85d4c2ec45"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 59,
+          "state_size": 20,
+          "state_load": 896,
+          "state_observation_count": 66,
+          "state_measurement_status": "OK",
+          "input_sha256": "0c302e793e9db86915c6163fbabb9d0a9976859eb54448cb12f96c3a4ff52328",
+          "source_sha256": "c86397161467c48a05a8a1c3b9d9cdc968122973e7759a52edbfee55607a0c48",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 112813,
+          "state_size": 1483,
+          "state_load": 98536591,
+          "state_observation_count": 70922,
+          "state_measurement_status": "OK",
+          "input_sha256": "7035767df0d876ec6a211af258eda3b340f5ba719f1d3c8f30d890596458ed17",
+          "source_sha256": "c86397161467c48a05a8a1c3b9d9cdc968122973e7759a52edbfee55607a0c48",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 1491,
+          "state_size": 1199,
+          "state_load": 1298913,
+          "state_observation_count": 1137,
+          "state_measurement_status": "OK",
+          "input_sha256": "7035767df0d876ec6a211af258eda3b340f5ba719f1d3c8f30d890596458ed17",
+          "source_sha256": "f41875fa3f7692eefec1a62e67928717fb5e40acf042c603e3120e581750a59b",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 1432,
+          "state_size": 1199,
+          "state_load": 1321625,
+          "state_observation_count": 1156,
+          "state_measurement_status": "OK",
+          "input_sha256": "7035767df0d876ec6a211af258eda3b340f5ba719f1d3c8f30d890596458ed17",
+          "source_sha256": "cb278e842ab865add5e5b08afeae6d96c07cdcbf64ca0a38de643e3879f68585",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=13; on the long-trace input, Omega_hat_NativeTrace=112,813 native events and Omega_hat_StateSize=1,483 peak reachable runtime value cells, with Omega_hat_StateLoad=98,536,591 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1598f",
+      "rating": 2400,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "c86397161467c48a05a8a1c3b9d9cdc968122973e7759a52edbfee55607a0c48",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 13
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 13,
+          "source_sha256": "c86397161467c48a05a8a1c3b9d9cdc968122973e7759a52edbfee55607a0c48"
+        },
+        "inside": {
+          "cyclomatic_complexity": 21,
+          "source_sha256": "f41875fa3f7692eefec1a62e67928717fb5e40acf042c603e3120e581750a59b"
+        },
+        "post": {
+          "cyclomatic_complexity": 21,
+          "source_sha256": "cb278e842ab865add5e5b08afeae6d96c07cdcbf64ca0a38de643e3879f68585"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    },
+    {
+      "arm_profiles": {
+        "short-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "short-trace-final",
+          "prediction_target_profile": "short-trace-final"
+        },
+        "long-trace-final": {
+          "static_profile": "original",
+          "source_input_execution_profile": "long-trace-final",
+          "prediction_target_profile": "long-trace-final"
+        },
+        "inside-loop-state": {
+          "static_profile": "inside",
+          "source_input_execution_profile": "inside-loop-state",
+          "prediction_target_profile": "inside-loop-state"
+        },
+        "post-loop-state": {
+          "static_profile": "post",
+          "source_input_execution_profile": "post-loop-state",
+          "prediction_target_profile": "post-loop-state"
+        }
+      },
+      "dynamic": {
+        "short-trace-final": {
+          "native_trace_length": 1031,
+          "state_size": 8389238,
+          "state_load": 2156032471,
+          "state_observation_count": 262,
+          "state_measurement_status": "OK",
+          "input_sha256": "47fdb134316707b54ae926b4ba0b8e2ffa13b01f961ee3bdbd4367e9493f9d43",
+          "source_sha256": "dc5b0364fffb69d059ac406180373038b2947bf8b018c0eb5ad6bdab89607c28",
+          "repeated_measurements": 3
+        },
+        "long-trace-final": {
+          "native_trace_length": 32711,
+          "state_size": 8389243,
+          "state_load": 48229717663,
+          "state_observation_count": 5754,
+          "state_measurement_status": "OK",
+          "input_sha256": "d17fc49cd397378f23ba09a1d25ed63dd16e1ca27e2fef716941dab7e3d260e9",
+          "source_sha256": "dc5b0364fffb69d059ac406180373038b2947bf8b018c0eb5ad6bdab89607c28",
+          "repeated_measurements": 3
+        },
+        "inside-loop-state": {
+          "native_trace_length": 6489,
+          "state_size": 8389243,
+          "state_load": 10033525628,
+          "state_observation_count": 1201,
+          "state_measurement_status": "OK",
+          "input_sha256": "d17fc49cd397378f23ba09a1d25ed63dd16e1ca27e2fef716941dab7e3d260e9",
+          "source_sha256": "f68b5d2afda3ef6b63ec68b53e390dc857f47e5bdf2f3f2e1081414a31775f0d",
+          "repeated_measurements": 3
+        },
+        "post-loop-state": {
+          "native_trace_length": 6476,
+          "state_size": 8389243,
+          "state_load": 10058693310,
+          "state_observation_count": 1204,
+          "state_measurement_status": "OK",
+          "input_sha256": "d17fc49cd397378f23ba09a1d25ed63dd16e1ca27e2fef716941dab7e3d260e9",
+          "source_sha256": "90b42a3a02b64368871b040777d72a1fae560ae9bae9612e2ab271e58b363cec",
+          "repeated_measurements": 3
+        }
+      },
+      "execution_compatibility_transform": {
+        "original": null,
+        "inside": null,
+        "post": null
+      },
+      "language": "C++ (gnu++17)",
+      "plain_english_profile": "Omega_CC=19; on the long-trace input, Omega_hat_NativeTrace=32,711 native events and Omega_hat_StateSize=8,389,243 peak reachable runtime value cells, with Omega_hat_StateLoad=48,229,717,663 value-cell observations accumulated across the run.",
+      "problem_id": "codecontests-test-1620g",
+      "rating": 2400,
+      "scope": "Static and dynamic metrics cover the four canonical arms; inserted __cc_ measurement helpers are excluded from dynamic event counts.",
+      "source_sha256": "dc5b0364fffb69d059ac406180373038b2947bf8b018c0eb5ad6bdab89607c28",
+      "split": "test",
+      "static": {
+        "cyclomatic_complexity": 19
+      },
+      "static_profiles": {
+        "original": {
+          "cyclomatic_complexity": 19,
+          "source_sha256": "dc5b0364fffb69d059ac406180373038b2947bf8b018c0eb5ad6bdab89607c28"
+        },
+        "inside": {
+          "cyclomatic_complexity": 27,
+          "source_sha256": "f68b5d2afda3ef6b63ec68b53e390dc857f47e5bdf2f3f2e1081414a31775f0d"
+        },
+        "post": {
+          "cyclomatic_complexity": 27,
+          "source_sha256": "90b42a3a02b64368871b040777d72a1fae560ae9bae9612e2ab271e58b363cec"
+        }
+      },
+      "tools": {
+        "clang": "Debian clang version 18.1.8 (++20240731024826+3b5b5c1ec4a3-1~exp1~20240731144843.145)",
+        "llvm_cov": "Debian LLVM version 18.1.8"
+      }
+    }
+  ]
+}

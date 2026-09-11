@@ -1,0 +1,1 @@
+{"i":4,"left":4,"len(node)":1,"result":9,"right":12,"word[i]":"a"}

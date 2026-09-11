@@ -1,0 +1,1 @@
+{"cnt":0,"d":4,"i":4,"j":19,"l":8,"m":16,"r":8,"s":"abacabacabacabacabac"}

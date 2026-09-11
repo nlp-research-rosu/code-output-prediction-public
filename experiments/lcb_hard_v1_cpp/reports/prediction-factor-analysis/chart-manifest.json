@@ -1,0 +1,109 @@
+{
+  "analysis_sources": [
+    {
+      "available_series_count": 49,
+      "excluded_series_count": 0,
+      "include_groups": [],
+      "include_scopes": [],
+      "name": "default",
+      "points_file": "experiments/lcb_hard_v1_cpp/reports/prediction-factor-analysis/data/analysis/raw-points.csv",
+      "points_sha256": "c94858a3ea0acedcbb28ee29598fc62716153aeeb577c5409a35f969d5af5e26",
+      "selected_series_count": 49,
+      "series_results_file": "experiments/lcb_hard_v1_cpp/reports/prediction-factor-analysis/data/analysis/series-results.csv",
+      "series_results_sha256": "13517a93f7d55b4be533a230a19e1183c1f9c90b05ba22754e03fff86ab463c4"
+    }
+  ],
+  "chart_count": 7,
+  "chart_counts_by_scope": {
+    "dynamic": 3,
+    "static": 4
+  },
+  "chart_data_file": "chart-data.csv",
+  "chart_data_row_count": 168,
+  "chart_data_sha256": "4eb37f860b469bca4ea1b3a78ce1f9cc23ad2e0552e9677d6096ecd5a0d71686",
+  "config_file": "experiments/lcb_hard_v1_cpp/reports/prediction-factor-analysis/chart-config.json",
+  "config_sha256": "09e4143dba2cefdcbf066207d7db9303cb72b4642cc1f15da462c7640cdeed25",
+  "generator_sha256": "644fa84fd055af4800b942396393ac9490c70a9a33192f0f9f6030c35c5c0603",
+  "logistic_chart_data_file": "logistic-chart-data.csv",
+  "logistic_chart_data_row_count": 28,
+  "logistic_chart_data_sha256": "58ac20576196d8dbc3a703f648b046fbd74df0c23cad47fc3b67571f6a228864",
+  "logistic_regression_sources": [
+    {
+      "curve_point_count": 1680,
+      "curves_file": "data/analysis/logistic-regression-curves.csv",
+      "curves_sha256": "8b570efeccc89c7392ea2ac427aa7066a7575e4015c2dd864b6603c307bfd0d0",
+      "name": "cumulative-state-load",
+      "point_count": 978,
+      "points_file": "data/analysis/logistic-regression-points.csv",
+      "points_sha256": "328d02a2f672dd2920168725f4b4edf348ecbea73304a285cad62ab5906a45a5",
+      "result_count": 7,
+      "results_file": "data/analysis/logistic-regression-results.csv",
+      "results_sha256": "b1e1eb76e47b5db76e6c23b43a4ab55c3293ac7d9f1e9a5a017cc8dc6df83929"
+    }
+  ],
+  "numpy_version": "2.1.3",
+  "output_sha256": {
+    "chart-data.csv": "4eb37f860b469bca4ea1b3a78ce1f9cc23ad2e0552e9677d6096ecd5a0d71686",
+    "charts.md": "b83979f31509e4ebd7914bf3c3ec8718fd88456d5e1f84fa6d21027a4408971b",
+    "charts/dynamic/all-arms/omega-hat-nativetrace.pdf": "cc73e7970f36e261f88178361beb4ca8027fbdf58ca1e454ad3bf526b167073f",
+    "charts/dynamic/all-arms/omega-hat-nativetrace.png": "ff70f310863c33ef905000e35f816118dd5f0b31b660fb60e00657f06d7fe06a",
+    "charts/dynamic/all-arms/omega-hat-stateload.pdf": "48c8cfd3ef1057eaa367c02c0d8a1bd997b76854a20ef41cfe18dfe936de4fc2",
+    "charts/dynamic/all-arms/omega-hat-stateload.png": "ad6a96c20b87b3c751e1940d56b2bb08e036c4191acee07f02d8ef39f1f17805",
+    "charts/dynamic/all-arms/omega-hat-statesize.pdf": "4a5b47bcf6e521f681601e86acb4c807b59e5029884fc2a65bf876b6dc0e4a57",
+    "charts/dynamic/all-arms/omega-hat-statesize.png": "4493d82613317ab2872a7135a343dbf1f4971d1181d28d1146e2e8dfe8740297",
+    "charts/static/inside-loop-state/omega-cc.pdf": "7ee89235dfe020f9709d736b82be51e8bc698d73275dc14cbe779971ac89abec",
+    "charts/static/inside-loop-state/omega-cc.png": "fbd649fddc9e7c02f060d9521d23d2fb9843bb77d860da8629caddbbf51a8776",
+    "charts/static/long-trace-final/omega-cc.pdf": "d09e796199d1af4ae752f804721b2a4df538be5475ba4261524bd78abb2ed7e5",
+    "charts/static/long-trace-final/omega-cc.png": "6e1bbb399ea53e500c4ec4d95839aa44a3d64077252106b93d92a3ea16724cc0",
+    "charts/static/post-loop-state/omega-cc.pdf": "73cca94dc86a6378dd1276bdb3383b9c0c946c3b79bae310143400a4fdef6ef4",
+    "charts/static/post-loop-state/omega-cc.png": "98ca004c7664b26a9d4c4b454f307890a5c56d085bf9089acfc48581a4fbf603",
+    "charts/static/short-trace-final/omega-cc.pdf": "3a9b32b30d31a3973d308bbfb6915a5cd8604493bae77ab6660fc4bdbffa07ee",
+    "charts/static/short-trace-final/omega-cc.png": "77fe362a95b32750a4c203b3fad73d319095ad8927b526b4c1e02c94630fbd1d",
+    "logistic-chart-data.csv": "58ac20576196d8dbc3a703f648b046fbd74df0c23cad47fc3b67571f6a228864"
+  },
+  "point_count": 3912,
+  "python_version": "3.12.11",
+  "schema": "generate-analysis-charts-v4",
+  "series_count": 49,
+  "style": {
+    "binned_accuracy": {
+      "capsize": 3,
+      "color": "#f05a28",
+      "elinewidth": 1.4,
+      "label": "binned accuracy + Wilson 95% CI",
+      "marker": "square",
+      "markersize": 6,
+      "matplotlib_marker": "s"
+    },
+    "logistic_fit": {
+      "band_alpha": 0.16,
+      "color": "#2478d4",
+      "label": "logistic fit + 95% confidence band",
+      "linewidth": 2
+    },
+    "overall_accuracy": {
+      "color": "#81817c",
+      "dash_pattern": [
+        3,
+        3
+      ],
+      "label": "overall accuracy",
+      "linewidth": 1.4
+    },
+    "prediction_outcome": {
+      "alpha": 0.45,
+      "color": "#8b8b86",
+      "label": "prediction outcome",
+      "marker": "circle",
+      "matplotlib_marker": "o",
+      "size": 18
+    },
+    "schema": "prediction-factor-chart-style-v1",
+    "statistics_annotation": {
+      "color": "#555550",
+      "fontsize": 7.5,
+      "lines": 2,
+      "placement": "panel-header"
+    }
+  }
+}

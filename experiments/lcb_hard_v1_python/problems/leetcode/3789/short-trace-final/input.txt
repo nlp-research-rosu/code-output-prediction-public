@@ -1,0 +1,1 @@
+{"conflictingPairs":[[2,3],[1,4]],"n":4}

@@ -1,0 +1,1 @@
+The program exits during the iteration i=11, j=7 after emitting a JSON dump of the current dp table; it does not print ans.

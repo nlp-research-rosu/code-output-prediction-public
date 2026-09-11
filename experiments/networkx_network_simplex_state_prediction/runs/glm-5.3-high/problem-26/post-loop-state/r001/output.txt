@@ -1,0 +1,1 @@
+I cannot determine the exact node-potential list without executing the program's full network-simplex pivot loop.

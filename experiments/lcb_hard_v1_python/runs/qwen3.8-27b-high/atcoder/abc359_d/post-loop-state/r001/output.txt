@@ -1,0 +1,1 @@
+{"count": 0, "current_char": "?", "is_palindrome": true, "j": 0, "new_state": ["A"], "new_substring": ["A"], "state": []}

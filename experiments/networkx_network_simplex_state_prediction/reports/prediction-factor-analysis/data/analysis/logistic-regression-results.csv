@@ -1,0 +1,8 @@
+regression_id,model_id,arm_group,scope,metric_name,included_arms,n,n_wrong,beta0,beta1,se_beta1,odds_ratio,ci_low,ci_high,p_value,status
+cumulative-state-load,deepseek-v4-pro-0813-high,all-arms,dynamic,Omega_hat_StateLoad,"short-trace-final,long-trace-final,inside-loop-state,post-loop-state",120,120,,,,,,,,SINGLE_OUTCOME
+cumulative-state-load,deepseek-v4-pro-0813-off,all-arms,dynamic,Omega_hat_StateLoad,"short-trace-final,long-trace-final,inside-loop-state,post-loop-state",120,120,,,,,,,,SINGLE_OUTCOME
+cumulative-state-load,glm-5.3-high,all-arms,dynamic,Omega_hat_StateLoad,"short-trace-final,long-trace-final,inside-loop-state,post-loop-state",120,120,,,,,,,,SINGLE_OUTCOME
+cumulative-state-load,gpt-5.6-sol-high,all-arms,dynamic,Omega_hat_StateLoad,"short-trace-final,long-trace-final,inside-loop-state,post-loop-state",120,114,-29.226407594801863,1.1877089949145649,0.47988614293510184,3.2795591074954196,1.2803704345844296,8.4003095112447461,0.013324333488292593,OK
+cumulative-state-load,gpt-5.6-sol-off,all-arms,dynamic,Omega_hat_StateLoad,"short-trace-final,long-trace-final,inside-loop-state,post-loop-state",120,120,,,,,,,,SINGLE_OUTCOME
+cumulative-state-load,qwen3.8-27b-high,all-arms,dynamic,Omega_hat_StateLoad,"short-trace-final,long-trace-final,inside-loop-state,post-loop-state",120,120,,,,,,,,SINGLE_OUTCOME
+cumulative-state-load,qwen3.8-27b-off,all-arms,dynamic,Omega_hat_StateLoad,"short-trace-final,long-trace-final,inside-loop-state,post-loop-state",120,120,,,,,,,,SINGLE_OUTCOME

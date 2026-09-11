@@ -1,0 +1,1 @@
+{"j": 431, "nj": 0, "num_red_cells": 957, "red_components": []}

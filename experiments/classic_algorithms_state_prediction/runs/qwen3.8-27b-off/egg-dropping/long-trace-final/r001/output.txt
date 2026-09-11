@@ -1,0 +1,1 @@
+{"minimum_trials":6}

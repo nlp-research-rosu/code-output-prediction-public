@@ -1,0 +1,1 @@
+{"col": 1, "count": 0, "dc": -1, "dr": 0, "row": 1, "steps_left": 8, "visited_mask": 1}

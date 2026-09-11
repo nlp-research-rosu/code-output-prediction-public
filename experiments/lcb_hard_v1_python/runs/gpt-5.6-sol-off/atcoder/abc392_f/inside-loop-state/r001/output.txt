@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "<stdin>", line 51, in <module>
+  File "<stdin>", line 43, in main
+UnboundLocalError: cannot access local variable 'k' where it is not associated with a value

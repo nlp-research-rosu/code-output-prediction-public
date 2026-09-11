@@ -1,0 +1,1 @@
+{"ch": 3, "covered": 1, "cur": 1001, "next_rem": 1001, "node": 2, "rem": 1001}

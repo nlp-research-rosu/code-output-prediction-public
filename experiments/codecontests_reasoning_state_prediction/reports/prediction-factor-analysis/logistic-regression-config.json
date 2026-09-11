@@ -1,0 +1,16 @@
+{
+  "analyses": [
+    {
+      "regression_id": "cumulative-state-load",
+      "metric_name": "Omega_hat_StateLoad",
+      "scope": "dynamic",
+      "arm_group": "all-arms",
+      "include_arms": [
+        "short-trace-final",
+        "long-trace-final",
+        "inside-loop-state",
+        "post-loop-state"
+      ]
+    }
+  ]
+}

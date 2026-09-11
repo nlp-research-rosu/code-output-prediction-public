@@ -1,0 +1,1 @@
+The program emits a large JSON debug-state line after the 30th DP step, then exits.

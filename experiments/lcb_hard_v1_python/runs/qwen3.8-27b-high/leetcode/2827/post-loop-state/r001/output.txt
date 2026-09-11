@@ -1,0 +1,1 @@
+{"factor":2,"index":1073,"number":2,"owner":{"2":0},"parent":[0],"size":[1074],"value":1}

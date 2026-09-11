@@ -1,0 +1,1 @@
+{"_":-1,"color":0,"column":2,"maximum_black_column":1002,"possible":true}

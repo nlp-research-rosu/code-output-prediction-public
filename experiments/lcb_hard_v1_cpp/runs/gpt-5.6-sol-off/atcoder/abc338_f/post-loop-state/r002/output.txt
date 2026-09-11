@@ -1,0 +1,1 @@
+{"fullMask":255,"last":4,"mask":86,"remaining":0,"value":44}

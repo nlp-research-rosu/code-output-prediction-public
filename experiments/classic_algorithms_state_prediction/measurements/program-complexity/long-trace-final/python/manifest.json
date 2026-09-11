@@ -1,0 +1,40 @@
+{
+  "arm": "long-trace-final",
+  "execution_timeout_seconds": 600,
+  "experiment": "classic_algorithms_state_prediction",
+  "language": "Python 3.12.11",
+  "last_requested_runtime_repetitions": 1,
+  "metric_coverage": {
+    "Omega_CC": {
+      "measured": 30,
+      "unavailable": 0
+    },
+    "Omega_hat_NativeTrace": {
+      "measured": 30,
+      "unavailable": 0
+    },
+    "Omega_hat_StateLoad": {
+      "measured": 30,
+      "unavailable": 0
+    },
+    "Omega_hat_StateSize": {
+      "measured": 30,
+      "unavailable": 0
+    }
+  },
+  "metric_methods": {
+    "Omega_CC": "python-control-flow-v2",
+    "Omega_hat_NativeTrace": "python-cpython-monitoring-instruction-v2",
+    "Omega_hat_StateLoad": "python-cpython-program-state-sum-v1",
+    "Omega_hat_StateSize": "python-cpython-program-state-v5"
+  },
+  "profiles": 30,
+  "profiles_sha256": "6dc5965c1244c7a64ef430f96209a7c08a8230dcb7837ff8539018dc51e59d64",
+  "runtime_repetition_counts": {
+    "1": 1,
+    "3": 29
+  },
+  "schema": "classic-algorithms-program-complexity-v1",
+  "state_cell_visit_limit": 18446744073709551615,
+  "unique_execution_ids": 30
+}

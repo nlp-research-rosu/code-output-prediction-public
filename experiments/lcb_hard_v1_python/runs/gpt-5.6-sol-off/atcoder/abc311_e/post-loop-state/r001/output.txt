@@ -1,0 +1,1 @@
+{"count":1002,"dp":[[0 repeated 1003 times],[0 followed by 1002 ones]],"i":1,"j":1002}

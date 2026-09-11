@@ -1,0 +1,72 @@
+import decimal
+import math
+import random
+import sys
+from bisect import bisect_left, bisect_right
+from collections import Counter, defaultdict, deque
+from functools import cmp_to_key, lru_cache
+from heapq import heapify, heappop, heappush
+
+class FastIO:
+
+    @staticmethod
+    def read_int():
+        return int(sys.stdin.readline().rstrip())
+
+    @staticmethod
+    def read_list_ints():
+        return list(map(int, sys.stdin.readline().rstrip().split()))
+
+    @staticmethod
+    def read_list_ints_minus_one():
+        return [int(value) - 1 for value in sys.stdin.readline().rstrip().split()]
+
+    @staticmethod
+    def read_str():
+        return sys.stdin.readline().rstrip()
+
+    @staticmethod
+    def st(value):
+        print(value)
+
+    @staticmethod
+    def lst(values):
+        print(*values)
+
+    @staticmethod
+    def yes():
+        print('Yes')
+
+    @staticmethod
+    def no():
+        print('No')
+
+    @staticmethod
+    def accumulate(values):
+        prefix = [0]
+        for value in values:
+            prefix.append(prefix[-1] + value)
+        return prefix
+
+def abc_356e():
+    ac = FastIO()
+    ac.read_int()
+    nums = ac.read_list_ints()
+    ceil = 10 ** 6 + 1
+    cnt = [0] * (ceil + 1)
+    for num in nums:
+        cnt[num] += 1
+    ans = 0
+    pre = ac.accumulate(cnt)
+    for x in range(1, ceil + 1):
+        if cnt[x]:
+            for y in range(x, ceil + 1, x):
+                low = y
+                high = min(y + x - 1, ceil)
+                ans += low // x * cnt[x] * (pre[high + 1] - pre[low])
+            ans -= cnt[x] * cnt[x]
+            if cnt[x] > 1:
+                ans += cnt[x] * (cnt[x] - 1) // 2
+    ac.st(ans)
+    return
+abc_356e()

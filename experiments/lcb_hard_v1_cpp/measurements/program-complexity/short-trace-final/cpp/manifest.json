@@ -1,0 +1,356 @@
+{
+  "arm": "short-trace-final",
+  "benchmark": "lcb_hard_v1_cpp",
+  "dynamic_adapter": {
+    "container_image": "silkeh/clang@sha256:9388794775d1393c16b6897b4775b6d3e29459319de0bfafec59a20262e1fa68",
+    "container_platform": "linux/amd64",
+    "path": "analysis/cpp_dynamic_adapter.py",
+    "repetitions": 3,
+    "sha256": "346d490824894730294a30989b3de9b9ca8b053cafd17c2f1c59042c4e32ce5a",
+    "state_runtime_path": "measurements/program-complexity/state_runtime.hpp",
+    "state_runtime_sha256": "f9835c65997ef4df98a733adc590cdef7246d17c57b3acf0fb36aaaacffd1bbb",
+    "support_include_file_count": 38,
+    "support_include_path": "measurements/program-complexity/support/include",
+    "support_include_sha256": "9aa2efba4487aeaa2df348feb7c7110f865b6260e60e8284f9cdc42decc6e1f2",
+    "version": "clang-18.1.8-coverage-state-load-v1"
+  },
+  "execution_timeout_seconds": 180,
+  "language": "cpp",
+  "measurement_mode": "full",
+  "metric_methods": {
+    "Omega_CC": "cpp-preprocessed-control-flow-v1",
+    "Omega_hat_NativeTrace": "clang-18.1.8-coverage-state-load-v1",
+    "Omega_hat_StateLoad": "clang-18.1.8-coverage-state-load-v1",
+    "Omega_hat_StateSize": "clang-18.1.8-coverage-state-load-v1"
+  },
+  "metric_provenance": {
+    "Omega_CC": {
+      "failed": 0,
+      "not_measured": 0,
+      "not_requested": 0,
+      "recomputed": 0,
+      "reused": 35,
+      "reused_execution": 0
+    },
+    "Omega_hat_NativeTrace": {
+      "failed": 0,
+      "not_measured": 0,
+      "not_requested": 0,
+      "recomputed": 0,
+      "reused": 35,
+      "reused_execution": 0
+    },
+    "Omega_hat_StateLoad": {
+      "failed": 0,
+      "not_measured": 0,
+      "not_requested": 0,
+      "recomputed": 0,
+      "reused": 35,
+      "reused_execution": 0
+    },
+    "Omega_hat_StateSize": {
+      "failed": 0,
+      "not_measured": 0,
+      "not_requested": 0,
+      "recomputed": 0,
+      "reused": 35,
+      "reused_execution": 0
+    }
+  },
+  "profile_count": 35,
+  "profiles": [
+    {
+      "dynamic_execution_id": "sha256:24af39daa1be0c93108e71fff0eb0e44a57de420767ea81fa764d25a60c79e38",
+      "input_sha256": "bd5d6711effad64110886582a231b5157fcf8e6429ea6b0b92d80acebc322d67",
+      "problem": "atcoder/abc338_f",
+      "program": "atcoder/abc338_f/short-trace-final",
+      "source_sha256": "c2b6fe623ba3b8b051bbda878339965e844af9c568582237cda63700b1f5ffc5"
+    },
+    {
+      "dynamic_execution_id": "sha256:14edfb6609b71b9b3da5939d2f56eeb58281ddc2ca6cb06a67bd001f9643e5b7",
+      "input_sha256": "621be8689c5f6c9c7c2256bf30eddfbf15d91e0315e22e8b9e2162a762ffe868",
+      "problem": "atcoder/abc370_f",
+      "program": "atcoder/abc370_f/short-trace-final",
+      "source_sha256": "390393e76b4be5d0658f06aeb6bbef6fcce8b61a70d925044b22fea42c871fb7"
+    },
+    {
+      "dynamic_execution_id": "sha256:8c9d3e2d722333e0febdc929bab8722e87af1a067b5a9f1e26b24a404e9128db",
+      "input_sha256": "1ff1273ff0843500f56e865a8db4eef6b86f93e801c74545141fe0de19fff83e",
+      "problem": "atcoder/abc370_g",
+      "program": "atcoder/abc370_g/short-trace-final",
+      "source_sha256": "d584f3d6eeaa29fd5b8e07256a25fb5a4fb51c4121617615dc855237581a97b5"
+    },
+    {
+      "dynamic_execution_id": "sha256:87c97c3eee8614cb392f65fbf91028ff6754c58caa23c5c37f4b6a9b30967bd5",
+      "input_sha256": "9b72d7178f0785e35c928bd57ab6b3691fd567cc3103926f6015a1195368d1fb",
+      "problem": "atcoder/abc371_f",
+      "program": "atcoder/abc371_f/short-trace-final",
+      "source_sha256": "3008d29ec0bb9cecb84967f652de123c58f85e8a9b79b9de1486a9649333ee52"
+    },
+    {
+      "dynamic_execution_id": "sha256:f4f032cd91266ad06542ab0e1f12a50433e731aa3157ca85e69807667a4ff1a0",
+      "input_sha256": "908cf414eb41259fdefa276eb4ad963eac308935ce668b15d6edb177480704b3",
+      "problem": "atcoder/abc372_g",
+      "program": "atcoder/abc372_g/short-trace-final",
+      "source_sha256": "d7cffdd2b7a53cf5d088a993c4ead72b1aaa4dc639e0fca32ed584bf276df84b"
+    },
+    {
+      "dynamic_execution_id": "sha256:ff714ae6991e6b6416b0e8b647d3a629c2ae8321574d4caa9c94d89fbc73d8df",
+      "input_sha256": "3d6464982c973452236032685981e73039652247779a3b0b0faef74594631c3b",
+      "problem": "atcoder/abc373_g",
+      "program": "atcoder/abc373_g/short-trace-final",
+      "source_sha256": "27add0cc29f8494b6b133c51444916494314390deb3ec51790e6bc8937b7cfe3"
+    },
+    {
+      "dynamic_execution_id": "sha256:f7cd9bbac845dd15aa684df30688c73d2390b74315592af20bf0da1ce7cdb1be",
+      "input_sha256": "43ddcf3921b12ce3c990ce1f684ef850f23ba80cfacfbc5869e49b540ee5529f",
+      "problem": "atcoder/abc376_g",
+      "program": "atcoder/abc376_g/short-trace-final",
+      "source_sha256": "a5a2caaffe9d625317bfb490f670e4e72a9c6eba5fbfdeb96c5e04037a430396"
+    },
+    {
+      "dynamic_execution_id": "sha256:9a04042b76c3047bcc8ae81ef7d6b9b10bb1d4d489e7a74da0891d0812c94471",
+      "input_sha256": "3a33d6c4c7c25c7b6e36f24ad58c15b129804e9fac8d28b82002491983c62ebb",
+      "problem": "atcoder/abc378_g",
+      "program": "atcoder/abc378_g/short-trace-final",
+      "source_sha256": "c051658c5e730cba3428946bc35dd053acaf7ed59786a2e1677d97031665a4de"
+    },
+    {
+      "dynamic_execution_id": "sha256:9adb4268bc88cca43bb54ee4a1583943c0add3cb8b0e3d46724891ec6ce67c22",
+      "input_sha256": "59ab75acce314f9214818f5d5de59a313cf6bd2f21ea9b1ab05f183f75897ec8",
+      "problem": "atcoder/abc389_g",
+      "program": "atcoder/abc389_g/short-trace-final",
+      "source_sha256": "820049802ac471c5db9559bbeed89bf74b3a8ef4e1f0a97cf95d8d71a24429fd"
+    },
+    {
+      "dynamic_execution_id": "sha256:eb0093eff54964970dbb61ff8db6b6e1ff95cbac1637788baf6db9e6f543323f",
+      "input_sha256": "4e07408562bedb8b60ce05c1decfe3ad16b72230967de01f640b7e4729b49fce",
+      "problem": "atcoder/abc390_g",
+      "program": "atcoder/abc390_g/short-trace-final",
+      "source_sha256": "427cb60eceb1d4b9ae3fa100680ad7cc87de3bcb3738336fa3442fd18b949c5a"
+    },
+    {
+      "dynamic_execution_id": "sha256:4bb5adebffb49e7ee069eb0a2f8083bf765c92341bcf8932ca3ce34ca958624d",
+      "input_sha256": "1939ac02b3e3a4200d2e58caa21f8b8c90a90c4e77b6dc86f95c8b39a97d84ba",
+      "problem": "atcoder/arc184_c",
+      "program": "atcoder/arc184_c/short-trace-final",
+      "source_sha256": "806766ccdf463ea6f768abf49f0cde8b4bc39f536ca0e19e1bec5a6f2c4e3408"
+    },
+    {
+      "dynamic_execution_id": "sha256:f6ba92d9d4603bc2ee6d4077a8fb67e00b0beca94666f34b0d8fe0ccb930fa4b",
+      "input_sha256": "54c17ad2a81c048ff529c3ba5186c940be71deadd3cfdaff0be679778002b38c",
+      "problem": "atcoder/arc184_d",
+      "program": "atcoder/arc184_d/short-trace-final",
+      "source_sha256": "cb7fff94cb5da5aba585afe21d3704564699029cee2ef66f2090596379511933"
+    },
+    {
+      "dynamic_execution_id": "sha256:fe4bfa738f867c36f5044a0a49b9842c58b81b0cee00a350a9af0439faffb05c",
+      "input_sha256": "be0a1fb85cc6ffff6e9ef429b23a175cdbfffa5505efd8ae51b2852e92a6891d",
+      "problem": "atcoder/arc185_c",
+      "program": "atcoder/arc185_c/short-trace-final",
+      "source_sha256": "60b8b7d35e88ca162ba87743d3d71e3904e733e673232c8cec1131c69bc1cf6f"
+    },
+    {
+      "dynamic_execution_id": "sha256:5806a23544fa8e5201780bb9a35a91e07de52c58e999140bde2f83a6581732cb",
+      "input_sha256": "04412575067f0bdb6722e31a7ee45744cc1ecf2dfacec4cfbfa70cfd364bb7e2",
+      "problem": "atcoder/arc185_d",
+      "program": "atcoder/arc185_d/short-trace-final",
+      "source_sha256": "7918b66dd232d42fb290bfafda19ced42f26d8299866627119019dbbba1ec3eb"
+    },
+    {
+      "dynamic_execution_id": "sha256:749fc93fc85b2e913e72f0b8fcd9258e17228f655a74cfa920102a5915be9288",
+      "input_sha256": "165cbe81fabd4dbb7fd7f794181f0ead8392fec2989dc84eede01801b235d75b",
+      "problem": "atcoder/arc186_a",
+      "program": "atcoder/arc186_a/short-trace-final",
+      "source_sha256": "3e596a1560bcc5be3dbf648f57dfafb7904f727b93b8b0c6531ee33a30a4555e"
+    },
+    {
+      "dynamic_execution_id": "sha256:b90589f9e4fc5316069615430b971e6e02185e820058f4080034a7cd7c3d658e",
+      "input_sha256": "757c0a27a11e86f7dbcbc92be7d284082682e71b0906ed1f88846e4502adbf36",
+      "problem": "atcoder/arc186_c",
+      "program": "atcoder/arc186_c/short-trace-final",
+      "source_sha256": "401ee2d30ba241667024c7b00bbec9880b4839d862ba6a6d263c5a874c3727cb"
+    },
+    {
+      "dynamic_execution_id": "sha256:153be127665359b396946059547c30b995e960703c17ae824a7d4b0da8214c50",
+      "input_sha256": "6a25b5fae9e5e1f3575122964426d2a4dcf7c7b601c6072c60c72d692d5f34f4",
+      "problem": "atcoder/arc186_e",
+      "program": "atcoder/arc186_e/short-trace-final",
+      "source_sha256": "4b2359071809694d4ff557dce6406d5d8246dda6d1114d32dc7ecfb22d678b24"
+    },
+    {
+      "dynamic_execution_id": "sha256:a53471ea87d03c8c7c2bfd1572b8a992a4c6deb3168820f3026ae7d5a02dfa40",
+      "input_sha256": "f2f56a242fd03345156447553d95b0dc108b409d9fca2687ea5d8622ddc56d35",
+      "problem": "atcoder/arc187_b",
+      "program": "atcoder/arc187_b/short-trace-final",
+      "source_sha256": "402a7f7270d851bb6658998ac99c93a34e235abe83c0a974541d40c2563c92f7"
+    },
+    {
+      "dynamic_execution_id": "sha256:bffc541f56b428dc2a7790ddfeadd4bae5f6029b7a04d7c3b60f82e91fa05ba0",
+      "input_sha256": "ffe0326cd1156b8dfd4243aad2cd28c27104489112806af6ccf309943f2458b6",
+      "problem": "atcoder/arc188_a",
+      "program": "atcoder/arc188_a/short-trace-final",
+      "source_sha256": "df5a1cc5a51e369f40ff540994028cf0b0b7db04952922054a55118bf195c1f2"
+    },
+    {
+      "dynamic_execution_id": "sha256:0f87173a2dff77dadb8d9096e668cb6e335ab57e634561f03ee8fbe1a743403a",
+      "input_sha256": "54ab534b1deec5a7c1a9445ad6c94ece8692fc6f7f8e750c0f7b5cf6d36069f2",
+      "problem": "atcoder/arc188_c",
+      "program": "atcoder/arc188_c/short-trace-final",
+      "source_sha256": "3100d793388a96f09828f380678d417bd036ec9764bc474451354dc5aa03ea34"
+    },
+    {
+      "dynamic_execution_id": "sha256:c897ca3d241cc021f9f29c61288990de11361917ba047619230836f6e3abe4ad",
+      "input_sha256": "6c3326ddeee8b30a41acd20190bbe02b6cf9ff3ee016db0d233dbeb1dea97b9c",
+      "problem": "atcoder/arc189_c",
+      "program": "atcoder/arc189_c/short-trace-final",
+      "source_sha256": "c9431f5da5d22e00ef65b092176f97a7c28d35bd414218675789fc67dd0aedef"
+    },
+    {
+      "dynamic_execution_id": "sha256:43091df125bd115cbfd7b48025445ffe55d100ad3edb0aeb4eeb32506fa8c409",
+      "input_sha256": "68ca32762a073a0a4c2479f9d07455f1b5e3ba8b8834ca1af09af6bcff5a51ea",
+      "problem": "atcoder/arc189_d",
+      "program": "atcoder/arc189_d/short-trace-final",
+      "source_sha256": "77963b2d53bb7d34c2c1eaddd4895fc0e2fbcb1c7cd6069f37e85604c5497a54"
+    },
+    {
+      "dynamic_execution_id": "sha256:66802dedfd874a9fbb9eabbc92b4c3dfbacfb2c9458fdad2f3ecc5ebaa1db68a",
+      "input_sha256": "74bbbdc71dbd5a1245ff2ec37c208dff49e10dad9705fe35378ee7a1bb89800d",
+      "problem": "atcoder/arc190_a",
+      "program": "atcoder/arc190_a/short-trace-final",
+      "source_sha256": "a2d50a746dd31da0ce55fcbda7388e80ab46aab1b7ea29476d3b90af7ba60e4b"
+    },
+    {
+      "dynamic_execution_id": "sha256:507eaacdb48623c5b26b6a1df1f99d86f740b52d771dc4d21d2e813adb656887",
+      "input_sha256": "82460a42708f80a74a8c5f6da1762ac7ef699afddd3249744d91a9dd913ca8da",
+      "problem": "atcoder/arc190_c",
+      "program": "atcoder/arc190_c/short-trace-final",
+      "source_sha256": "7a68f293bad209113a319f94f0fa7883645661fba74e154b420f5c7dc98717df"
+    },
+    {
+      "dynamic_execution_id": "sha256:cd10f739b62080d945b3d0cb90ae91ba11e7fde9c29ffce07e7e2d22a6db9d4c",
+      "input_sha256": "9dc3a1129fc0be46346b31af2ea694183eb27b45812a88864444c83a27a81bff",
+      "problem": "atcoder/arc190_d",
+      "program": "atcoder/arc190_d/short-trace-final",
+      "source_sha256": "e179b7e3f2d805db572b4f442bad7255bfd52362ff02ad5e93dddec3fa723a99"
+    },
+    {
+      "dynamic_execution_id": "sha256:5d7301c7d1e0b8a81f9126ada7ae0114623b3421ae0c7e0889a74cf0952eb998",
+      "input_sha256": "735cff6fa24305e5ca39c287366d3da27d0bb5aeeb27b20419b364fb69f7c9b9",
+      "problem": "atcoder/arc191_d",
+      "program": "atcoder/arc191_d/short-trace-final",
+      "source_sha256": "1e57a5c572a64b2be97b9c1f6c3be39b56dec1edbb79b86ef9bd181db5bbee6c"
+    },
+    {
+      "dynamic_execution_id": "sha256:460cbabd72149664615177da3611c29314298b07af7a635f062346e01bfe02d3",
+      "input_sha256": "6add986dad64a039ad94f6fa375668f2c495fd9265aae9a1b0392e986410365a",
+      "problem": "atcoder/arc192_b",
+      "program": "atcoder/arc192_b/short-trace-final",
+      "source_sha256": "87bcc05fef4aa742e90992849abaa4534d861a18fb686edbe6917a96c35f5d03"
+    },
+    {
+      "dynamic_execution_id": "sha256:7a0bd01aea8199aa29b7e630535aae88eda57dcdf9eca494848c314191fad7d0",
+      "input_sha256": "747692344dca2a9e1598d70c4c68fbf2c78a263b3404cb331db48484ea969217",
+      "problem": "atcoder/arc192_e",
+      "program": "atcoder/arc192_e/short-trace-final",
+      "source_sha256": "c54417785ac04707346a9c6ed7faf680b86f5fc816d059c50d7b071836cb119f"
+    },
+    {
+      "dynamic_execution_id": "sha256:b3a699b28c0d1cc89b18932ca5aeeb4b3bc004d115d80e392981d14f74a281ad",
+      "input_sha256": "a917a3fd38c4f26e45dd94406bec0103d8516922f999054cd4d694a30ce4a865",
+      "problem": "atcoder/arc193_b",
+      "program": "atcoder/arc193_b/short-trace-final",
+      "source_sha256": "a2527e29e335ae86f297a38b883099e65ad2af33b77a5c3c5b525a2a67db26eb"
+    },
+    {
+      "dynamic_execution_id": "sha256:32c35c069860cad695fe7095df6abf77ff888669b93a597dbf23dab8a20f3aff",
+      "input_sha256": "55d42e20e8bd2d37a35110126a777b2c32ed4d76dff45eaea1511e3173661839",
+      "problem": "atcoder/arc194_c",
+      "program": "atcoder/arc194_c/short-trace-final",
+      "source_sha256": "4565a85f56be8b3b89cabe6f92d3a236433a473ab707e81f6ab9ab9dd90fa69b"
+    },
+    {
+      "dynamic_execution_id": "sha256:d6f129bc1ecc11080c87d024166895bf1149daa67207ab75b2e6422180b1a820",
+      "input_sha256": "40cc1d3eac180b5d664470886fb832dbea5d6c444f0a1686c9c24dfe2b77626d",
+      "problem": "atcoder/arc195_d",
+      "program": "atcoder/arc195_d/short-trace-final",
+      "source_sha256": "aa08868f903c10e97be8a478364f025fdd1e1e979c1f72c887e9b43b394b1ef4"
+    },
+    {
+      "dynamic_execution_id": "sha256:6446b519cc7898f44df4ee66bbbe94e40d77f9b34c57f488e91ce0a8662180f8",
+      "input_sha256": "e9e3b9d04ba709f6695caf0539bb3ca0d8e9bc15f0d365d07475bd3d494c43c3",
+      "problem": "atcoder/arc195_e",
+      "program": "atcoder/arc195_e/short-trace-final",
+      "source_sha256": "1fd2b24851399db5542d0307011fe015793773136c542f3b7562ece29bdcd29b"
+    },
+    {
+      "dynamic_execution_id": "sha256:384d3c9f8ac9857a79334fae264844ca45f265e5cbeb3dc8a164a57457e13c09",
+      "input_sha256": "269b4a12a9f8545af9a8925a29dbb3168d478e7ae8cd5cebad1e5a9cf1e90bd9",
+      "problem": "atcoder/arc196_a",
+      "program": "atcoder/arc196_a/short-trace-final",
+      "source_sha256": "f03b182d925717ca1f96d1c7305faebab7a6bbf43ffc1b90c60569bcddb0a950"
+    },
+    {
+      "dynamic_execution_id": "sha256:d2779b3358440c4eb85de92c9903c1eeb49ef5edcda94521cd5878385d7910f7",
+      "input_sha256": "516f3f61a4da506a8363f8b56ed40029a4adbf9f746297331f868703701fa0b1",
+      "problem": "atcoder/arc196_c",
+      "program": "atcoder/arc196_c/short-trace-final",
+      "source_sha256": "283a3d96ba5e7c352b7324f52fb512c29bb350574cf262f0fa49809870613893"
+    },
+    {
+      "dynamic_execution_id": "sha256:5bfbf1159347a950398e09cbc42b4f77cfe93ffd7d5f544cffabd326398f1fd6",
+      "input_sha256": "6e20a49ba84b6ab1628691577b58a91ea0e8226a4bfd095d68166f1f5e129dd9",
+      "problem": "atcoder/arc196_d",
+      "program": "atcoder/arc196_d/short-trace-final",
+      "source_sha256": "e2df80fb49aff00461f755fa470879f9e7c7df8fc2570216acf294233fafed2c"
+    }
+  ],
+  "runtime_versions": {
+    "Pygments": "2.17.2",
+    "matplotlib": "3.9.2",
+    "numpy": "2.1.3",
+    "python": "3.12.11",
+    "tree-sitter": "0.25.2",
+    "tree-sitter-cpp": "0.23.4"
+  },
+  "schema_version": 6,
+  "selected_case_limit": null,
+  "selected_problem_ids": [
+    "atcoder/abc338_f",
+    "atcoder/abc370_f",
+    "atcoder/abc370_g",
+    "atcoder/abc371_f",
+    "atcoder/abc372_g",
+    "atcoder/abc373_g",
+    "atcoder/abc376_g",
+    "atcoder/abc378_g",
+    "atcoder/abc389_g",
+    "atcoder/abc390_g",
+    "atcoder/arc184_c",
+    "atcoder/arc184_d",
+    "atcoder/arc185_c",
+    "atcoder/arc185_d",
+    "atcoder/arc186_a",
+    "atcoder/arc186_c",
+    "atcoder/arc186_e",
+    "atcoder/arc187_b",
+    "atcoder/arc188_a",
+    "atcoder/arc188_c",
+    "atcoder/arc189_c",
+    "atcoder/arc189_d",
+    "atcoder/arc190_a",
+    "atcoder/arc190_c",
+    "atcoder/arc190_d",
+    "atcoder/arc191_d",
+    "atcoder/arc192_b",
+    "atcoder/arc192_e",
+    "atcoder/arc193_b",
+    "atcoder/arc194_c",
+    "atcoder/arc195_d",
+    "atcoder/arc195_e",
+    "atcoder/arc196_a",
+    "atcoder/arc196_c",
+    "atcoder/arc196_d"
+  ],
+  "selected_profile_count": 35
+}

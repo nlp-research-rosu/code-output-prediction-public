@@ -1,0 +1,1 @@
+The program exits early at loop iteration 502 (index 501) and writes the intermediate Fenwick-tree JSON state. The scalar fields are: index=501, left_sum=6199981, median=49359, median_rank=3685, total_sum=23162065, value=67420, x=501; count_tree and sum_tree are the 7460-element arrays at that point.

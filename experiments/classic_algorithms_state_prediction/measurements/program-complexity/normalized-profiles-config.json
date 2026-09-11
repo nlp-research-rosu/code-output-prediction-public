@@ -1,0 +1,10 @@
+{
+  "benchmark": "classic_algorithms_state_prediction",
+  "source_format": "canonical-jsonl",
+  "sources": [
+    "short-trace-final/python/profiles.jsonl",
+    "long-trace-final/python/profiles.jsonl",
+    "inside-loop-state/python/profiles.jsonl",
+    "post-loop-state/python/profiles.jsonl"
+  ]
+}

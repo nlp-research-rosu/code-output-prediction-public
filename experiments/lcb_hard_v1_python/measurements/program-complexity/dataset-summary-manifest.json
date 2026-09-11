@@ -1,0 +1,86 @@
+{
+  "config": {
+    "path": "dataset-summary-config.json",
+    "sha256": "80aa7923332808ce71dae085da7a4a6e3ebaa30dc7e34e5ca71c3f6b3819f15b"
+  },
+  "metrics": {
+    "dynamic": [
+      "Omega_hat_NativeTrace",
+      "Omega_hat_StateSize",
+      "Omega_hat_StateLoad"
+    ],
+    "static": [
+      "Omega_CC"
+    ]
+  },
+  "rows": [
+    {
+      "dataset_id": "lcb_hard_v1_python-python",
+      "dynamic_profiles": {
+        "files": [
+          {
+            "path": "short-trace-final/python/profiles.jsonl",
+            "sha256": "220f157797279b82e09624a83e8f273952c9467385f6b74fdf6737e21a6b4adf"
+          },
+          {
+            "path": "long-trace-final/python/profiles.jsonl",
+            "sha256": "47519a3d46f5c3aa56c01d75e3e6492c4479625da506844c2949f7c9517dc0f8"
+          },
+          {
+            "path": "inside-loop-state/python/profiles.jsonl",
+            "sha256": "25cffe1c97d7a3df07ad1cfd179e58ef89931d8d6e2723a11e7d10b44d56b3a9"
+          },
+          {
+            "path": "post-loop-state/python/profiles.jsonl",
+            "sha256": "7dbe3b11afdd2cc0be3c041a8bdc6cc98b5fb818ae3c4ffacc2b4e2fb29717f3"
+          }
+        ],
+        "selected": 1132,
+        "unavailable": 0,
+        "unique_executions": 1132
+      },
+      "label": "lcb_hard_v1_python (Python)",
+      "language": "Python 3.12",
+      "metric_coverage": {
+        "Omega_CC": {
+          "exact": 283,
+          "lower_bound": 0,
+          "measured": 283,
+          "unavailable": 0
+        },
+        "Omega_hat_NativeTrace": {
+          "exact": 1132,
+          "lower_bound": 0,
+          "measured": 1132,
+          "unavailable": 0
+        },
+        "Omega_hat_StateLoad": {
+          "exact": 1132,
+          "lower_bound": 0,
+          "measured": 1132,
+          "unavailable": 0
+        },
+        "Omega_hat_StateSize": {
+          "exact": 1132,
+          "lower_bound": 0,
+          "measured": 1132,
+          "unavailable": 0
+        }
+      },
+      "note": "Static medians use one clean source per case. Dynamic medians use the four canonical execution identities per case.",
+      "numeric_recovery_policy": "assume_equal",
+      "programs": 283,
+      "static_profiles": {
+        "files": [
+          {
+            "path": "short-trace-final/python/profiles.jsonl",
+            "sha256": "220f157797279b82e09624a83e8f273952c9467385f6b74fdf6737e21a6b4adf"
+          }
+        ],
+        "selected": 283,
+        "unique": 283
+      }
+    }
+  ],
+  "schema": "program-complexity-dataset-summary-v1"
+}

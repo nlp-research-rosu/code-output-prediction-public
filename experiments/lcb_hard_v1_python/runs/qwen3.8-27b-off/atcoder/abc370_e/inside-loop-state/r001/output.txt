@@ -1,0 +1,1 @@
+{"c": -970, "dp_i": 1624, "i": 501, "prefix": 30, "sum_forbidden": 0, "total": 3249}

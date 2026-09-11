@@ -1,0 +1,2319 @@
+{
+  "arms": [
+    "short-trace-final",
+    "long-trace-final",
+    "inside-loop-state",
+    "post-loop-state"
+  ],
+  "benchmark": "lcb_hard_v1_cpp",
+  "case_count": 35,
+  "cases": [
+    {
+      "contest_date": "2024-01-27T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 8,
+        "long_trace_final_bytes": 3,
+        "inside_loop_state_bytes": 63,
+        "post_loop_state_bytes": 61
+      },
+      "platform": "atcoder",
+      "question_id": "abc338_f",
+      "question_title": "Negative Traveling Salesman",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc338_f/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 106,
+        "official_index": 2,
+        "origin": "public",
+        "reason": "lower-complexity representative official case",
+        "total_loop_entries": 525
+      },
+      "long_trace_input": {
+        "constraint_check": "all 56 directed edges are distinct, have different endpoints and positive bounded weights, so no negative cycle exists",
+        "input_bytes": 392,
+        "reason": "a complete eight-vertex positive graph makes the subset DP consume 3584 remaining-vertex transitions",
+        "total_loop_entries": 6543
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 59,
+          "source_loop_index": 8,
+          "nesting_depth": 2
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "fullMask",
+          "last",
+          "mask",
+          "remaining",
+          "value"
+        ],
+        "field_types": {
+          "fullMask": "integer",
+          "last": "integer",
+          "mask": "integer",
+          "remaining": "integer",
+          "value": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "bf48a0a33dcc93efe3c781ebdacba3181f9260a3e0f8a3c244ebca91122f78b3",
+        "post_oracle_sha256": "7a3e2d2e3108ad0c4c8364079e415c7cb7639d3aabc2ee5191941369ad0dd666"
+      }
+    },
+    {
+      "contest_date": "2024-09-07T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 5,
+        "long_trace_final_bytes": 4,
+        "inside_loop_state_bytes": 61,
+        "post_loop_state_bytes": 59
+      },
+      "platform": "atcoder",
+      "question_id": "abc370_f",
+      "question_title": "Cake Division",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc370_f/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 17,
+        "official_index": 1,
+        "origin": "public",
+        "reason": "smallest public example",
+        "total_loop_entries": 6146
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1002, K=501, and every circular segment weight is positive",
+        "input_bytes": 2013,
+        "reason": "a 1002-element unit circle with K=501 drives repeated doubling checks and a 1002-entry final feasibility scan",
+        "total_loop_entries": 964267
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 81,
+          "source_loop_index": 9,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "ans",
+          "i",
+          "k",
+          "l",
+          "n",
+          "now[i]",
+          "r"
+        ],
+        "field_types": {
+          "ans": "integer",
+          "i": "integer",
+          "k": "integer",
+          "l": "integer",
+          "n": "integer",
+          "now[i]": "integer",
+          "r": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "acdcb9c8484531ff9eba5960359b0ea3cc2af7fa2c3874788a449302c42a5a83",
+        "post_oracle_sha256": "348b665b2b7a79deed621ad7d3d2c3f09d315e381e5eb8b1cf09aead63743190"
+      }
+    },
+    {
+      "contest_date": "2024-09-07T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 9,
+        "inside_loop_state_bytes": 41,
+        "post_loop_state_bytes": 40
+      },
+      "platform": "atcoder",
+      "question_id": "abc370_g",
+      "question_title": "Divisible by 3",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc370_g/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 4,
+        "official_index": 1,
+        "origin": "public",
+        "reason": "smallest public example",
+        "total_loop_entries": 1999
+      },
+      "long_trace_input": {
+        "constraint_check": "N=9999999967 and M=17 lie within the stated bounds",
+        "input_bytes": 14,
+        "reason": "a near-10^10 prime-scale N drives the recursive prime summation through 1718588 deepest exponent transitions",
+        "total_loop_entries": 37314876
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 76,
+          "source_loop_index": 12,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "ans",
+          "i",
+          "k",
+          "x"
+        ],
+        "field_types": {
+          "ans": "integer",
+          "i": "integer",
+          "k": "integer",
+          "x": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "cec1b4493e5bb7351f2dde06ae08026cee063c7c8c698b7324938e89f7050c7e",
+        "post_oracle_sha256": "03c641aa4642ad4d0ce55cc5fecec6e3388396b809ec6a07558e2be008c340ce"
+      }
+    },
+    {
+      "contest_date": "2024-09-14T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 4,
+        "long_trace_final_bytes": 8,
+        "inside_loop_state_bytes": 76,
+        "post_loop_state_bytes": 91
+      },
+      "platform": "atcoder",
+      "question_id": "abc371_f",
+      "question_title": "Takahashi in Narrow Road",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc371_f/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 39,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "smaller public example",
+        "total_loop_entries": 17
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1002, initial positions are strictly increasing, and the single query uses a valid index and target",
+        "input_bytes": 4472,
+        "reason": "one far-left update of the last point walks through 1002 ordered intervals while accumulating movement cost",
+        "total_loop_entries": 3005
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 196,
+          "source_loop_index": 5,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "ans",
+          "cost",
+          "g",
+          "left",
+          "right",
+          "t",
+          "val"
+        ],
+        "field_types": {
+          "ans": "integer",
+          "cost": "integer",
+          "g": "integer",
+          "left": "integer",
+          "right": "integer",
+          "t": "integer",
+          "val": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "0bb0369d9a1039a272302eaba6a2058556e8ab63d80e095ed933e448085fe1ea",
+        "post_oracle_sha256": "d3b10b5fb9be2428cdb921e22f6df4694cdaefc58aeaec6a356399a0b353ba9d"
+      }
+    },
+    {
+      "contest_date": "2024-09-21T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 4,
+        "long_trace_final_bytes": 2,
+        "inside_loop_state_bytes": 90,
+        "post_loop_state_bytes": 90
+      },
+      "platform": "atcoder",
+      "question_id": "abc372_g",
+      "question_title": "Ax + By < C",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc372_g/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 24,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "smaller public example",
+        "total_loop_entries": 11
+      },
+      "long_trace_input": {
+        "constraint_check": "T=1, N=1002, and every triple contains positive bounded integers",
+        "input_bytes": 12683,
+        "reason": "1002 patterned lines make the convex-envelope maintenance perform 1842 cumulative dominance removals",
+        "total_loop_entries": 3850
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 37,
+          "source_loop_index": 2,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "lim",
+          "pos",
+          "stk.size()",
+          "x[0]",
+          "x[1]",
+          "x[2]"
+        ],
+        "field_types": {
+          "lim": "integer",
+          "pos": "array",
+          "stk.size()": "integer",
+          "x[0]": "integer",
+          "x[1]": "integer",
+          "x[2]": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "f392c2f330a6aeefecd900287dbe520b8c328ac1778b8a5e89d24b48af8f64de",
+        "post_oracle_sha256": "fda6fa8d2f206451a12da034873c17ce567b57b93c27783ef11de6d243fb812e"
+      }
+    },
+    {
+      "contest_date": "2024-09-28T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 6,
+        "long_trace_final_bytes": 87,
+        "inside_loop_state_bytes": 88,
+        "post_loop_state_bytes": 103
+      },
+      "platform": "atcoder",
+      "question_id": "abc373_g",
+      "question_title": "No Cross Matching",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc373_g/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 26,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "smaller public example",
+        "total_loop_entries": 320
+      },
+      "long_trace_input": {
+        "constraint_check": "N=32 and all point coordinates are valid bounded integers",
+        "input_bytes": 357,
+        "reason": "32 points on each side create 1024 candidate matching edges and a 1024-entry post-flow assignment scan",
+        "total_loop_entries": 43778
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 282,
+          "source_loop_index": 20,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "ans",
+          "i"
+        ],
+        "field_types": {
+          "ans": "array",
+          "i": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "2ac6e97c5d79d38807e1da5b0c77724bea11ea5d5db58bde6d432bb763137bc5",
+        "post_oracle_sha256": "470c5dc6dfe5c6179b828a269b6060979fa8d996c07e7af3c8ca56c8228f0e4c"
+      }
+    },
+    {
+      "contest_date": "2024-10-19T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 30,
+        "long_trace_final_bytes": 10,
+        "inside_loop_state_bytes": 36,
+        "post_loop_state_bytes": 34
+      },
+      "platform": "atcoder",
+      "question_id": "abc376_g",
+      "question_title": "Treasure Hunting",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc376_g/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 91,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 189
+      },
+      "long_trace_input": {
+        "constraint_check": "T=1, every parent is smaller than its child, and all positive weights satisfy the total bound",
+        "input_bytes": 6815,
+        "reason": "a 1002-vertex parent chain makes the priority-queue aggregation loop process more than 1000 changing component blocks",
+        "total_loop_entries": 5043
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 40,
+          "source_loop_index": 5,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "S",
+          "n",
+          "q.size()"
+        ],
+        "field_types": {
+          "S": "integer",
+          "n": "integer",
+          "q.size()": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "f10e3f709acb1c4d8374ebb4b475c129930ee3f1c88e7d5594eff324be61150f",
+        "post_oracle_sha256": "090db543d55998db4d4e5d98cdafb934ef2efc3d96d88cf9247cfbcc14338fd4"
+      }
+    },
+    {
+      "contest_date": "2024-11-02T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 3,
+        "long_trace_final_bytes": 10,
+        "inside_loop_state_bytes": 61,
+        "post_loop_state_bytes": 67
+      },
+      "platform": "atcoder",
+      "question_id": "abc378_g",
+      "question_title": "Everlasting LIDS",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc378_g/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 13,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 16
+      },
+      "long_trace_input": {
+        "constraint_check": "A=B=8, AB=64, and the modulus is an allowed prime",
+        "input_bytes": 14,
+        "reason": "an eight-by-eight instance expands the ordered-state map through 22307 explicit worklist iterations",
+        "total_loop_entries": 22307
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 34,
+          "source_loop_index": 0,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "A",
+          "B",
+          "memo.size()",
+          "mo",
+          "ret",
+          "x"
+        ],
+        "field_types": {
+          "A": "integer",
+          "B": "integer",
+          "memo.size()": "integer",
+          "mo": "integer",
+          "ret": "integer",
+          "x": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "b1309909b817ea06cd1c39989692aae5956d242c0667d73dd929542676edca81",
+        "post_oracle_sha256": "aac0131a86eeef87570baed4de219bb8866d6c10596fae3781579f1300b21090"
+      }
+    },
+    {
+      "contest_date": "2025-01-18T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 9,
+        "long_trace_final_bytes": 311,
+        "inside_loop_state_bytes": 56,
+        "post_loop_state_bytes": 56
+      },
+      "platform": "atcoder",
+      "question_id": "abc389_g",
+      "question_title": "Odd Even Graph",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc389_g/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 11,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 527945
+      },
+      "long_trace_input": {
+        "constraint_check": "N=10 and the supplied modulus is a valid prime within the published bounds",
+        "input_bytes": 13,
+        "reason": "N=10 drives 1837 iterations in the deepest nonzero edge-distribution transition loop",
+        "total_loop_entries": 530031
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 67,
+          "source_loop_index": 12,
+          "nesting_depth": 4
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "N",
+          "dif",
+          "e",
+          "mo",
+          "pre",
+          "sum"
+        ],
+        "field_types": {
+          "N": "integer",
+          "dif": "integer",
+          "e": "integer",
+          "mo": "integer",
+          "pre": "integer",
+          "sum": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "b5c207f0dfee4f3a946469ff1da55563c54b4442f67a469ce540793020b27739",
+        "post_oracle_sha256": "3b8eefe7ec79219be85a6f49040d6ce3731163cfc88e4e1cb8a611f81a1bf4e6"
+      }
+    },
+    {
+      "contest_date": "2025-01-25T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 5,
+        "long_trace_final_bytes": 10,
+        "inside_loop_state_bytes": 84,
+        "post_loop_state_bytes": 79
+      },
+      "platform": "atcoder",
+      "question_id": "abc390_g",
+      "question_title": "Permutation Concatenation",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/abc390_g/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 1,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 2405537
+      },
+      "long_trace_input": {
+        "constraint_check": "N=200 satisfies the published integer bound",
+        "input_bytes": 4,
+        "reason": "N=200 makes the final coefficient-accumulation loop execute 1203 times across the six digit classes",
+        "total_loop_entries": 2567022
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 138,
+          "source_loop_index": 19,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "ans",
+          "cnt[k]",
+          "i",
+          "k",
+          "n",
+          "res.size()",
+          "sum[k]"
+        ],
+        "field_types": {
+          "ans": "integer",
+          "cnt[k]": "integer",
+          "i": "integer",
+          "k": "integer",
+          "n": "integer",
+          "res.size()": "integer",
+          "sum[k]": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "82e7ae04a0089d7d8a4379f3e937483e3751e2cdeab22cde8f361574723bfbda",
+        "post_oracle_sha256": "01811fcf4d1458abaf74f70d412c0f280b5610dcc1021a6ad0871b953350ccd9"
+      }
+    },
+    {
+      "contest_date": "2024-09-22T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 3,
+        "inside_loop_state_bytes": 63,
+        "post_loop_state_bytes": 64
+      },
+      "platform": "atcoder",
+      "question_id": "arc184_c",
+      "question_title": "Mountain and Valley Folds",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc184_c/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 9,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 10434
+      },
+      "long_trace_input": {
+        "constraint_check": "N=20 and all signed offsets satisfy the published bounds",
+        "input_bytes": 168,
+        "reason": "twenty offsets generate 1248 distinct candidate starts and 24960 final mountain tests",
+        "total_loop_entries": 89126
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 52,
+          "source_loop_index": 5,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "a.size()",
+          "answer",
+          "candidates.size()",
+          "count"
+        ],
+        "field_types": {
+          "a.size()": "integer",
+          "answer": "integer",
+          "candidates.size()": "integer",
+          "count": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "3b068bb716c1b2bcf4a8e12207dc99ba3ca41eefcb4c6a77f9038e6072270670",
+        "post_oracle_sha256": "f4575e6dc6801e6b0e9d93c82f817e6ae7d8328c6f7782e754c7eb9e969d2190"
+      }
+    },
+    {
+      "contest_date": "2024-09-22T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 2,
+        "inside_loop_state_bytes": 624,
+        "post_loop_state_bytes": 624
+      },
+      "platform": "atcoder",
+      "question_id": "arc184_d",
+      "question_title": "Erase Balls 2D",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc184_d/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 13,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 44
+      },
+      "long_trace_input": {
+        "constraint_check": "N=46 and the listed pairs form valid bounded coordinates",
+        "input_bytes": 261,
+        "reason": "46 ordered pairs create 1128 final predecessor-transition checks plus stateful validity scans",
+        "total_loop_entries": 53155
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 75,
+          "source_loop_index": 6,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "a",
+          "dp",
+          "i",
+          "n",
+          "vals"
+        ],
+        "field_types": {
+          "a": "array",
+          "dp": "array",
+          "i": "integer",
+          "n": "integer",
+          "vals": "array"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "34d4358d87c903bf8c18dcfd5b06d154d4d55bf9d5a641e90d9689525f8c34de",
+        "post_oracle_sha256": "df359e96178ac55943c31c3d695e1eb974c5182dd6799c55a587f6151b5bb908"
+      }
+    },
+    {
+      "contest_date": "2024-10-13T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 6,
+        "long_trace_final_bytes": 9,
+        "inside_loop_state_bytes": 130,
+        "post_loop_state_bytes": 135
+      },
+      "platform": "atcoder",
+      "question_id": "arc185_c",
+      "question_title": "Sum of Three Integers",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc185_c/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 16,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 69
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1003, X=1002, and every input value lies in zero through X",
+        "input_bytes": 3915,
+        "reason": "a convolution length of 2048 makes the post-transform complex squaring loop execute 2048 times",
+        "total_loop_entries": 2058
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 47,
+          "source_loop_index": 3,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "llround(in[0].imag())",
+          "llround(in[0].real())",
+          "llround(in[n-1].imag())",
+          "llround(in[n-1].real())",
+          "n"
+        ],
+        "field_types": {
+          "llround(in[0].imag())": "integer",
+          "llround(in[0].real())": "integer",
+          "llround(in[n-1].imag())": "integer",
+          "llround(in[n-1].real())": "integer",
+          "n": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "b8852139230d0ee5b03861577f66d528659bc1ad954a4d62cccc0dc302f75f01",
+        "post_oracle_sha256": "f0a819d997093cfdc6aa071a70ea233f32b50b536df0be15032afbeb6422a86b"
+      }
+    },
+    {
+      "contest_date": "2024-10-13T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 3,
+        "long_trace_final_bytes": 10,
+        "inside_loop_state_bytes": 42,
+        "post_loop_state_bytes": 42
+      },
+      "platform": "atcoder",
+      "question_id": "arc185_d",
+      "question_title": "Random Walk on Tree",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc185_d/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 3,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 3
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1002 and M=7919 are positive integers within the published bounds",
+        "input_bytes": 10,
+        "reason": "N=1002 makes the expected-walk accumulation loop execute exactly 1002 times",
+        "total_loop_entries": 1003
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 53,
+          "source_loop_index": 1,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "ans.val()",
+          "m",
+          "n"
+        ],
+        "field_types": {
+          "ans.val()": "integer",
+          "m": "integer",
+          "n": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "57a6692b6a6d966250b52bc0a7805be881422f6c7d397da513162218fdd56b66",
+        "post_oracle_sha256": "c300a60ae1f7f36e06ed7cdc4534b74ddc50119f017b06842fb2e311130b1e62"
+      }
+    },
+    {
+      "contest_date": "2024-10-27T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 11,
+        "long_trace_final_bytes": 4,
+        "inside_loop_state_bytes": 33,
+        "post_loop_state_bytes": 33
+      },
+      "platform": "atcoder",
+      "question_id": "arc186_a",
+      "question_title": "Underclued",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc186_a/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 9,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 54
+      },
+      "long_trace_input": {
+        "constraint_check": "N=10, Q=1, and the single query value is within the area bound",
+        "input_bytes": 8,
+        "reason": "N=10 executes 2025 candidate-area iterations in the deepest reachable DP loop",
+        "total_loop_entries": 2653
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 15,
+          "source_loop_index": 3,
+          "nesting_depth": 3
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "i",
+          "n",
+          "q",
+          "x",
+          "y"
+        ],
+        "field_types": {
+          "i": "integer",
+          "n": "integer",
+          "q": "integer",
+          "x": "integer",
+          "y": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "677c25a491737f2135af2d9a163c05d633c45540b3b3dfcc4cdeb21a4119e904",
+        "post_oracle_sha256": "c1c8cf41c8546038d8ee0c38e226dae00552aed65a9a2522a8b9e262a90a08cb"
+      }
+    },
+    {
+      "contest_date": "2024-10-27T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 7,
+        "long_trace_final_bytes": 8,
+        "inside_loop_state_bytes": 59,
+        "post_loop_state_bytes": 57
+      },
+      "platform": "atcoder",
+      "question_id": "arc186_c",
+      "question_title": "Ball and Box",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc186_c/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 111,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 12
+      },
+      "long_trace_input": {
+        "constraint_check": "T=1, N=1002, M=1, and each pair has a strictly larger first value",
+        "input_bytes": 8919,
+        "reason": "one 1002-row case makes the final multiset optimization loop execute exactly 1002 times",
+        "total_loop_entries": 1003
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 52,
+          "source_loop_index": 1,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "M",
+          "N",
+          "V.size()",
+          "mp",
+          "ret",
+          "x"
+        ],
+        "field_types": {
+          "M": "integer",
+          "N": "integer",
+          "V.size()": "integer",
+          "mp": "integer",
+          "ret": "integer",
+          "x": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "3183b08851e03814c5aa0a2527e044a6a2c61bb1fb301d6392a94d9dec09d9af",
+        "post_oracle_sha256": "45e9cac7ec865e4416cd18ae39bcc4087489312ed827f7f826a92a23a204764e"
+      }
+    },
+    {
+      "contest_date": "2024-10-27T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 2,
+        "inside_loop_state_bytes": 56,
+        "post_loop_state_bytes": 56
+      },
+      "platform": "atcoder",
+      "question_id": "arc186_e",
+      "question_title": "Missing Subsequence",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc186_e/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 9,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 4000032
+      },
+      "long_trace_input": {
+        "constraint_check": "N=M=50, K=3, and every pattern value is in the permitted alphabet",
+        "input_bytes": 108,
+        "reason": "a 50-position alternating pattern produces 4456 updates in the deepest final transition loop",
+        "total_loop_entries": 4009898
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 66,
+          "source_loop_index": 5,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "A[i+1]",
+          "A[i]",
+          "K",
+          "M",
+          "N",
+          "i",
+          "y"
+        ],
+        "field_types": {
+          "A[i+1]": "integer",
+          "A[i]": "integer",
+          "K": "integer",
+          "M": "integer",
+          "N": "integer",
+          "i": "integer",
+          "y": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "d3223b4ad2e44f45d830a503f0ae087f25d4c5be1abaca83a144de5c24543a26",
+        "post_oracle_sha256": "4f4a71b6ba97f6f1e6a3b1a5b5f8988689db7fd9e250510fbb5060198c3aef75"
+      }
+    },
+    {
+      "contest_date": "2024-11-17T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 10,
+        "inside_loop_state_bytes": 205,
+        "post_loop_state_bytes": 205
+      },
+      "platform": "atcoder",
+      "question_id": "arc187_b",
+      "question_title": "Sum of CC",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc187_b/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 10,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 18
+      },
+      "long_trace_input": {
+        "constraint_check": "N=46, M=50, and every array entry is the allowed unknown marker",
+        "input_bytes": 144,
+        "reason": "46 unknown entries and alphabet size 50 create 2205 separator-state evaluations",
+        "total_loop_entries": 35510
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 56,
+          "source_loop_index": 6,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "a",
+          "ans",
+          "i",
+          "l",
+          "m",
+          "mn",
+          "mx",
+          "r"
+        ],
+        "field_types": {
+          "a": "array",
+          "ans": "integer",
+          "i": "integer",
+          "l": "integer",
+          "m": "integer",
+          "mn": "integer",
+          "mx": "integer",
+          "r": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "ba767226cebc5b2fadb4099382ba8e96c9de2fa9cd2037feab18db8112b6dd41",
+        "post_oracle_sha256": "f7f224b3f7a860f5248bcb9912da1dca97f4d777ef7cb0cea83960625caa030f"
+      }
+    },
+    {
+      "contest_date": "2024-11-23T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 9,
+        "inside_loop_state_bytes": 48,
+        "post_loop_state_bytes": 49
+      },
+      "platform": "atcoder",
+      "question_id": "arc188_a",
+      "question_title": "ABC Symmetry",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc188_a/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 8,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 299
+      },
+      "long_trace_input": {
+        "constraint_check": "N=15, K=20, and the string consists of exactly N allowed wildcard characters",
+        "input_bytes": 22,
+        "reason": "fifteen wildcard characters lead to 4096 cells in the final four-group aggregation cube",
+        "total_loop_entries": 20143
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 82,
+          "source_loop_index": 6,
+          "nesting_depth": 2
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "a",
+          "ans.val()",
+          "b",
+          "k",
+          "n"
+        ],
+        "field_types": {
+          "a": "integer",
+          "ans.val()": "integer",
+          "b": "integer",
+          "k": "integer",
+          "n": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "f3782b3c0060820f3b7cb5bca6b20fe0b6089ed6704f659c877d97dc084579a7",
+        "post_oracle_sha256": "d8159cdc80db90d9c3c8c0a2a48ff8b8d5c9644332bd225daf0b6850a9a9fdaf"
+      }
+    },
+    {
+      "contest_date": "2024-11-23T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 3,
+        "long_trace_final_bytes": 1002,
+        "inside_loop_state_bytes": 8956,
+        "post_loop_state_bytes": 18979
+      },
+      "platform": "atcoder",
+      "question_id": "arc188_c",
+      "question_title": "Honest or Liar or Confused",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc188_c/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 21,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 36
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1002 and M=0 is a valid unconstrained instance",
+        "input_bytes": 7,
+        "reason": "N=1002 makes the disjoint-set initialization loop execute 4008 times before any output",
+        "total_loop_entries": 5016
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 27,
+          "source_loop_index": 2,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "m",
+          "n",
+          "vector<int>(f+1,f+4*n+1)"
+        ],
+        "field_types": {
+          "m": "integer",
+          "n": "integer",
+          "vector<int>(f+1,f+4*n+1)": "array"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "42c44a2b0636b8ce27ce46f29b21392345d6bd09880a72fb140fb98560d2f6d7",
+        "post_oracle_sha256": "4227ce22ce92b083b9774a57ff5ec144c48afd10e65c2ccb472f64efdcca4475"
+      }
+    },
+    {
+      "contest_date": "2024-12-08T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 5,
+        "inside_loop_state_bytes": 9739,
+        "post_loop_state_bytes": 11746
+      },
+      "platform": "atcoder",
+      "question_id": "arc189_c",
+      "question_title": "Balls and Boxes",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc189_c/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 43,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 41
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1003, root one, both markers are valid, and P and Q are full permutations",
+        "input_bytes": 11835,
+        "reason": "two full 1003-cycles make the final cross-cycle LIS projection loop execute exactly 1002 times",
+        "total_loop_entries": 11028
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 83,
+          "source_loop_index": 12,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "cnt",
+          "f",
+          "g",
+          "v"
+        ],
+        "field_types": {
+          "cnt": "integer",
+          "f": "array",
+          "g": "array",
+          "v": "array"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "3506e3708407a54fd5203637d201eacdd5db20aadffa2c7ceacb82fc7dc105cb",
+        "post_oracle_sha256": "fb3b749419fc169e68bded5ece83f010743c1c10257af5a0a637b301d6c44017"
+      }
+    },
+    {
+      "contest_date": "2024-12-08T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 15,
+        "long_trace_final_bytes": 2004,
+        "inside_loop_state_bytes": 7976,
+        "post_loop_state_bytes": 7979
+      },
+      "platform": "atcoder",
+      "question_id": "arc189_d",
+      "question_title": "Takahashi is Slime",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc189_d/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 14,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 74
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1002 and every array value is a valid positive integer",
+        "input_bytes": 2009,
+        "reason": "an all-one 1002-element array makes the interval-expansion loop execute once for every answer position",
+        "total_loop_entries": 23029
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 659,
+          "source_loop_index": 20,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "L",
+          "R",
+          "a",
+          "ans",
+          "cum",
+          "i",
+          "n",
+          "x"
+        ],
+        "field_types": {
+          "L": "integer",
+          "R": "integer",
+          "a": "array",
+          "ans": "array",
+          "cum": "array",
+          "i": "integer",
+          "n": "integer",
+          "x": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "979071eb2e837f633800c14985f673a8b8cbf5494d1e5ea308866000075afc2c",
+        "post_oracle_sha256": "4735147c323d39de0f85ec76718052156cdd8ca74d538b99def483357127c7b2"
+      }
+    },
+    {
+      "contest_date": "2025-01-12T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 10,
+        "long_trace_final_bytes": 2006,
+        "inside_loop_state_bytes": 12893,
+        "post_loop_state_bytes": 12894
+      },
+      "platform": "atcoder",
+      "question_id": "arc190_a",
+      "question_title": "Inside or Outside",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc190_a/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 19,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 7
+      },
+      "long_trace_input": {
+        "constraint_check": "N=4000, M=1002, and every interval has valid ordered endpoints",
+        "input_bytes": 8923,
+        "reason": "1002 mutually overlapping increasing intervals make the ordered dominance scan execute fully without early output",
+        "total_loop_entries": 2004
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 111,
+          "source_loop_index": 2,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "f",
+          "l",
+          "maxIdx",
+          "maxR",
+          "minIdx",
+          "minR",
+          "ord",
+          "r"
+        ],
+        "field_types": {
+          "f": "boolean",
+          "l": "array",
+          "maxIdx": "integer",
+          "maxR": "integer",
+          "minIdx": "integer",
+          "minR": "integer",
+          "ord": "array",
+          "r": "array"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "09a0305fd65f75b6cd623c12d61bbc0c8b1b2ae8c79679c2151a2b728c22992b",
+        "post_oracle_sha256": "469e7fd17d250c2c2523bca71914690977e09fa9515aeacce6ec31fa38a6e3c2"
+      }
+    },
+    {
+      "contest_date": "2025-01-12T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 12,
+        "long_trace_final_bytes": 9,
+        "inside_loop_state_bytes": 23,
+        "post_loop_state_bytes": 22
+      },
+      "platform": "atcoder",
+      "question_id": "arc190_c",
+      "question_title": "Basic Grid Problem with Updates",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc190_c/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 33,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 65
+      },
+      "long_trace_input": {
+        "constraint_check": "the grid, start cell, single right move, and replacement value satisfy the bounds",
+        "input_bytes": 2194,
+        "reason": "a 33-by-33 grid executes 1088 reverse suffix-DP cell updates before the only movement query",
+        "total_loop_entries": 4596
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 30,
+          "source_loop_index": 7,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "i",
+          "m",
+          "n"
+        ],
+        "field_types": {
+          "i": "integer",
+          "m": "integer",
+          "n": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "e660282ed3f134a02abd827b06ad926523f1d3449829c4526fca5c6eaec9ec85",
+        "post_oracle_sha256": "397647b236bf28b6390ea420c1519fcab0a6fd09ba9c429b50841d7553f4eb76"
+      }
+    },
+    {
+      "contest_date": "2025-01-12T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 10,
+        "long_trace_final_bytes": 2211,
+        "inside_loop_state_bytes": 31,
+        "post_loop_state_bytes": 31
+      },
+      "platform": "atcoder",
+      "question_id": "arc190_d",
+      "question_title": "Matrix Pow Sum",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc190_d/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 11,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 103
+      },
+      "long_trace_input": {
+        "constraint_check": "N=33, modulus five, and every matrix entry is a valid residue",
+        "input_bytes": 2183,
+        "reason": "a 33-by-33 dense matrix makes the final powered-matrix accumulation loop execute 1089 times",
+        "total_loop_entries": 190912
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 77,
+          "source_loop_index": 21,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "i",
+          "mod",
+          "n",
+          "pw"
+        ],
+        "field_types": {
+          "i": "integer",
+          "mod": "integer",
+          "n": "integer",
+          "pw": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "64e325fce118ebde19ebf4bfe9a8ced7d44902fc7e341631aea92f2b6bdc5f7e",
+        "post_oracle_sha256": "2a8496b57eb1b10918eb401b23a7fc001708fa8e7c4dbe069665f9296999e96d"
+      }
+    },
+    {
+      "contest_date": "2025-01-26T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 3,
+        "inside_loop_state_bytes": 4032,
+        "post_loop_state_bytes": 4032
+      },
+      "platform": "atcoder",
+      "question_id": "arc191_d",
+      "question_title": "Moving Pieces on Graph",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc191_d/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 23,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 38
+      },
+      "long_trace_input": {
+        "constraint_check": "the graph is a connected path and both endpoints are valid distinct vertices",
+        "input_bytes": 7826,
+        "reason": "a 1003-vertex path makes the alternate-state breadth-first neighbor scan execute 2004 times",
+        "total_loop_entries": 10024
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 73,
+          "source_loop_index": 6,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "alternate[vertex][usedOutsideEdge]",
+          "path",
+          "pathEdges.size()",
+          "states.size()",
+          "usedOutsideEdge",
+          "vertex"
+        ],
+        "field_types": {
+          "alternate[vertex][usedOutsideEdge]": "integer",
+          "path": "array",
+          "pathEdges.size()": "integer",
+          "states.size()": "integer",
+          "usedOutsideEdge": "integer",
+          "vertex": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "7e90efcee0abf7549ca04798f5712c00ea464ac945a54b55f4f90c5c34128f73",
+        "post_oracle_sha256": "6c972ff68d5a2fc081f8455e043a09e6a5cae9a4ba7e23471b64a6580f364c48"
+      }
+    },
+    {
+      "contest_date": "2025-02-09T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 6,
+        "long_trace_final_bytes": 5,
+        "inside_loop_state_bytes": 2049,
+        "post_loop_state_bytes": 2049
+      },
+      "platform": "atcoder",
+      "question_id": "arc192_b",
+      "question_title": "Fennec VS. Snuke 2",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc192_b/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 7,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 6
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1002 and every pile size is a valid positive integer",
+        "input_bytes": 2009,
+        "reason": "1002 alternating pile sizes make the parity-statistics loop execute exactly 1002 times",
+        "total_loop_entries": 2004
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 16,
+          "source_loop_index": 1,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "A",
+          "N",
+          "P[0]",
+          "P[1]",
+          "p"
+        ],
+        "field_types": {
+          "A": "array",
+          "N": "integer",
+          "P[0]": "integer",
+          "P[1]": "integer",
+          "p": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "3a4e0a6d64542b7db0ab814a46080be8ad63d1bfae7c5ee222da5851a8692da2",
+        "post_oracle_sha256": "c7232b000f526627c8b08e1a48fee38af093e16d3ae4898987b2b7885e1c3125"
+      }
+    },
+    {
+      "contest_date": "2025-02-09T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 4,
+        "long_trace_final_bytes": 10,
+        "inside_loop_state_bytes": 84,
+        "post_loop_state_bytes": 84
+      },
+      "platform": "atcoder",
+      "question_id": "arc192_e",
+      "question_title": "Snuke's Kyoto Trip",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc192_e/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 11,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 4800009
+      },
+      "long_trace_input": {
+        "constraint_check": "the board and rectangle coordinates are ordered and inside the published bounds",
+        "input_bytes": 28,
+        "reason": "a 1002-by-1002 inner rectangle makes each boundary contribution loop execute exactly 1002 times",
+        "total_loop_entries": 4804009
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 60,
+          "source_loop_index": 5,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "D",
+          "H",
+          "L",
+          "R",
+          "U",
+          "W",
+          "ret",
+          "x"
+        ],
+        "field_types": {
+          "D": "integer",
+          "H": "integer",
+          "L": "integer",
+          "R": "integer",
+          "U": "integer",
+          "W": "integer",
+          "ret": "integer",
+          "x": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "b6456a39af3abef02c545b0dc38521e0e32522f5229bc200032498d3ec9950c7",
+        "post_oracle_sha256": "0049d25668e8a55b02c766c26131d7225bda1302773094f4db83d4016e748cb7"
+      }
+    },
+    {
+      "contest_date": "2025-02-23T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 3,
+        "long_trace_final_bytes": 9,
+        "inside_loop_state_bytes": 106,
+        "post_loop_state_bytes": 105
+      },
+      "platform": "atcoder",
+      "question_id": "arc193_b",
+      "question_title": "Broken Wheel",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc193_b/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 5,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 159
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1002 and the binary string has exactly N characters",
+        "input_bytes": 1008,
+        "reason": "a 1002-bit zero string creates 30018 innermost two-state transition checks",
+        "total_loop_entries": 62061
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 56,
+          "source_loop_index": 6,
+          "nesting_depth": 3
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "a[i]",
+          "d",
+          "dp[0][0]",
+          "dp[0][1]",
+          "dp[1][0]",
+          "dp[1][1]",
+          "i",
+          "j",
+          "n"
+        ],
+        "field_types": {
+          "a[i]": "integer",
+          "d": "integer",
+          "dp[0][0]": "boolean",
+          "dp[0][1]": "boolean",
+          "dp[1][0]": "boolean",
+          "dp[1][1]": "boolean",
+          "i": "integer",
+          "j": "integer",
+          "n": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "054acc8fea541a7a0417a832c1756606a668c150374eab87a3e815a7d069138c",
+        "post_oracle_sha256": "64bed0715f4a8123c08f8276e3c9198788ac44ccd88c3f916498a7b3f8742b97"
+      }
+    },
+    {
+      "contest_date": "2025-03-09T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 3,
+        "long_trace_final_bytes": 9,
+        "inside_loop_state_bytes": 6935,
+        "post_loop_state_bytes": 7940
+      },
+      "platform": "atcoder",
+      "question_id": "arc194_c",
+      "question_title": "Cost to Flip",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc194_c/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 25,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 12
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1002, A and B are binary vectors, and all C values are positive",
+        "input_bytes": 7916,
+        "reason": "three length-1002 input vectors make the last explicit source loop incrementally populate the weighted-cost vector",
+        "total_loop_entries": 3006
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 42,
+          "source_loop_index": 2,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "A",
+          "B",
+          "C",
+          "N"
+        ],
+        "field_types": {
+          "A": "array",
+          "B": "array",
+          "C": "array",
+          "N": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "a4095155aa46908ec7d5dc77a871a81babe70e9d3ee90a0a003c26c321898cb5",
+        "post_oracle_sha256": "81657523be89612a1946929b31b513f2bb7450cc52d7f54b5efa7244ddd25fb0"
+      }
+    },
+    {
+      "contest_date": "2025-03-23T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 6,
+        "long_trace_final_bytes": 5,
+        "inside_loop_state_bytes": 100,
+        "post_loop_state_bytes": 106
+      },
+      "platform": "atcoder",
+      "question_id": "arc195_d",
+      "question_title": "Swap and Erase",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc195_d/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 48,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 43
+      },
+      "long_trace_input": {
+        "constraint_check": "one test case has N=1002 and every sequence value is a valid positive integer",
+        "input_bytes": 2482,
+        "reason": "one patterned sequence of length 1002 makes the final dynamic-programming loop update both transition states at every position",
+        "total_loop_entries": 2005
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 22,
+          "source_loop_index": 2,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "f[0][0]",
+          "f[0][1]",
+          "f[n/2][0]",
+          "f[n/2][1]",
+          "f[n][0]",
+          "f[n][1]",
+          "n"
+        ],
+        "field_types": {
+          "f[0][0]": "integer",
+          "f[0][1]": "integer",
+          "f[n/2][0]": "integer",
+          "f[n/2][1]": "integer",
+          "f[n][0]": "integer",
+          "f[n][1]": "integer",
+          "n": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "3e4c60f044660399795462fc2da67f0434d605f1432b43b618c5b2b3d3a030f5",
+        "post_oracle_sha256": "ac237e1c19bb94444c75938db0dac0caea333717d0d71c433b1946afc7c27d5e"
+      }
+    },
+    {
+      "contest_date": "2025-03-23T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 4,
+        "long_trace_final_bytes": 10,
+        "inside_loop_state_bytes": 74,
+        "post_loop_state_bytes": 76
+      },
+      "platform": "atcoder",
+      "question_id": "arc195_e",
+      "question_title": "Random Tree Distance",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc195_e/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 15,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 124
+      },
+      "long_trace_input": {
+        "constraint_check": "N=1003, Q=1, all 1002 edge values and the query endpoints are valid",
+        "input_bytes": 2918,
+        "reason": "N=1003 makes the preprocessing loop execute 1002 modular expectation updates before the sole query",
+        "total_loop_entries": 61123
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 35,
+          "source_loop_index": 1,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "N",
+          "Q",
+          "fact",
+          "i",
+          "sum",
+          "sum2"
+        ],
+        "field_types": {
+          "N": "integer",
+          "Q": "integer",
+          "fact": "integer",
+          "i": "integer",
+          "sum": "integer",
+          "sum2": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "5cf6a4bebf6de7464f3edc1470695354cd71e750f0f49bfefef8cf7b23b666b8",
+        "post_oracle_sha256": "957406eee6a795364ef2d84d69325d570f5505af6e5f31e4dacf8743a70f644a"
+      }
+    },
+    {
+      "contest_date": "2025-04-06T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 8,
+        "inside_loop_state_bytes": 117,
+        "post_loop_state_bytes": 115
+      },
+      "platform": "atcoder",
+      "question_id": "arc196_a",
+      "question_title": "Adjacent Delete",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc196_a/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 9,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 8
+      },
+      "long_trace_input": {
+        "constraint_check": "N=2005 is odd and the sequence contains valid distinct positive integers",
+        "input_bytes": 8923,
+        "reason": "an odd sequence of length 2005 makes the final balancing loop execute exactly 1002 state-dense multiset transitions",
+        "total_loop_entries": 5011
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 40,
+          "source_loop_index": 5,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "ans",
+          "mi",
+          "ms[0].size()",
+          "ms[1].size()",
+          "ms[2].size()",
+          "ms[3].size()",
+          "pl"
+        ],
+        "field_types": {
+          "ans": "integer",
+          "mi": "integer",
+          "ms[0].size()": "integer",
+          "ms[1].size()": "integer",
+          "ms[2].size()": "integer",
+          "ms[3].size()": "integer",
+          "pl": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "55f53fcb8a1cb4fc0f6aef36d868dae7cf7c234719991357ef343643cf5c1058",
+        "post_oracle_sha256": "1dba68497c2404c6ef82b0d2e79b5ac5b183aee6e8b09be85e213a61f81747cf"
+      }
+    },
+    {
+      "contest_date": "2025-04-06T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 2,
+        "long_trace_final_bytes": 10,
+        "inside_loop_state_bytes": 93,
+        "post_loop_state_bytes": 93
+      },
+      "platform": "atcoder",
+      "question_id": "arc196_c",
+      "question_title": "Strongly Connected",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc196_c/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 6,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 109
+      },
+      "long_trace_input": {
+        "constraint_check": "the string has length 2N, contains N symbols of each color, begins with B, and ends with W",
+        "input_bytes": 2010,
+        "reason": "1002 black symbols followed by 1002 white symbols drive the inverse-factorial loop through all 1002 combinatorial states",
+        "total_loop_entries": 51108
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 90,
+          "source_loop_index": 16,
+          "nesting_depth": 0
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "fac[n]",
+          "inv[0]",
+          "inv[n/2]",
+          "inv[n]",
+          "n",
+          "p[n]"
+        ],
+        "field_types": {
+          "fac[n]": "integer",
+          "inv[0]": "integer",
+          "inv[n/2]": "integer",
+          "inv[n]": "integer",
+          "n": "integer",
+          "p[n]": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "732b1980a427b18dd9efc18a969ad80b4a40ae82fdb40edcaeb90a3ab3087327",
+        "post_oracle_sha256": "4739fd4f660d4dfd834dccc8ffaaed4684b7da23b9e2d3d9faf1353a48eff7b5"
+      }
+    },
+    {
+      "contest_date": "2025-04-06T00:00:00",
+      "language": "cpp20",
+      "outputs": {
+        "short_trace_final_bytes": 7,
+        "long_trace_final_bytes": 3,
+        "inside_loop_state_bytes": 48,
+        "post_loop_state_bytes": 48
+      },
+      "platform": "atcoder",
+      "question_id": "arc196_d",
+      "question_title": "Roadway",
+      "source": "experiments/lcb_hard_v1_cpp/problems/atcoder/arc196_d/short-trace-final/program.cpp",
+      "validation": {
+        "clean_sources_identical": true,
+        "state_inputs_match_long_trace": true,
+        "state_fields_and_types_match": true,
+        "state_changes_after_selected_loop": true,
+        "oracles_stable_across_three_runs": true
+      },
+      "short_trace_input": {
+        "input_bytes": 29,
+        "official_index": 0,
+        "origin": "public",
+        "reason": "representative public example",
+        "total_loop_entries": 343
+      },
+      "long_trace_input": {
+        "constraint_check": "N=2004, M=1002, Q=1, every endpoint is valid, and the query range lies within the edge list",
+        "input_bytes": 8932,
+        "reason": "1002 disjoint directed pairs make the sliding-window expansion enter 2003 times before the sole query",
+        "total_loop_entries": 87178
+      },
+      "state_projection": {
+        "selected_loop": {
+          "source_body_line": 51,
+          "source_loop_index": 3,
+          "nesting_depth": 1
+        },
+        "inside_checkpoint": "inside the selected loop at cumulative entry 502",
+        "post_checkpoint": "immediately after the same selected loop completes normally after more than 1000 cumulative entries",
+        "fields": [
+          "L",
+          "M",
+          "N",
+          "Q",
+          "R",
+          "x"
+        ],
+        "field_types": {
+          "L": "integer",
+          "M": "integer",
+          "N": "integer",
+          "Q": "integer",
+          "R": "integer",
+          "x": "integer"
+        },
+        "serialization": "canonical compact JSON object with one trailing newline",
+        "inside_oracle_sha256": "cc8fa32f42e0820d8c35a0397b4150bbca72a21622c8a0a231cd27f02276b609",
+        "post_oracle_sha256": "0f14eac9faa9438335c9290273a7933b6ed27b37f260527058413904e315c547"
+      }
+    }
+  ],
+  "dataset": "livecodebench/code_generation_lite",
+  "dataset_revision": "25d8cb8f0db2efe1b589941eb8c26a219850d4d2",
+  "excluded_source_count": 315,
+  "exclusions": [
+    {
+      "detail": "the digit dynamic program uses recursion and a generator expression; only the fixed-arity JSON decoder wrapper has explicit loops",
+      "question_id": "2757",
+      "reason": "no_eligible_algorithm_loop"
+    },
+    {
+      "detail": "the wall dynamic program is entirely recursive; only the fixed-arity JSON decoder wrapper has explicit loops",
+      "question_id": "2808",
+      "reason": "no_eligible_algorithm_loop"
+    },
+    {
+      "detail": "the array length is at most 1000, so both explicit element-processing loops enter at most 1000 times; the bit-level outer loop is logarithmically bounded",
+      "question_id": "3025",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "both explicit loops are bounded by the decimal digit count of values no greater than 10^15, even across the two count calls",
+      "question_id": "3243",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "the only explicit algorithm loop has exactly two iterations for every input",
+      "question_id": "3402",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "the stair-state search is entirely recursive; only the fixed-arity JSON decoder wrapper has explicit loops",
+      "question_id": "3414",
+      "reason": "no_eligible_algorithm_loop"
+    },
+    {
+      "detail": "the only explicit algorithm loop scans the remainder block after division by 12, so it has at most 11 entries",
+      "question_id": "3552",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "the subsequence-pair dynamic program is entirely recursive; only the fixed-arity JSON decoder wrapper has explicit loops",
+      "question_id": "3608",
+      "reason": "no_eligible_algorithm_loop"
+    },
+    {
+      "detail": "every eligible meaningful loop is reached only after the clean program has already printed query results, so a state-only transformed oracle cannot match its prompt-only pair",
+      "question_id": "abc302_e",
+      "reason": "checkpoint_output_contamination"
+    },
+    {
+      "detail": "the clean source contains no Python for or while statement",
+      "question_id": "abc307_e",
+      "reason": "no_explicit_source_loop"
+    },
+    {
+      "detail": "every eligible loop has only positional changes at occurrences 502 and 1002; the bounded algorithm state is unchanged",
+      "question_id": "abc310_f",
+      "reason": "no_meaningful_state_at_fixed_depths"
+    },
+    {
+      "detail": "the changing owner arrays exceed 16 KB; bounded variables expose only loop position, while the later scan is empty at both fixed occurrences",
+      "question_id": "abc312_e",
+      "reason": "meaningful_state_exceeds_output_limit"
+    },
+    {
+      "detail": "a single case can enter the ancestor loop only about 60 times; accumulating 1002 entries requires prior test cases whose final answers have already been printed",
+      "question_id": "abc321_e",
+      "reason": "checkpoint_output_contamination"
+    },
+    {
+      "detail": "building a source box with more than 1000 colors requires earlier queries, and each such query prints before the eligible transfer loop reaches either checkpoint",
+      "question_id": "abc329_f",
+      "reason": "checkpoint_output_contamination"
+    },
+    {
+      "detail": "N is at most 100, so the only explicit loop over friend bits enters at most seven times",
+      "question_id": "abc337_e",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "the algorithm uses recursion and a generator expression; its only explicit for statement is in an unused helper and therefore never executes",
+      "question_id": "abc350_e",
+      "reason": "no_eligible_executed_loop"
+    },
+    {
+      "detail": "all explicit loops cover only the coordinate remainders after multiples of four, so every valid input bounds their total entries below 16",
+      "question_id": "abc354_d",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "the clean source contains no Python for or while statement",
+      "question_id": "abc355_e",
+      "reason": "no_explicit_source_loop"
+    },
+    {
+      "detail": "the closed-form algorithm executes no explicit loop; its only for statement belongs to an unused prefix-sum helper",
+      "question_id": "abc360_e",
+      "reason": "no_eligible_executed_loop"
+    },
+    {
+      "detail": "the algorithm's sole executed explicit loop has exactly 60 iterations for every valid input; its per-vertex operations are comprehensions",
+      "question_id": "abc367_e",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "the only repeatable explicit loops are constant-size coordinate-normalization steps; reaching 1002 entries would require earlier test cases whose answers have already been printed",
+      "question_id": "abc382_g",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "the implementation uses only comprehensions and generator expressions, with no Python for or while statement",
+      "question_id": "abc393_d",
+      "reason": "no_explicit_source_loop"
+    },
+    {
+      "detail": "all graph traversals and input scans use recursion or FOR-style macros; the clean C++ source has no explicit for, while, or do statement",
+      "question_id": "abc398_g",
+      "reason": "no_explicit_source_loop"
+    },
+    {
+      "detail": "the only unbounded explicit loop is the test-case loop and every prior case prints; the per-case explicit loops are fixed at at most 125 entries",
+      "question_id": "abc400_g",
+      "reason": "checkpoint_output_contamination"
+    },
+    {
+      "detail": "the only explicit loop is the logarithmic Euclidean floor-sum loop; comprehensions and generators are excluded by the benchmark rule",
+      "question_id": "arc182_e",
+      "reason": "loop_bound_below_1002"
+    },
+    {
+      "detail": "the only explicit loop is the test-case loop and each completed case prints; a single case has no explicit source loop",
+      "question_id": "arc188_b",
+      "reason": "checkpoint_output_contamination"
+    },
+    {
+      "detail": "the sole explicit loop is the test-case loop and every completed case prints its answer",
+      "question_id": "arc191_c",
+      "reason": "checkpoint_output_contamination"
+    },
+    {
+      "detail": "every eligible construction loop prints answer elements from its first entry, so neither fixed inside checkpoint can produce a state-only transformed oracle",
+      "question_id": "arc195_c",
+      "reason": "checkpoint_output_contamination"
+    },
+    {
+      "detail": "the inside-loop checkpoint exits before the selected loop performs its first state transition, exposing the freshly initialized g array instead of loop-maintained state",
+      "question_id": "abc376_f",
+      "reason": "inside_checkpoint_before_state_update"
+    },
+    {
+      "case_id": "leetcode/3675",
+      "reason": "unstable native trace across repeated executions",
+      "observed_native_traces": [
+        1761,
+        1761,
+        1671
+      ]
+    },
+    {
+      "reason": "language_partition",
+      "count": 285,
+      "detail": "Python selected cases live in lcb_hard_v1_python"
+    }
+  ],
+  "problem_count": 140,
+  "reviewed_source_count": 350,
+  "schema_version": 4
+}

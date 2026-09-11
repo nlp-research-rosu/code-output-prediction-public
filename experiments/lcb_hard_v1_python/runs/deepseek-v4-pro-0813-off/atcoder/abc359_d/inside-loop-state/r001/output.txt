@@ -1,0 +1,1 @@
+{"count":1,"current_char":"?","is_palindrome":true,"j":3,"new_state":["A","A","A","A","A","A","A","A","A","A"],"new_substring":["A","A","A","A","A","A","A","A","A","A"],"state":["A","A","A","A","A","A","A","A","A"]}

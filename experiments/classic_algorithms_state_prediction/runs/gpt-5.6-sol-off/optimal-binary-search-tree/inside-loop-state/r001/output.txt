@@ -1,0 +1,1 @@
+The program prints a JSON snapshot when the 2028th candidate root is reached (before evaluating candidate_root=11 for interval [7,23]). The exact snapshot is too large to reproduce reliably here without executing the program.

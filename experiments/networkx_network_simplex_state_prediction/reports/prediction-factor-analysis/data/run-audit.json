@@ -1,0 +1,225 @@
+{
+  "attempt_policy": "Select the earliest completed assistant response in rNNN order and preserve all native attempts. Only transport failures, timeouts, and no-response attempts may be retried.",
+  "models": {
+    "deepseek-v4-pro-0813-high": {
+      "assistant_messages": 135,
+      "native_attempts": 120,
+      "pi_thinking_level": "high",
+      "predictions_with_multiple_attempts": 0,
+      "provider_models": [
+        {
+          "model": "deepseek/deepseek-v4-pro-0813",
+          "provider": "openrouter"
+        }
+      ],
+      "recovered_transport_diagnostics": 0,
+      "selected_completed_predictions": 120,
+      "selected_completed_with_positive_reasoning_tokens": 120,
+      "selected_completed_with_thinking": 120,
+      "selected_predictions": 120,
+      "selected_sessions_with_zero_reasoning_tokens": 0,
+      "selected_thinking_blocks": 120,
+      "sessions_with_zero_reasoning_tokens": 0,
+      "statuses": {
+        "invalid_format": 12,
+        "parsed_output": 108
+      },
+      "thinking_blocks": 134,
+      "usage": {
+        "input": 338279,
+        "output": 10122380,
+        "reasoning": 10117495,
+        "totalTokens": 11006451
+      }
+    },
+    "deepseek-v4-pro-0813-off": {
+      "assistant_messages": 130,
+      "native_attempts": 123,
+      "pi_thinking_level": "off",
+      "predictions_with_multiple_attempts": 3,
+      "provider_models": [
+        {
+          "model": "deepseek/deepseek-v4-pro-0813",
+          "provider": "openrouter"
+        }
+      ],
+      "recovered_transport_diagnostics": 0,
+      "selected_completed_predictions": 120,
+      "selected_completed_with_positive_reasoning_tokens": 0,
+      "selected_completed_with_thinking": 0,
+      "selected_predictions": 120,
+      "selected_sessions_with_zero_reasoning_tokens": 120,
+      "selected_thinking_blocks": 0,
+      "sessions_with_zero_reasoning_tokens": 113,
+      "statuses": {
+        "invalid_format": 1,
+        "no_response": 3,
+        "parsed_output": 119
+      },
+      "thinking_blocks": 10,
+      "usage": {
+        "input": 877247,
+        "output": 292048,
+        "reasoning": 287716,
+        "totalTokens": 1229327
+      }
+    },
+    "glm-5.3-high": {
+      "assistant_messages": 122,
+      "native_attempts": 120,
+      "pi_thinking_level": "high",
+      "predictions_with_multiple_attempts": 0,
+      "provider_models": [
+        {
+          "model": "glm-5.3",
+          "provider": "zai-coding-cn"
+        }
+      ],
+      "recovered_transport_diagnostics": 0,
+      "selected_completed_predictions": 120,
+      "selected_completed_with_positive_reasoning_tokens": 120,
+      "selected_completed_with_thinking": 120,
+      "selected_predictions": 120,
+      "selected_sessions_with_zero_reasoning_tokens": 0,
+      "selected_thinking_blocks": 120,
+      "sessions_with_zero_reasoning_tokens": 0,
+      "statuses": {
+        "invalid_format": 22,
+        "parsed_output": 98
+      },
+      "thinking_blocks": 122,
+      "usage": {
+        "input": 290756,
+        "output": 11732051,
+        "reasoning": 11724953,
+        "totalTokens": 12570071
+      }
+    },
+    "gpt-5.6-sol-high": {
+      "assistant_messages": 131,
+      "native_attempts": 123,
+      "pi_thinking_level": "high",
+      "predictions_with_multiple_attempts": 3,
+      "provider_models": [
+        {
+          "model": "gpt-5.6-sol",
+          "provider": "openai-codex"
+        }
+      ],
+      "recovered_transport_diagnostics": 9,
+      "selected_completed_predictions": 120,
+      "selected_completed_with_positive_reasoning_tokens": 120,
+      "selected_completed_with_thinking": 120,
+      "selected_predictions": 120,
+      "selected_sessions_with_zero_reasoning_tokens": 0,
+      "selected_thinking_blocks": 6130,
+      "sessions_with_zero_reasoning_tokens": 2,
+      "statuses": {
+        "invalid_format": 1,
+        "no_response": 2,
+        "parsed_output": 120
+      },
+      "thinking_blocks": 6584,
+      "usage": {
+        "input": 784373,
+        "output": 3178398,
+        "reasoning": 3172287,
+        "totalTokens": 4027795
+      }
+    },
+    "gpt-5.6-sol-off": {
+      "assistant_messages": 180,
+      "native_attempts": 180,
+      "pi_thinking_level": "minimal",
+      "predictions_with_multiple_attempts": 60,
+      "provider_models": [
+        {
+          "model": "gpt-5.6-sol",
+          "provider": "openai-codex"
+        }
+      ],
+      "recovered_transport_diagnostics": 46,
+      "selected_completed_predictions": 120,
+      "selected_completed_with_positive_reasoning_tokens": 0,
+      "selected_completed_with_thinking": 0,
+      "selected_predictions": 120,
+      "selected_sessions_with_zero_reasoning_tokens": 120,
+      "selected_thinking_blocks": 0,
+      "sessions_with_zero_reasoning_tokens": 120,
+      "statuses": {
+        "parsed_output": 180
+      },
+      "thinking_blocks": 166,
+      "usage": {
+        "input": 1262640,
+        "output": 85735,
+        "reasoning": 75651,
+        "totalTokens": 1348375
+      }
+    },
+    "qwen3.8-27b-high": {
+      "assistant_messages": 120,
+      "native_attempts": 120,
+      "pi_thinking_level": "high",
+      "predictions_with_multiple_attempts": 0,
+      "provider_models": [
+        {
+          "model": "qwen/qwen3.8-27b",
+          "provider": "openrouter"
+        }
+      ],
+      "recovered_transport_diagnostics": 0,
+      "selected_completed_predictions": 120,
+      "selected_completed_with_positive_reasoning_tokens": 120,
+      "selected_completed_with_thinking": 120,
+      "selected_predictions": 120,
+      "selected_sessions_with_zero_reasoning_tokens": 0,
+      "selected_thinking_blocks": 120,
+      "sessions_with_zero_reasoning_tokens": 0,
+      "statuses": {
+        "invalid_format": 15,
+        "parsed_output": 105
+      },
+      "thinking_blocks": 120,
+      "usage": {
+        "input": 966944,
+        "output": 1954541,
+        "reasoning": 1950503,
+        "totalTokens": 2921485
+      }
+    },
+    "qwen3.8-27b-off": {
+      "assistant_messages": 120,
+      "native_attempts": 120,
+      "pi_thinking_level": "off",
+      "predictions_with_multiple_attempts": 0,
+      "provider_models": [
+        {
+          "model": "qwen/qwen3.8-27b",
+          "provider": "openrouter"
+        }
+      ],
+      "recovered_transport_diagnostics": 0,
+      "selected_completed_predictions": 120,
+      "selected_completed_with_positive_reasoning_tokens": 0,
+      "selected_completed_with_thinking": 0,
+      "selected_predictions": 120,
+      "selected_sessions_with_zero_reasoning_tokens": 120,
+      "selected_thinking_blocks": 0,
+      "sessions_with_zero_reasoning_tokens": 120,
+      "statuses": {
+        "invalid_format": 16,
+        "parsed_output": 104
+      },
+      "thinking_blocks": 0,
+      "usage": {
+        "input": 718736,
+        "output": 3873,
+        "reasoning": 0,
+        "totalTokens": 971057
+      }
+    }
+  },
+  "schema_version": 1,
+  "transport_note": "provider transport diagnostics recovered inside the same Pi invocation are counted separately and are not benchmark retries"
+}

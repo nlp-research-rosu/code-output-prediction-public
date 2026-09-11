@@ -1,0 +1,1 @@
+{"N":1003,"X":5,"cost":1,"current_dist":1,"heap":[[2,3],[2,1004]],"neighbor":2,"u":1}

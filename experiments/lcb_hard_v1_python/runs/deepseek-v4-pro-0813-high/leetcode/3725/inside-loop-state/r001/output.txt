@@ -1,0 +1,1 @@
+{"cnt":3,"i":7,"k":501,"list(dq)":[5,8],"nums[i]":176,"result":16770,"right":9,"total":3729}

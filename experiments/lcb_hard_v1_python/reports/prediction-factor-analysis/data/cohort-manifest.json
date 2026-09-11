@@ -1,0 +1,248 @@
+{
+  "arm_labels": {
+    "inside-loop-state": "inside-loop-state",
+    "long-trace-final": "long-trace-final",
+    "post-loop-state": "post-loop-state",
+    "short-trace-final": "short-trace-final"
+  },
+  "benchmark": "lcb_hard_v1_python",
+  "dynamic_pooling": {
+    "arm_group": "all-arms",
+    "arms": [
+      "short-trace-final",
+      "long-trace-final",
+      "inside-loop-state",
+      "post-loop-state"
+    ],
+    "dependence_disclosure": "Predictions are clustered by program; the row-level test does not model within-program dependence.",
+    "distinct_execution_id_count": 1132,
+    "prediction_count": 7881,
+    "predictions_backed_by_shared_execution_ids": 7881,
+    "shared_execution_id_count": 1132
+  },
+  "eligibility": {
+    "excluded": [
+      "no_response",
+      "not_run"
+    ],
+    "included": [
+      "correct_invalid",
+      "correct_valid",
+      "wrong_invalid",
+      "wrong_valid"
+    ]
+  },
+  "excluded_by_model_arm_status": {
+    "gpt-5.6-sol-off::inside-loop-state::no_response": 15,
+    "gpt-5.6-sol-off::long-trace-final::no_response": 4,
+    "gpt-5.6-sol-off::post-loop-state::no_response": 24
+  },
+  "included_by_model_arm": {
+    "deepseek-v4-pro-0813-high::inside-loop-state": 283,
+    "deepseek-v4-pro-0813-high::long-trace-final": 283,
+    "deepseek-v4-pro-0813-high::post-loop-state": 283,
+    "deepseek-v4-pro-0813-high::short-trace-final": 283,
+    "deepseek-v4-pro-0813-off::inside-loop-state": 283,
+    "deepseek-v4-pro-0813-off::long-trace-final": 283,
+    "deepseek-v4-pro-0813-off::post-loop-state": 283,
+    "deepseek-v4-pro-0813-off::short-trace-final": 283,
+    "glm-5.3-high::inside-loop-state": 283,
+    "glm-5.3-high::long-trace-final": 283,
+    "glm-5.3-high::post-loop-state": 283,
+    "glm-5.3-high::short-trace-final": 283,
+    "gpt-5.6-sol-high::inside-loop-state": 283,
+    "gpt-5.6-sol-high::long-trace-final": 283,
+    "gpt-5.6-sol-high::post-loop-state": 283,
+    "gpt-5.6-sol-high::short-trace-final": 283,
+    "gpt-5.6-sol-off::inside-loop-state": 268,
+    "gpt-5.6-sol-off::long-trace-final": 279,
+    "gpt-5.6-sol-off::post-loop-state": 259,
+    "gpt-5.6-sol-off::short-trace-final": 283,
+    "qwen3.8-27b-high::inside-loop-state": 283,
+    "qwen3.8-27b-high::long-trace-final": 283,
+    "qwen3.8-27b-high::post-loop-state": 283,
+    "qwen3.8-27b-high::short-trace-final": 283,
+    "qwen3.8-27b-off::inside-loop-state": 283,
+    "qwen3.8-27b-off::long-trace-final": 283,
+    "qwen3.8-27b-off::post-loop-state": 283,
+    "qwen3.8-27b-off::short-trace-final": 283
+  },
+  "included_prediction_count": 7881,
+  "language": "python",
+  "metric_measurement_coverage": {
+    "reason_definitions": {
+      "ADAPTER_NOT_RUN": "The metric adapter did not run for this arm.",
+      "INVALID_ORACLE_MISMATCH": "The natural execution did not match the committed oracle.",
+      "MEASUREMENT_FAILED": "The metric adapter ran but did not produce a valid measurement.",
+      "NONDETERMINISTIC_TRACE": "Repeated executions produced different native trace counts.",
+      "STATE_TRAVERSAL_RECURSION_LIMIT": "Exact state traversal exceeded the CPython recursion limit.",
+      "STATE_TRAVERSAL_WORK_LIMIT": "Exact state traversal exceeded the configured semantic-cell visit limit.",
+      "TRACE_TIMEOUT": "The instrumented execution exceeded its timeout.",
+      "UNSUPPORTED_REACHABLE_TYPE": "The reachable state contained a value that cannot be inspected faithfully."
+    },
+    "records": [
+      {
+        "arm_id": "short-trace-final",
+        "measured": 283,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "short-trace-final",
+        "measured": 283,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "short-trace-final",
+        "measured": 283,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "long-trace-final",
+        "measured": 283,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "long-trace-final",
+        "measured": 283,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "long-trace-final",
+        "measured": 283,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "measured": 283,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "measured": 283,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "inside-loop-state",
+        "measured": 283,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "post-loop-state",
+        "measured": 283,
+        "metric_name": "Omega_hat_NativeTrace",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "post-loop-state",
+        "measured": 283,
+        "metric_name": "Omega_hat_StateSize",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      },
+      {
+        "arm_id": "post-loop-state",
+        "measured": 283,
+        "metric_name": "Omega_hat_StateLoad",
+        "selected_profiles": 283,
+        "unavailable": 0,
+        "unavailable_by_reason": {},
+        "usable": 283
+      }
+    ],
+    "unit": "selected program profiles"
+  },
+  "metrics": {
+    "dynamic": [
+      "Omega_hat_NativeTrace",
+      "Omega_hat_StateSize",
+      "Omega_hat_StateLoad"
+    ],
+    "static": [
+      "Omega_CC"
+    ]
+  },
+  "model_ids": [
+    "gpt-5.6-sol-high",
+    "gpt-5.6-sol-off",
+    "glm-5.3-high",
+    "deepseek-v4-pro-0813-off",
+    "deepseek-v4-pro-0813-high",
+    "qwen3.8-27b-off",
+    "qwen3.8-27b-high"
+  ],
+  "point_count": 31524,
+  "points_sha256": "444252ad0c2b8d1795eefa663992eebbc6ea82d6bbef1cac3ac5b150ec192bed",
+  "provenance": {
+    "cases": {
+      "path": "experiments/lcb_hard_v1_python/cases.json",
+      "sha256": "a1466cc5684843bdced1341138ac4f8ae3cd99f1707af2933c89c2ac579e424f"
+    },
+    "grader": {
+      "path": "experiments/lcb_hard_v1_python/grade.py",
+      "sha256": "dd43da4e5be75f909700671944f77eb969ca11f2620fa72e3b6a6403a7b361d7"
+    },
+    "normalized_profiles": {
+      "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/normalized-profiles.csv",
+      "sha256": "fe463152b66a4658d1189bcd46adec506bc5fb008c2384348673947a73cda1ad"
+    },
+    "normalized_profiles_config": {
+      "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/normalized-profiles-config.json",
+      "sha256": "53f5a0d6938aaa60b3799d5083c1cdcd7b9fa0277970dba5faf27f5618e37350"
+    },
+    "normalized_profiles_manifest": {
+      "path": "experiments/lcb_hard_v1_python/measurements/program-complexity/normalized-profiles-manifest.json",
+      "sha256": "c7ee4577939568a0f147c305c8312a79e0c462d1ccb678a3d3a0205a419a877a"
+    },
+    "numeric_recovery_policy": "assume_equal",
+    "workbench_config": {
+      "path": "experiments/lcb_hard_v1_python/workbench.toml",
+      "sha256": "cd9950bc6e683d03b237516990c78b272d1191abdb7e73d404d2be9988adbc5b"
+    }
+  },
+  "retry_cells_deduplicated": 259,
+  "schema": "lcb-hard-v1-prediction-factor-cohort-v7",
+  "scope": "static-and-dynamic",
+  "selection_policy": "selected-attempts.json pins corrected reasoning-condition recollections; every other cell uses the first completed assistant response in rNNN order; retries are not independent predictions",
+  "unavailable_dynamic_prediction_points_by_arm_metric": {}
+}

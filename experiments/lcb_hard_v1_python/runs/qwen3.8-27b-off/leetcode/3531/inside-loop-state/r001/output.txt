@@ -1,0 +1,1 @@
+{"answer":5170,"damage[index]":1,"elapsed":9842904,"hits[index]":1,"index":600,"len(order)":1035}

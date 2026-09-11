@@ -1,0 +1,8 @@
+The program raises SystemExit after the iterative DFS, so the normal answer line is not printed. It writes a debug JSON with stack=[], u=1, acc=ans[1] mod 998244353. For this star input (N=502), the values are:
+
+ans[1] = ans[2] = 502 - H_502 mod 998244353,
+ans[k] = 1/k + sum_{m=k}^{501} m/(m+1) mod 998244353 for 2 <= k <= 502,
+where H_502 = sum_{j=1}^{502} 1/j modulo 998244353.
+
+The exact JSON is therefore:
+{"acc":<ans[1]>,"ans":[<ans[1], ans[2], ..., ans[502]>],"stack":[],"u":1}
